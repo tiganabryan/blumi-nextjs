@@ -29,7 +29,7 @@ const Form = () => {
   const log = console.log;
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     log(formInfo);
   };
 
@@ -42,7 +42,14 @@ const Form = () => {
         boxShadow={1}
         marginBottom={4}
       >
-        <form noValidate autoComplete="off" onSubmit={handleSubmit}>
+        <form
+          action="https://script.google.com/macros/s/AKfycbw4ENJfkNon7N1EbzdDcTif_3Ec_xLvYFGcQHKX0z3Ntki5zgvdeqQ0j6bvlWP-zBYiCg/exec"
+          noValidate
+          autoComplete="off"
+          onSubmit={handleSubmit}
+          method="POST"
+          className="gform"
+        >
           <Grid container spacing={4}>
             <Grid item xs={12} sm={6}>
               <TextField

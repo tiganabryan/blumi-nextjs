@@ -29,14 +29,12 @@ const validationSchema = yup.object({
     .trim()
     .email('Please enter a valid email address')
     .required('Email is required.'),
-  message: yup
-    .string()
-    .trim()
-    .required('Please specify your message'),
+  message: yup.string().trim().required('Please specify your message'),
 });
 
 const Form = () => {
   const theme = useTheme();
+  const log = console.log;
 
   const initialValues = {
     firstName: '',
@@ -46,6 +44,7 @@ const Form = () => {
   };
 
   const onSubmit = (values) => {
+    log(values);
     return values;
   };
 
@@ -64,7 +63,14 @@ const Form = () => {
         boxShadow={1}
         marginBottom={4}
       >
-        <form noValidate autoComplete="off" onSubmit={formik.handleSubmit}>
+        <form
+          noValidate
+          className="gform"
+          autoComplete="off"
+          // onSubmit={formik.handleSubmit}
+          method="POST"
+          action="https://script.google.com/macros/s/AKfycbw4ENJfkNon7N1EbzdDcTif_3Ec_xLvYFGcQHKX0z3Ntki5zgvdeqQ0j6bvlWP-zBYiCg/exec"
+        >
           <Grid container spacing={4}>
             <Grid item xs={12} sm={6}>
               <TextField
@@ -86,7 +92,7 @@ const Form = () => {
             <Grid item xs={12} sm={6}>
               <TextField
                 sx={{ height: 54 }}
-                label="Last name"
+                label="Last "
                 variant="outlined"
                 color="primary"
                 size="medium"
