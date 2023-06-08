@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
+import axios from 'axios';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
 import { useTheme } from '@mui/material/styles';
@@ -44,8 +45,66 @@ const Form = () => {
   };
 
   const onSubmit = (values) => {
-    log(values);
     return values;
+  };
+
+  const tryingAgain = (e) => {
+    e.preventDefault();
+    const action = e.target.action;
+    // log(e.target);
+    // log(onSubmit);
+
+    const formInfo = {
+      firstName: formik.values.firstName,
+      lastName: formik.values.lastName,
+      email: formik.values.email,
+      message: formik.values.message,
+    };
+
+    const JSONdata = JSON.stringify(formInfo);
+    // log(formInfo);
+
+    axios({
+      method: 'POST',
+      url: action,
+      data: JSONdata,
+    })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  const preventDefault = async (e) => {
+    e.preventDefault();
+    log(formik.values);
+
+    const formInfo = {
+      firstName: formik.values.firstName,
+      lastName: formik.values.lastName,
+      email: formik.values.email,
+      message: formik.values.message,
+    };
+
+    const JSONdata = JSON.stringify(formInfo);
+
+    const endpoint =
+      'https://script.google.com/macros/s/AKfycbw4ENJfkNon7N1EbzdDcTif_3Ec_xLvYFGcQHKX0z3Ntki5zgvdeqQ0j6bvlWP-zBYiCg/exec';
+
+    const options = {
+      // The method is POST because we are sending data.
+      method: 'POST',
+      // Tell the server we're sending JSON.
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      // Body of the request is the JSON data we created above.
+      body: JSONdata,
+    };
+
+    const response = await fetch(endpoint, options);
   };
 
   const formik = useFormik({
@@ -53,6 +112,24 @@ const Form = () => {
     validationSchema: validationSchema,
     onSubmit,
   });
+
+  const preventFormRefresh = async (e) => {
+    const event = e;
+    log(event);
+    const formData = new FormData(event.target);
+    log(formData);
+
+    const response = await fetch(formData.action, {
+      method: 'POST',
+      body: formData,
+    });
+    if (response.status === 200) {
+      // Success!
+    } else {
+      // Error!
+    }
+    e.preventDefault();
+  };
 
   return (
     <Box>
@@ -68,6 +145,9 @@ const Form = () => {
           className="gform"
           autoComplete="off"
           // onSubmit={formik.handleSubmit}
+          // onSubmit={preventDefault}
+          // onSubmit={preventFormRefresh}
+          onSubmit={tryingAgain}
           method="POST"
           action="https://script.google.com/macros/s/AKfycbw4ENJfkNon7N1EbzdDcTif_3Ec_xLvYFGcQHKX0z3Ntki5zgvdeqQ0j6bvlWP-zBYiCg/exec"
         >
