@@ -60,11 +60,11 @@ const Form = () => {
 
     const action = e.target.action;
 
-    // consolidating form data for submission
     const formInfo = {
-      name: `${formik.values.firstName} ${formik.values.lastName}`,
-      message: formik.values.message,
+      firstName: formik.values.firstName,
+      lastName: formik.values.lastName,
       email: formik.values.email,
+      message: formik.values.message,
     };
 
     const JSONdata = JSON.stringify(formInfo);
