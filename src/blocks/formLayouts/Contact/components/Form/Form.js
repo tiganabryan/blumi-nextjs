@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
+import { useState } from 'react';
 import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
@@ -10,7 +11,27 @@ import Divider from '@mui/material/Divider';
 import Grid from '@mui/material/Grid';
 
 const Form = () => {
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [userEmail, setUserEmail] = useState('');
+  const [userMessage, setUserMessage] = useState('');
+
+  const formInfo = {
+    firstName: firstName,
+    lastName: lastName,
+    userEmail: userEmail,
+    userMessage: userMessage,
+    businessEmail: 'tigananow@gmail.com',
+  };
+
   const theme = useTheme();
+
+  const log = console.log;
+
+  const handleSubmit = (e) => {
+    // e.preventDefault();
+    log(formInfo);
+  };
 
   return (
     <Box>
@@ -21,7 +42,14 @@ const Form = () => {
         boxShadow={1}
         marginBottom={4}
       >
-        <form noValidate autoComplete="off">
+        <form
+          action="https://script.google.com/macros/s/AKfycbw4ENJfkNon7N1EbzdDcTif_3Ec_xLvYFGcQHKX0z3Ntki5zgvdeqQ0j6bvlWP-zBYiCg/exec"
+          noValidate
+          autoComplete="off"
+          onSubmit={handleSubmit}
+          method="POST"
+          className="gform"
+        >
           <Grid container spacing={4}>
             <Grid item xs={12} sm={6}>
               <TextField
@@ -32,8 +60,10 @@ const Form = () => {
                 size="medium"
                 name="firstName"
                 fullWidth
+                onChange={(e) => setFirstName(e.target.value)}
               />
             </Grid>
+
             <Grid item xs={12} sm={6}>
               <TextField
                 sx={{ height: 54 }}
@@ -43,8 +73,10 @@ const Form = () => {
                 size="medium"
                 name="lastName"
                 fullWidth
+                onChange={(e) => setLastName(e.target.value)}
               />
             </Grid>
+
             <Grid item xs={12}>
               <TextField
                 sx={{ height: 54 }}
@@ -55,8 +87,10 @@ const Form = () => {
                 size="medium"
                 name="email"
                 fullWidth
+                onChange={(e) => setUserEmail(e.target.value)}
               />
             </Grid>
+
             <Grid item xs={12}>
               <TextField
                 label="Message"
@@ -67,8 +101,10 @@ const Form = () => {
                 size="medium"
                 name="message"
                 fullWidth
+                onChange={(e) => setUserMessage(e.target.value)}
               />
             </Grid>
+
             <Grid item container justifyContent={'center'} xs={12}>
               <Button
                 sx={{ height: 54, minWidth: 150 }}
@@ -81,9 +117,11 @@ const Form = () => {
                 Submit
               </Button>
             </Grid>
+
             <Grid item xs={12}>
               <Divider />
             </Grid>
+
             <Grid item container justifyContent={'center'} xs={12}>
               <Box>
                 <Typography component="p" variant="body2" align="left">
@@ -121,6 +159,7 @@ const Form = () => {
           </Grid>
         </form>
       </Box>
+
       <Box>
         <Typography color="text.secondary" align={'center'}>
           We'll get back to you in 1-2 business days.
