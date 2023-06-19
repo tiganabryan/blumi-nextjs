@@ -50,11 +50,23 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
           <Link
             underline="none"
             component="a"
-            href="/about"
+            href="/agency"
             color={colorInvert ? 'common.white' : 'text.primary'}
             sx={{ display: 'flex', alignItems: 'center' }}
           >
-            About
+            Portfolio
+          </Link>
+        </Box>
+
+        <Box marginLeft={4}>
+          <Link
+            underline="none"
+            component="a"
+            href="/pricing"
+            color={colorInvert ? 'common.white' : 'text.primary'}
+            sx={{ display: 'flex', alignItems: 'center' }}
+          >
+            Services
           </Link>
         </Box>
 
@@ -66,69 +78,8 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
             color={colorInvert ? 'common.white' : 'text.primary'}
             sx={{ display: 'flex', alignItems: 'center' }}
           >
-            About
+            Contact
           </Link>
-        </Box>
-
-        <Box marginLeft={4}>
-          <Link
-            underline="none"
-            component="a"
-            href="/about"
-            color={colorInvert ? 'common.white' : 'text.primary'}
-            sx={{ display: 'flex', alignItems: 'center' }}
-          >
-            About
-          </Link>
-        </Box>
-
-        <Box marginLeft={4}>
-          <Link
-            underline="none"
-            component="a"
-            href="/about"
-            color={colorInvert ? 'common.white' : 'text.primary'}
-            sx={{ display: 'flex', alignItems: 'center' }}
-          >
-            About
-          </Link>
-        </Box>
-
-        <Box marginLeft={4}>
-          <Link
-            underline="none"
-            component="a"
-            href="/about"
-            color={colorInvert ? 'common.white' : 'text.primary'}
-            sx={{ display: 'flex', alignItems: 'center' }}
-          >
-            About
-          </Link>
-        </Box>
-
-        <Box marginLeft={4}>
-          <Link
-            underline="none"
-            component="a"
-            href="/about"
-            color={colorInvert ? 'common.white' : 'text.primary'}
-            sx={{ display: 'flex', alignItems: 'center' }}
-          >
-            About
-          </Link>
-        </Box>
-
-        <Box marginLeft={4}>
-          <Button
-            variant="contained"
-            color="primary"
-            component="a"
-            target="blank"
-            href="https://mui.com/store/items/the-front-landing-page/"
-            size="large"
-          >
-            Buy now
-          </Button>
         </Box>
       </Box>
       <Box sx={{ display: { xs: 'block', md: 'none' } }} alignItems={'center'}>
