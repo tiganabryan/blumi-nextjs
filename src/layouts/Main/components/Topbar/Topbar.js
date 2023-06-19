@@ -6,6 +6,8 @@ import { alpha, useTheme } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
 
 import { NavItem } from './components';
+// import { NavItemNoDropdown } from './components';
+import NavItemNoDropdown from './components/NavItemNoDropdown/NavItemNoDropdown';
 
 const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
   const theme = useTheme();
@@ -55,10 +57,16 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
           /> */}
         </Box>
         <Box marginLeft={4}>
-          <NavItem
+          {/* <NavItem
             title={'Company'}
             id={'company-pages'}
             items={companyPages}
+            colorInvert={colorInvert}
+          /> */}
+          <NavItemNoDropdown
+            title="Company"
+            id="company-pages"
+            path="/company-about"
             colorInvert={colorInvert}
           />
         </Box>
