@@ -78,6 +78,18 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
             color={colorInvert ? 'common.white' : 'text.primary'}
             sx={{ display: 'flex', alignItems: 'center' }}
           >
+            About
+          </Link>
+        </Box>
+
+        <Box marginLeft={4}>
+          <Link
+            underline="none"
+            component="a"
+            href="/about"
+            color={colorInvert ? 'common.white' : 'text.primary'}
+            sx={{ display: 'flex', alignItems: 'center' }}
+          >
             Contact
           </Link>
         </Box>
