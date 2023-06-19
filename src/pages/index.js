@@ -1,8 +1,9 @@
 import React from 'react';
 import IndexView from 'views/IndexView';
+import DesignCompanyPage from './design-company';
 
 const IndexPage = () => {
-  return <IndexView />;
+  return <DesignCompanyPage />;
 };
 
 export default IndexPage;
