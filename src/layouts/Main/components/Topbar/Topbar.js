@@ -4,10 +4,9 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import { alpha, useTheme } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
+import Link from '@mui/material/Link';
 
 import { NavItem } from './components';
-// import { NavItemNoDropdown } from './components';
-import NavItemNoDropdown from './components/NavItemNoDropdown/NavItemNoDropdown';
 
 const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
   const theme = useTheme();
@@ -47,61 +46,78 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
         />
       </Box>
       <Box sx={{ display: { xs: 'none', md: 'flex' } }} alignItems={'center'}>
-        <Box>
-          <a href="">test</a>
-          {/* <NavItem
-            title={'Landings'}
-            id={'landing-pages'}
-            items={landingPages}
-            colorInvert={colorInvert}
-          /> */}
-        </Box>
         <Box marginLeft={4}>
-          {/* <NavItem
-            title={'Company'}
-            id={'company-pages'}
-            items={companyPages}
-            colorInvert={colorInvert}
-          /> */}
-          <NavItemNoDropdown
-            title="Company"
-            id="company-pages"
-            path="/company-about"
-            colorInvert={colorInvert}
-          />
+          <Link
+            underline="none"
+            component="a"
+            href="/about"
+            color={colorInvert ? 'common.white' : 'text.primary'}
+            sx={{ display: 'flex', alignItems: 'center' }}
+          >
+            About
+          </Link>
         </Box>
+
         <Box marginLeft={4}>
-          <NavItem
-            title={'Account'}
-            id={'account-pages'}
-            items={accountPages}
-            colorInvert={colorInvert}
-          />
+          <Link
+            underline="none"
+            component="a"
+            href="/about"
+            color={colorInvert ? 'common.white' : 'text.primary'}
+            sx={{ display: 'flex', alignItems: 'center' }}
+          >
+            About
+          </Link>
         </Box>
+
         <Box marginLeft={4}>
-          <NavItem
-            title={'Pages'}
-            id={'secondary-pages'}
-            items={secondaryPages}
-            colorInvert={colorInvert}
-          />
+          <Link
+            underline="none"
+            component="a"
+            href="/about"
+            color={colorInvert ? 'common.white' : 'text.primary'}
+            sx={{ display: 'flex', alignItems: 'center' }}
+          >
+            About
+          </Link>
         </Box>
+
         <Box marginLeft={4}>
-          <NavItem
-            title={'Blog'}
-            id={'blog-pages'}
-            items={blogPages}
-            colorInvert={colorInvert}
-          />
+          <Link
+            underline="none"
+            component="a"
+            href="/about"
+            color={colorInvert ? 'common.white' : 'text.primary'}
+            sx={{ display: 'flex', alignItems: 'center' }}
+          >
+            About
+          </Link>
         </Box>
+
         <Box marginLeft={4}>
-          <NavItem
-            title={'Portfolio'}
-            id={'portfolio-pages'}
-            items={portfolioPages}
-            colorInvert={colorInvert}
-          />
+          <Link
+            underline="none"
+            component="a"
+            href="/about"
+            color={colorInvert ? 'common.white' : 'text.primary'}
+            sx={{ display: 'flex', alignItems: 'center' }}
+          >
+            About
+          </Link>
         </Box>
+
+        <Box marginLeft={4}>
+          <Link
+            underline="none"
+            component="a"
+            href="/about"
+            color={colorInvert ? 'common.white' : 'text.primary'}
+            sx={{ display: 'flex', alignItems: 'center' }}
+          >
+            About
+          </Link>
+        </Box>
+
         <Box marginLeft={4}>
           <Button
             variant="contained"
