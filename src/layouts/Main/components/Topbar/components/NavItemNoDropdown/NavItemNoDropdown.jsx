@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-const NavItem = ({ title, id, items, colorInvert = false }) => {
+const NavItemNoDropdown = ({ title, id, items, colorInvert = false }) => {
   const theme = useTheme();
 
   const [anchorEl, setAnchorEl] = useState(null);
@@ -139,4 +139,4 @@ NavItem.propTypes = {
   colorInvert: PropTypes.bool,
 };
 
-export default NavItem;
+export default NavItemNoDropdown;

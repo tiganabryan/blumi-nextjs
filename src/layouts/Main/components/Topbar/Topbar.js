@@ -46,12 +46,13 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
       </Box>
       <Box sx={{ display: { xs: 'none', md: 'flex' } }} alignItems={'center'}>
         <Box>
-          <NavItem
+          <a href="">test</a>
+          {/* <NavItem
             title={'Landings'}
             id={'landing-pages'}
             items={landingPages}
             colorInvert={colorInvert}
-          />
+          /> */}
         </Box>
         <Box marginLeft={4}>
           <NavItem
