@@ -18,7 +18,7 @@ const IndexPage = () => {
     ],
   };
 
-  const [title, description, keywords] = seo;
+  const { title, description, keywords } = seo;
 
   return (
     <>
