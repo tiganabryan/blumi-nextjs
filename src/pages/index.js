@@ -7,7 +7,15 @@ const IndexPage = () => {
   const seo = {
     title: 'My Page Title',
     description: 'This is the description of my page.',
-    keywords: ['keyword1', 'keyword2', 'keyword3'],
+    keywords: [
+      'web design in Midtown Toronto',
+      'web design for small businesses',
+      'lifestyle web design for cafes',
+      'wellness web design for businesses',
+      'affordable web design for startups',
+      'mobile-friendly web design for e-commerce',
+      'local SEO services for businesses',
+    ],
   };
 
   const [title, description, keywords] = seo;
