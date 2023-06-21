@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import { alpha, useTheme } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
+import Link from '@mui/material/Link';
 
 import { NavItem } from './components';
 
@@ -45,65 +46,52 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
         />
       </Box>
       <Box sx={{ display: { xs: 'none', md: 'flex' } }} alignItems={'center'}>
-        <Box>
-          <NavItem
-            title={'Landings'}
-            id={'landing-pages'}
-            items={landingPages}
-            colorInvert={colorInvert}
-          />
-        </Box>
         <Box marginLeft={4}>
-          <NavItem
-            title={'Company'}
-            id={'company-pages'}
-            items={companyPages}
-            colorInvert={colorInvert}
-          />
-        </Box>
-        <Box marginLeft={4}>
-          <NavItem
-            title={'Account'}
-            id={'account-pages'}
-            items={accountPages}
-            colorInvert={colorInvert}
-          />
-        </Box>
-        <Box marginLeft={4}>
-          <NavItem
-            title={'Pages'}
-            id={'secondary-pages'}
-            items={secondaryPages}
-            colorInvert={colorInvert}
-          />
-        </Box>
-        <Box marginLeft={4}>
-          <NavItem
-            title={'Blog'}
-            id={'blog-pages'}
-            items={blogPages}
-            colorInvert={colorInvert}
-          />
-        </Box>
-        <Box marginLeft={4}>
-          <NavItem
-            title={'Portfolio'}
-            id={'portfolio-pages'}
-            items={portfolioPages}
-            colorInvert={colorInvert}
-          />
-        </Box>
-        <Box marginLeft={4}>
-          <Button
-            variant="contained"
-            color="primary"
+          <Link
+            underline="none"
             component="a"
-            target="blank"
-            href="https://mui.com/store/items/the-front-landing-page/"
-            size="large"
+            href="/agency"
+            color={colorInvert ? 'common.white' : 'text.primary'}
+            sx={{ display: 'flex', alignItems: 'center' }}
           >
-            Buy now
-          </Button>
+            Portfolio
+          </Link>
+        </Box>
+
+        <Box marginLeft={4}>
+          <Link
+            underline="none"
+            component="a"
+            href="/pricing"
+            color={colorInvert ? 'common.white' : 'text.primary'}
+            sx={{ display: 'flex', alignItems: 'center' }}
+          >
+            Services
+          </Link>
+        </Box>
+
+        <Box marginLeft={4}>
+          <Link
+            underline="none"
+            component="a"
+            href="/about-side-cover"
+            color={colorInvert ? 'common.white' : 'text.primary'}
+            sx={{ display: 'flex', alignItems: 'center' }}
+          >
+            About
+          </Link>
+        </Box>
+
+        <Box marginLeft={4}>
+          <Link
+            underline="none"
+            component="a"
+            href="/contact-page-cover"
+            color={colorInvert ? 'common.white' : 'text.primary'}
+            sx={{ display: 'flex', alignItems: 'center' }}
+          >
+            Contact
+          </Link>
         </Box>
       </Box>
       <Box sx={{ display: { xs: 'block', md: 'none' } }} alignItems={'center'}>

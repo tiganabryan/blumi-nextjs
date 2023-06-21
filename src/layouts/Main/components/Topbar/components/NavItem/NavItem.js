@@ -14,9 +14,11 @@ const NavItem = ({ title, id, items, colorInvert = false }) => {
   const [anchorEl, setAnchorEl] = useState(null);
   const [openedPopoverId, setOpenedPopoverId] = useState(null);
 
+  // this need to link to page, not open dropdown
   const handleClick = (event, popoverId) => {
     setAnchorEl(event.target);
     setOpenedPopoverId(popoverId);
+    console.log(event, event.target);
   };
 
   const handleClose = () => {
