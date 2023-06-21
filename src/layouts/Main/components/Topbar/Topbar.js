@@ -86,7 +86,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
           <Link
             underline="none"
             component="a"
-            href="/about"
+            href="/contact-page-cover"
             color={colorInvert ? 'common.white' : 'text.primary'}
             sx={{ display: 'flex', alignItems: 'center' }}
           >
