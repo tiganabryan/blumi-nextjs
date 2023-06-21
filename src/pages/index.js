@@ -5,15 +5,15 @@ import DesignCompanyPage from './design-company';
 
 const IndexPage = () => {
   const seo = {
-    title: 'My Page Title',
-    description: 'This is the description of my page.',
+    title: 'blumi design | home',
+    description: 'website maintenance for small toronto businesses.',
     keywords: [
       'web design in Midtown Toronto',
       'web design for small businesses',
-      'lifestyle web design for cafes',
-      'wellness web design for businesses',
-      'affordable web design for startups',
-      'mobile-friendly web design for e-commerce',
+      'fix wordpress website toronto',
+      'wellness web design for toronto businesses',
+      'affordable web design for toronto businesses',
+      'mobile-friendly web design toronto',
       'local SEO services for businesses',
     ],
   };
