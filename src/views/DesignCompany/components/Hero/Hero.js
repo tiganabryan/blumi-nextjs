@@ -20,6 +20,7 @@ const Hero = () => {
           <Box marginBottom={2}>
             <Typography
               variant="h2"
+              component="h1"
               color="text.primary"
               sx={{ fontWeight: 700 }}
             >
@@ -41,7 +42,7 @@ const Hero = () => {
             </Typography>
           </Box>
           <Box marginBottom={3}>
-            <Typography variant="h6" component="p" color="text.secondary">
+            <Typography variant="h6" component="h2" color="text.secondary">
               World developers use our theFront theme to build their web
               applications.
               <br />
