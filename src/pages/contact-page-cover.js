@@ -26,7 +26,6 @@ const ContactCoverPage = () => {
       <ContactPageCover />
     </>
   );
-  return <ContactPageCover />;
 };
 
 export default ContactCoverPage;
