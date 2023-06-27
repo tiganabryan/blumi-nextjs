@@ -5,6 +5,9 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
+import Image from 'next/image';
+import TestImg from './IMG_4299.png';
+import SVG1 from '/Users/user/Desktop/blumi/blumi-nextjs/src/img/Vector 1.svg';
 
 const Hero = () => {
   const theme = useTheme();
@@ -115,6 +118,39 @@ const Hero = () => {
             filter: theme.palette.mode === 'dark' ? 'brightness(0.7)' : 'none',
           }}
         />
+      </Grid>
+
+      <Grid
+        item
+        container
+        alignItems={'center'}
+        justifyContent={'center'}
+        xs={12}
+        md={6}
+      >
+        {/* <Box
+          component={'img'}
+          loading="lazy"
+          height={1}
+          width={1}
+          src={TestImg}
+          alt="..."
+          borderRadius={2}
+          maxWidth={600}
+          maxHeight={500}
+          sx={{
+            objectFit: 'cover',
+            boxShadow: '19px 20px 0px 0 rgb(140 152 164 / 13%)',
+            filter: theme.palette.mode === 'dark' ? 'brightness(0.7)' : 'none',
+          }}
+        /> */}
+        {/* <div> */}
+        <Image
+          src={SVG1}
+          // width={500} height={500}
+          alt="test svg"
+        />
+        {/* </div> */}
       </Grid>
     </Grid>
   );
