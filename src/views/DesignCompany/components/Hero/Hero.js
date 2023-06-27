@@ -7,7 +7,9 @@ import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import Image from 'next/image';
 import TestImg from './IMG_4299.png';
-import SVG1 from '/Users/user/Desktop/blumi/blumi-nextjs/src/img/Vector 1.svg';
+import YellowHeroVector from '/Users/user/Desktop/blumi/blumi-nextjs/src/img/Vector 1.svg';
+import GreenHeroVector from '/Users/user/Desktop/blumi/blumi-nextjs/src/img/Vector 2.svg';
+import PinkHeroVector from '/Users/user/Desktop/blumi/blumi-nextjs/src/img/Vector 3.svg';
 
 const Hero = () => {
   const theme = useTheme();
@@ -146,11 +148,23 @@ const Hero = () => {
         /> */}
         {/* <div> */}
         <Image
-          src={SVG1}
+          src={YellowHeroVector}
           // width={500} height={500}
           alt="test svg"
         />
         {/* </div> */}
+
+        <Image
+          src={PinkHeroVector}
+          // width={500} height={500}
+          alt="test svg"
+        />
+
+        <Image
+          src={GreenHeroVector}
+          // width={500} height={500}
+          alt="test svg"
+        />
       </Grid>
     </Grid>
   );
