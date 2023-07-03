@@ -12,6 +12,9 @@ import TopNav from 'components/TopNav';
 
 import { Topbar, Sidebar, Footer } from './components';
 
+import HeroVector from '../../views/DesignCompany/components/Hero/HeroVector.jsx';
+// import { HeroSVG } from '/Users/user/Desktop/blumi/blumi-nextjs/src/img/Group 739.svg';
+
 import pages from '../navigation';
 
 const Main = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
@@ -37,9 +40,24 @@ const Main = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
     threshold: 38,
   });
 
+  const viewportWidth = globalThis?.window?.innerWidth;
+  const viewportHeight = globalThis?.window?.innerHeight;
+
+  const viewBoxWidth = viewportWidth;
+  const viewBoxHeight = viewportHeight;
+
   return (
     <Box>
+      {/* <HeroVector viewBoxWidth={viewBoxWidth} viewBoxHeight={viewBoxHeight} /> */}
+
       <Box bgcolor={bgcolor} position={'relative'} zIndex={theme.zIndex.appBar}>
+        {/* <HeroVector viewBoxWidth={viewBoxWidth} viewBoxHeight={viewBoxHeight} /> */}
+        <HeroVector />
+        <Topbar
+          onSidebarOpen={handleSidebarOpen}
+          pages={pages}
+          colorInvert={trigger ? false : colorInvert}
+        />
         <Container paddingTop={'8px !important'} paddingBottom={'0 !important'}>
           {/* <TopNav colorInvert={colorInvert} /> */}
         </Container>
@@ -53,11 +71,12 @@ const Main = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
         elevation={trigger ? 1 : 0}
       >
         <Container paddingY={1}>
-          <Topbar
+          {/* <HeroVector /> */}
+          {/* <Topbar
             onSidebarOpen={handleSidebarOpen}
             pages={pages}
             colorInvert={trigger ? false : colorInvert}
-          />
+          /> */}
         </Container>
       </AppBar>
       <Sidebar

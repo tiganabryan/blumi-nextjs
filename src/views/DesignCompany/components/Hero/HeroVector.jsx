@@ -1,12 +1,12 @@
 import React from 'react';
 // import HeroVector from '/Users/user/Desktop/blumi/blumi-nextjs/src/img/Group 739.svg';
 
-const HeroVector = ({ viewBoxWidth = 1440, viewBoxHeight = 827 }) => {
+const HeroVector = () => {
   return (
     <svg
-      width="100%"
-      height="1000"
-      viewBox={`0 0 ${viewBoxWidth} ${viewBoxHeight}`}
+      // width="100%"
+      // height="auto"
+      viewBox="0 0 1440 827"
       preserveAspectRatio="none"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
