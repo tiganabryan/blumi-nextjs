@@ -26,6 +26,8 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
       justifyContent={'space-between'}
       alignItems={'center'}
       width={1}
+      // paddingX={{ xs: 1, md: 6 }}
+      position={'relative'}
     >
       <Box
         display={'flex'}
