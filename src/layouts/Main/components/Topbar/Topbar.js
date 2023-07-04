@@ -24,8 +24,9 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
     <Box
       display={'flex'}
       justifyContent={'space-between'}
-      alignItems={'center'}
+      // alignItems={'center'}
       width={1}
+      padding={{ xs: 2, md: 3 }}
       // paddingX={{ xs: 1, md: 6 }}
       // position={'sticky'}
       // top: {xs: 0, md: 1}
@@ -36,6 +37,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
       bottom="0px"
       left="0px"
       right="0px"
+      alignItems="flex-start"
 
       // backgroundColor={colorInvert ? 'common.white' : 'transparent'}
       // backgroundColor={'rgb(255, 200, 87)'}
@@ -47,7 +49,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
         title="theFront"
         width={{ xs: 100, md: 120 }}
       >
-        <Box
+        {/* <Box
           component={'img'}
           src={
             mode === 'light' && !colorInvert
@@ -56,15 +58,19 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
           }
           height={1}
           width={1}
-        />
+        /> */}
       </Box>
-      <Box sx={{ display: { xs: 'none', md: 'flex' } }} alignItems={'center'}>
+      <Box
+        sx={{ display: { xs: 'none', md: 'flex' } }}
+        alignItems={'center'}
+        paddingRight={24}
+      >
         <Box marginLeft={4}>
           <Link
             underline="none"
             component="a"
             href="/agency"
-            color={colorInvert ? 'common.white' : 'text.primary'}
+            color={'common.white'}
             sx={{ display: 'flex', alignItems: 'center' }}
           >
             Portfolio
@@ -76,7 +82,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
             underline="none"
             component="a"
             href="/pricing"
-            color={colorInvert ? 'common.white' : 'text.primary'}
+            color={'common.white'}
             sx={{ display: 'flex', alignItems: 'center' }}
           >
             Services
@@ -88,7 +94,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
             underline="none"
             component="a"
             href="/about-side-cover"
-            color={colorInvert ? 'common.white' : 'text.primary'}
+            color={'common.white'}
             sx={{ display: 'flex', alignItems: 'center' }}
           >
             About
@@ -100,7 +106,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
             underline="none"
             component="a"
             href="/contact-page-cover"
-            color={colorInvert ? 'common.white' : 'text.primary'}
+            color={'common.white'}
             sx={{ display: 'flex', alignItems: 'center' }}
           >
             Contact
