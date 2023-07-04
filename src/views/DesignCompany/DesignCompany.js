@@ -29,9 +29,9 @@ const DesignCompany = () => {
       {/* <HeroVector viewBoxWidth={viewBoxWidth} viewBoxHeight={viewBoxHeight} /> */}
 
       <Main>
-        <Container>
-          <Hero />
-        </Container>
+        {/* <Container> */}
+        <Hero />
+        {/* </Container> */}
         <Container>
           <Partners />
         </Container>
