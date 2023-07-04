@@ -55,6 +55,33 @@ const Hero = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
         pages={pages}
         colorInvert={trigger ? false : colorInvert}
       />
+      <Box position="absolute" top="0px" bottom="0px" left="0px" right="0px">
+        <Grid container>
+          <Grid item container direction={'column'}>
+            <Typography variant="h1">THE ART OF WEB DESIGN</Typography>
+            <Typography variant="h2">
+              We design, develop and launch websites and products for startups,
+              small businesses and ourselves.
+            </Typography>
+            <br />
+            <Typography variant="h2">
+              Are you ready to unlock the true potential of your online
+              presence? Let Blumi be your guide on this transformative journey.
+              Together, we will create a digital masterpiece that elevates your
+              brand, captivates your audience, and drives your business forward.
+              Contact us now to embark on an unforgettable design adventure.
+            </Typography>
+            <Button
+              variant="contained"
+              color="primary"
+              size="small"
+              fullWidth={isMd ? false : true}
+            >
+              Contact Us
+            </Button>
+          </Grid>
+        </Grid>
+      </Box>
       <Grid container spacing={4}>
         {/* <Grid item container xs={12}> */}
         {/* <Box> */}
