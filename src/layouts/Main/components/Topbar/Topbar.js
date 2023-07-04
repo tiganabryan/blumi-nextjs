@@ -27,9 +27,15 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
       alignItems={'center'}
       width={1}
       // paddingX={{ xs: 1, md: 6 }}
-      position={'sticky'}
+      // position={'sticky'}
       // top: {xs: 0, md: 1}
       // ^^ FIX THE ERROR
+      position="absolute"
+      // background: rgba(100,100,100,0);
+      top="0px"
+      bottom="0px"
+      left="0px"
+      right="0px"
 
       // backgroundColor={colorInvert ? 'common.white' : 'transparent'}
       // backgroundColor={'rgb(255, 200, 87)'}
