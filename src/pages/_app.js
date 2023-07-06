@@ -13,7 +13,7 @@ import 'aos/dist/aos.css';
 const theme = createTheme({
   // palette: mode === 'light' ? light : dark,
   primary: {
-    main: '#3f51b5',
+    main: '#227C9D',
   },
   secondary: {
     main: '#8D3B72',
