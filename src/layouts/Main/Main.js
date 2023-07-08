@@ -12,9 +12,6 @@ import TopNav from 'components/TopNav';
 
 import { Topbar, Sidebar, Footer } from './components';
 
-import HeroVector from '../../views/DesignCompany/components/Hero/HeroVector.jsx';
-// import { HeroSVG } from '/Users/user/Desktop/blumi/blumi-nextjs/src/img/Group 739.svg';
-
 import pages from '../navigation';
 
 const Main = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
@@ -39,12 +36,6 @@ const Main = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
     disableHysteresis: true,
     threshold: 38,
   });
-
-  const viewportWidth = globalThis?.window?.innerWidth;
-  const viewportHeight = globalThis?.window?.innerHeight;
-
-  const viewBoxWidth = viewportWidth;
-  const viewBoxHeight = viewportHeight;
 
   return (
     <Box>

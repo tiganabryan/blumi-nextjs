@@ -24,24 +24,14 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
     <Box
       display={'flex'}
       justifyContent={'space-between'}
-      // alignItems={'center'}
       width={1}
       padding={{ xs: 2, md: 3 }}
-      // paddingX={{ xs: 1, md: 6 }}
-      // position={'sticky'}
-      // top: {xs: 0, md: 1}
-      // ^^ FIX THE ERROR
       position="sticky"
-      // background={'none'}
-      // background: rgba(100,100,100,0);
       top="0px"
       bottom="0px"
       left="0px"
       right="0px"
       alignItems="flex-start"
-
-      // backgroundColor={colorInvert ? 'common.white' : 'transparent'}
-      // backgroundColor={'rgb(255, 200, 87)'}
     >
       <Box
         display={'flex'}
@@ -60,6 +50,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
           height={1}
           width={1}
         /> */}
+        {/* DON'T DELETE ^^ THAT'S WHERE THE LOGO GOES */}
       </Box>
       <Box
         sx={{ display: { xs: 'none', md: 'flex' } }}

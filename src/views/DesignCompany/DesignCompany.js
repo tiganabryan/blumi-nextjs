@@ -14,22 +14,11 @@ import {
   Contact,
 } from './components';
 
-import HeroVector from '../../views/DesignCompany/components/Hero/HeroVector.jsx';
-import HeroSVG from './components/Hero/HeroSVG.svg';
-
 const DesignCompany = () => {
   const theme = useTheme();
 
-  const viewportWidth = globalThis?.window?.innerWidth;
-  const viewportHeight = globalThis?.window?.innerHeight;
-
-  const viewBoxWidth = viewportWidth;
-  const viewBoxHeight = viewportHeight;
-
   return (
     <>
-      {/* <HeroVector viewBoxWidth={viewBoxWidth} viewBoxHeight={viewBoxHeight} /> */}
-
       {/* <Main> */}
       {/* <Container> */}
       <Box className="hero-box">
