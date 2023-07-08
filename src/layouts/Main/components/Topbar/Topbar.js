@@ -31,7 +31,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
       // position={'sticky'}
       // top: {xs: 0, md: 1}
       // ^^ FIX THE ERROR
-      // position="absolute"
+      position="sticky"
       // background={'none'}
       // background: rgba(100,100,100,0);
       top="0px"
@@ -114,7 +114,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
           </Link>
         </Box>
       </Box>
-      <Box sx={{ display: { xs: 'block', md: 'none' } }} alignItems={'center'}>
+      <Box sx={{ display: { md: 'none' } }} alignItems={'center'}>
         <Button
           onClick={() => onSidebarOpen()}
           aria-label="Menu"

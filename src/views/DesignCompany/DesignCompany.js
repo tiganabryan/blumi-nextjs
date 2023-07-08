@@ -37,7 +37,7 @@ const DesignCompany = () => {
       </Box>
 
       {/* </Container> */}
-      <Container>
+      {/* <Container>
         <Partners />
       </Container>
       <Container>
@@ -48,7 +48,7 @@ const DesignCompany = () => {
       </Container>
       <Container>
         <CaseStudy3 />
-      </Container>
+      </Container> */}
       <Box
         position={'relative'}
         sx={{
