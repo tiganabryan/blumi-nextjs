@@ -49,29 +49,34 @@ const Hero = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
 
   return (
     <>
-      <HeroVector />
+      {/* <HeroVector /> */}
       <Topbar
         onSidebarOpen={handleSidebarOpen}
         pages={pages}
         colorInvert={trigger ? false : colorInvert}
       />
-      <Box position="absolute" top="0px" bottom="0px" left="0px" right="0px">
+      <Box
+      // position="absolute" top="0px" bottom="0px" left="0px" right="0px"
+      >
         <Grid container>
           <Grid item container direction={'column'}>
+            {/* <Grid item xs={12} md={6}> */}
             <Typography
-              variant="h1"
+              // variant="h1"
               component={'h1'}
-              // fontSize={'20px'}
-              color={theme.primary.main}
+              fontSize={'5rem'}
+              fontFamily={"'Livvic', sans-serif"}
+              color="#227C9D"
             >
               THE ART OF WEB DESIGN
             </Typography>
-            <Typography variant="h2" color={'white'}>
+            {/* </Grid> */}
+            <Typography variant="h4" color={'white'}>
               We design, develop and launch websites and products for startups,
               small businesses and ourselves.
             </Typography>
             <br />
-            <Typography variant="h2" color={'white'}>
+            <Typography variant="h4" color={'white'}>
               Are you ready to unlock the true potential of your online
               presence? Let Blumi be your guide on this transformative journey.
               Together, we will create a digital masterpiece that elevates your
@@ -98,12 +103,14 @@ const Hero = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
         <Grid item container xs={12} md={6} alignItems={'center'}>
           <Box
             data-aos={isMd ? 'fade-right' : 'fade-up'}
-            sx={{
-              // backgroundImage: `url(${HeroSVG})`,
-              // url('./HeroSVG.svg'),
-              backgroundRepeat: 'repeat',
-              backgroundSize: 'cover',
-            }}
+            sx={
+              {
+                // backgroundImage: `url(${HeroSVG})`,
+                // url('./HeroSVG.svg'),
+                // backgroundRepeat: 'repeat',
+                // backgroundSize: 'cover',
+              }
+            }
           >
             <Box marginBottom={2}>
               <Typography

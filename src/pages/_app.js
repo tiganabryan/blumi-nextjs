@@ -9,6 +9,8 @@ import Page from '../components/Page';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import 'aos/dist/aos.css';
+import '../views/DesignCompany/hero.css';
+// /Users/user/Desktop/blumi/blumi-nextjs/src/views/DesignCompany/hero.css
 
 const theme = createTheme({
   // palette: mode === 'light' ? light : dark,
@@ -24,9 +26,9 @@ const theme = createTheme({
   },
   // shadows: shadows(mode),
   typography: {
-    fontFamily: "'Lato', sans-serif;",
+    fontFamily: "'Lato', sans-serif",
     h1: {
-      fontFamily: "'Livvic', sans-serif;",
+      fontFamily: "'Livvic', sans-serif",
     },
     button: {
       textTransform: 'none',

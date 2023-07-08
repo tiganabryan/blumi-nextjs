@@ -31,7 +31,8 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
       // position={'sticky'}
       // top: {xs: 0, md: 1}
       // ^^ FIX THE ERROR
-      position="absolute"
+      // position="absolute"
+      // background={'none'}
       // background: rgba(100,100,100,0);
       top="0px"
       bottom="0px"

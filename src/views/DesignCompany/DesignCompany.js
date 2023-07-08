@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
+// import './hero.css';
 
 import Main from 'layouts/Main';
 import Container from 'components/Container';
@@ -14,6 +15,7 @@ import {
 } from './components';
 
 import HeroVector from '../../views/DesignCompany/components/Hero/HeroVector.jsx';
+import HeroSVG from './components/Hero/HeroSVG.svg';
 
 const DesignCompany = () => {
   const theme = useTheme();
@@ -30,7 +32,10 @@ const DesignCompany = () => {
 
       {/* <Main> */}
       {/* <Container> */}
-      <Hero />
+      <Box className="hero-box">
+        <Hero />
+      </Box>
+
       {/* </Container> */}
       <Container>
         <Partners />
