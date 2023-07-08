@@ -5,6 +5,7 @@ import Button from '@mui/material/Button';
 import { alpha, useTheme } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
 import Link from '@mui/material/Link';
+import pages from 'layouts/navigation';
 
 import { NavItem } from './components';
 

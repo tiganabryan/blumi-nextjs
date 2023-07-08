@@ -10,6 +10,9 @@ import { Topbar } from 'layouts/Main/components';
 import pages from '/Users/user/Desktop/blumi/blumi-nextjs/src/layouts/navigation.js';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 
+import ServicePaper from './ServicePaper';
+import ServiceCard from '../../../../blocks/cards/ServicesCard/ServicesCard';
+
 const Hero = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
   const theme = useTheme();
 
@@ -82,6 +85,52 @@ const Hero = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
           >
             Contact Us
           </Button>
+        </Grid>
+      </Grid>
+
+      <Grid
+        container
+        direction={'column'}
+        paddingX={{ xs: 6, md: 12 }}
+        paddingY={{ xs: 2, md: 6 }}
+      >
+        <Grid item container alignContent={'center'} direction={'column'}>
+          <Grid item>
+            <Typography component={'h2'} align="center">
+              Services
+            </Typography>
+          </Grid>
+
+          <Grid item>
+            <Typography component={'p'}>
+              Unlike teams from larger agencies, we will treat your project as
+              if it were our own.
+            </Typography>
+          </Grid>
+        </Grid>
+
+        <Grid
+          item
+          container
+          spacing={{ xs: 3 }}
+          direction={`xs ? 'column' : 'row'`}
+          justifyContent={'center'}
+        >
+          <Grid item xs={12} md={3}>
+            <ServiceCard />
+          </Grid>
+
+          <Grid item xs={12} md={3}>
+            <ServiceCard />
+          </Grid>
+
+          <Grid item xs={12} md={3}>
+            <ServiceCard />
+          </Grid>
+
+          <Grid item xs={12} md={3}>
+            <ServiceCard />
+          </Grid>
         </Grid>
       </Grid>
     </>

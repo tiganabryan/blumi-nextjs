@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 // import './hero.css';
 
 import Main from 'layouts/Main';
+import { Topbar } from 'layouts/Main/components';
 import Container from 'components/Container';
 import {
   Partners,
@@ -21,6 +22,7 @@ const DesignCompany = () => {
     <>
       {/* <Main> */}
       {/* <Container> */}
+      {/* <Topbar /> */}
       <Box className="hero-box">
         <Hero />
       </Box>
@@ -44,10 +46,10 @@ const DesignCompany = () => {
           backgroundColor: theme.palette.alternate.main,
         }}
       >
-        <Container>
+        {/* <Container>
           <Contact />
-        </Container>
-        <Box
+        </Container> */}
+        {/* <Box
           component={'svg'}
           preserveAspectRatio="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -63,7 +65,7 @@ const DesignCompany = () => {
             fill={theme.palette.background.paper}
             d="M0,0c0,0,934.4,93.4,1920,0v100.1H0L0,0z"
           ></path>
-        </Box>
+        </Box> */}
       </Box>
       {/* </Main> */}
     </>
