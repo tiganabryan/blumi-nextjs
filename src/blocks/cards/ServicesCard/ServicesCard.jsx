@@ -9,79 +9,37 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { useTheme } from '@mui/material/styles';
+import SvgIcon from '@mui/material/SvgIcon';
 
 import Container from 'components/Container';
 
-const ServiceCard = () => {
+const ServiceCard = ({ iconSVG, iconColour, title, description }) => {
   const theme = useTheme();
 
   return (
-    // <Box
-    //   sx={{
-    //     display: 'flex',
-    //     flexWrap: 'wrap',
-    // '& > :not(style)': {
-    //   m: 1,
-    //       width: 128,
-    //       height: 128,
-    //     },
-    //   }}
-    // >
-    //   <Paper elevation={3} />
-    // </Box>
-
-    <Container maxWidth={800}>
-      <Card
-        sx={{
-          p: { xs: 12, md: 3 },
-          borderTopLeftRadius: 0,
-          borderTopRightRadius: 0,
-          borderTop: `2px solid ${theme.palette.primary.main}`,
-        }}
-      >
-        <Typography
-          variant="h5"
-          sx={{
-            fontWeight: 700,
-          }}
-        >
-          User details
-        </Typography>
-        <Divider sx={{ marginY: 4 }} />
-        <form>
-          <Grid container spacing={4}>
-            <Grid item xs={12}>
-              <Typography variant={'subtitle2'} sx={{ marginBottom: 2 }}>
-                Enter your name
-              </Typography>
-              <TextField
-                label="Name *"
-                variant="outlined"
-                name={'name'}
-                type={'text'}
-                fullWidth
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <Typography variant={'subtitle2'} sx={{ marginBottom: 2 }}>
-                Enter your email
-              </Typography>
-              <TextField
-                label="Email *"
-                variant="outlined"
-                name={'email'}
-                fullWidth
-              />
-            </Grid>
-            <Grid item container xs={12}>
-              <Button size={'large'} variant={'contained'} type={'submit'}>
-                Save changes
-              </Button>
-            </Grid>
-          </Grid>
-        </form>
-      </Card>
-    </Container>
+    // <Container maxWidth={800}>
+    <Card
+      sx={{
+        p: 3,
+      }}
+    >
+      <Grid container direction={'column'}>
+        <Grid item>
+          <div backgroundcolor={iconColour} opacity=".1">
+            <SvgIcon htmlColor={iconColour}>{iconSVG}</SvgIcon>
+          </div>
+        </Grid>
+        <Grid item>
+          <Typography fontWeight={700} fontSize={'1.25rem'}>
+            {title}
+          </Typography>
+        </Grid>
+        <Grid item>
+          <Typography>{description}</Typography>
+        </Grid>
+      </Grid>
+    </Card>
+    // </Container>
     // </Box>
   );
 };
