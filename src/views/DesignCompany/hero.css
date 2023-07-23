@@ -1,6 +1,17 @@
-.hero-box {
-  background-image: url('./components/Hero/HeroSVG.svg');
+/* svg background for mobile */
+.hero-container {
+  background-image: url('./components/Hero/HeroSVGmobile.svg');
   background-size: cover;
   height: 100vh;
   width: 100vw;
+}
+
+/* wider version of svg for desktop */
+@media (min-width: 600px) {
+  .hero-container {
+    background-image: url('./components/Hero/HeroSVG.svg');
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+  }
 }

@@ -23,11 +23,23 @@ const ServiceCard = ({ iconSVG, iconColour, title, description }) => {
         p: 3,
       }}
     >
-      <Grid container direction={'column'}>
+      <Grid container direction={'column'} spacing={3}>
         <Grid item>
-          <div backgroundcolor={iconColour} opacity=".1">
-            <SvgIcon htmlColor={iconColour}>{iconSVG}</SvgIcon>
-          </div>
+          {/* <div
+            backgroundcolor={iconColour}
+            opacity=".1"
+            width={'20px'}
+            height={'20px'}
+          > */}
+          <SvgIcon
+          // color="primary"
+          // width={20}
+          // height={20}
+          //   htmlColor={iconColour}
+          >
+            {iconSVG}
+          </SvgIcon>
+          {/* </div> */}
         </Grid>
         <Grid item>
           <Typography fontWeight={700} fontSize={'1.25rem'}>

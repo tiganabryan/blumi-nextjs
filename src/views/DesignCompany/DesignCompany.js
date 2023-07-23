@@ -23,7 +23,7 @@ const DesignCompany = () => {
       {/* <Main> */}
       {/* <Container> */}
       {/* <Topbar /> */}
-      <Box className="hero-box">
+      <Box className="hero-container">
         <Hero />
       </Box>
 
