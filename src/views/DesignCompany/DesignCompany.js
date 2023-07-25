@@ -13,7 +13,13 @@ import {
   CaseStudy3,
   Hero,
   Contact,
+  OurWork,
+  MeetYourTeam,
 } from './components';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+
+import Form from '/Users/user/Desktop/blumi/blumi-nextjs/src/views/HireUs/components/Form/Form.js';
 
 const DesignCompany = () => {
   const theme = useTheme();
@@ -25,49 +31,45 @@ const DesignCompany = () => {
       {/* <Topbar /> */}
       <Box className="hero-container">
         <Hero />
-      </Box>
+        <OurWork />
+        <MeetYourTeam />
+        <Container maxWidth={800} paddingBottom={'0 !important'}>
+          <Grid
+            item
+            container
+            alignContent={'center'}
+            direction={'column'}
+            marginBottom={4}
+          >
+            <Grid item marginTop={8} marginBottom={1}>
+              <Typography
+                variant={'h4'}
+                component={'h2'}
+                color={'#227C9D'}
+                fontWeight={'600'}
+                align="center"
+                // id="services-section--js-scroll"
+              >
+                Got a project for us?
+              </Typography>
+            </Grid>
 
-      {/* </Container> */}
-      {/* <Container>
-        <Partners />
-      </Container>
-      <Container>
-        <CaseStudy1 />
-      </Container>
-      <Container paddingY={'0 !important'}>
-        <CaseStudy2 />
-      </Container>
-      <Container>
-        <CaseStudy3 />
-      </Container> */}
-      <Box
-        position={'relative'}
-        sx={{
-          backgroundColor: theme.palette.alternate.main,
-        }}
-      >
-        {/* <Container>
-          <Contact />
-        </Container> */}
-        {/* <Box
-          component={'svg'}
-          preserveAspectRatio="none"
-          xmlns="http://www.w3.org/2000/svg"
-          x="0px"
-          y="0px"
-          viewBox="0 0 1920 100.1"
-          sx={{
-            width: '100%',
-            marginBottom: theme.spacing(-1),
-          }}
-        >
-          <path
-            fill={theme.palette.background.paper}
-            d="M0,0c0,0,934.4,93.4,1920,0v100.1H0L0,0z"
-          ></path>
-        </Box> */}
+            <Typography
+              variant={'body1'}
+              fontSize={'1.2rem'}
+              component={'h2'}
+              color={'#646E73'}
+              // fontWeight={'600'}
+              align="center"
+              // id="services-section--js-scroll"
+            >
+              We help brands and platforms turn big ideas into beautiful digital
+              products and experiences.
+            </Typography>
+          </Grid>
+          <Form />
+        </Container>
       </Box>
-      {/* </Main> */}
     </>
   );
 };

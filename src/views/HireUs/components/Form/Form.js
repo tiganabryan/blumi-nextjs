@@ -134,7 +134,7 @@ const Form = () => {
           </Grid>
           <Grid item xs={12}>
             <Typography variant={'subtitle2'} sx={{ marginBottom: 2 }}>
-              Please tell us the budget
+              Please tell us your budget
             </Typography>
             <TextField
               select
@@ -148,10 +148,10 @@ const Form = () => {
               helperText={formik.touched.budget && formik.errors.budget}
             >
               {[
-                '< $20.000',
-                '$20.000 - $50.000',
-                '$50.000 - $100.000',
-                '> $100.000',
+                '< $20,000',
+                '$20,000 - $50,000',
+                '$50,000 - $100,000',
+                '> $100,000',
               ].map((option) => (
                 <MenuItem key={option} value={option}>
                   {option}

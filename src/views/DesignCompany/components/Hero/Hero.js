@@ -77,7 +77,7 @@ const Hero = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
             align="left"
             lineHeight={1.1}
           >
-            LOREM LOREM LOREM LOREM
+            THE ART OF WEB DESIGN
           </Typography>
         </Grid>
 
@@ -108,7 +108,7 @@ const Hero = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
       >
         <Grid item container alignContent={'center'} direction={'column'}>
           <Grid item container justifyContent={'center'}>
-            <Box marginTop={4}>
+            <Box marginTop={8}>
               <NoSsr>
                 <Box
                   component={'svg'}
@@ -206,8 +206,8 @@ const Hero = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
                 <Grid item>
                   <Typography>
                     We meet with your team to know more about your idea, project
-                    and goal. After that, our team sits to create an action plan
-                    and proposal for your project.
+                    and goal. After that, our team creates an action plan and
+                    proposal for your project.
                   </Typography>
                 </Grid>
               </Grid>
@@ -255,8 +255,8 @@ const Hero = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
                 <Grid item>
                   <Typography>
                     We meet with your team to know more about your idea, project
-                    and goal. After that, our team sits to create an action plan
-                    and proposal for your project.
+                    and goal. After that, our team creates an action plan and
+                    proposal for your project.
                   </Typography>
                 </Grid>
               </Grid>
@@ -304,8 +304,8 @@ const Hero = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
                 <Grid item>
                   <Typography>
                     We meet with your team to know more about your idea, project
-                    and goal. After that, our team sits to create an action plan
-                    and proposal for your project.
+                    and goal. After that, our team creates an action plan and
+                    proposal for your project.
                   </Typography>
                 </Grid>
               </Grid>
@@ -353,8 +353,8 @@ const Hero = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
                 <Grid item>
                   <Typography>
                     We meet with your team to know more about your idea, project
-                    and goal. After that, our team sits to create an action plan
-                    and proposal for your project.
+                    and goal. After that, our team creates an action plan and
+                    proposal for your project.
                   </Typography>
                 </Grid>
               </Grid>
