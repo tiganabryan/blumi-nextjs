@@ -12,6 +12,8 @@ import useScrollTrigger from '@mui/material/useScrollTrigger';
 import NoSsr from '@mui/material/NoSsr';
 import Divider from '@mui/material/Divider';
 import Card from '@mui/material/Card';
+// import kbkunleWebsite from '../Hero/kbkunleWebsite.png';
+import kbkunleWebsite from './kbkunleWebsite.png';
 
 const OurWork = ({
   children,
@@ -78,26 +80,12 @@ const OurWork = ({
           </Grid>
 
           <Grid item container>
-            <Card xs={12}>
-              <Grid item container direction={'column'} xs={6}>
-                <Typography>The Mob's Press</Typography>
-                <Typography>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Ratione dolorum sapiente modi atque! Perspiciatis culpa eum
-                  veniam nam dignissimos sint quis fuga officiis vero rerum,
-                  magni, necessitatibus placeat unde atque?
-                </Typography>
-                <Grid item container xs={2}>
-                  <Grid item xs={2}>
-                    <a href="google.ca">Learn more</a>
-                  </Grid>
-                  <Grid item xs={1}>
-                    <Typography>--</Typography>
-                  </Grid>
-                </Grid>
-              </Grid>
-              <Grid item xs={6}></Grid>
-            </Card>
+            {/* <img
+              height={'100%'}
+              width={'100%'}
+              src={kbkunleWebsite}
+              alt="..."
+            /> */}
           </Grid>
 
           <Divider />

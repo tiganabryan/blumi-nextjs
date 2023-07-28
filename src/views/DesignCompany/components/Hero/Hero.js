@@ -169,6 +169,9 @@ const Hero = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
             <Card
               sx={{
                 p: 3,
+                borderStyle: 'solid',
+                borderColor: '#FFC857',
+                borderWidth: '1px',
               }}
             >
               <Grid container direction={'column'} spacing={3}>
@@ -218,6 +221,9 @@ const Hero = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
             <Card
               sx={{
                 p: 3,
+                borderStyle: 'solid',
+                borderColor: '#8D3B72',
+                borderWidth: '1px',
               }}
             >
               <Grid container direction={'column'} spacing={3}>
@@ -267,6 +273,9 @@ const Hero = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
             <Card
               sx={{
                 p: 3,
+                borderStyle: 'solid',
+                borderColor: '#EC91D8',
+                borderWidth: '1px',
               }}
             >
               <Grid container direction={'column'} spacing={3}>
@@ -316,6 +325,9 @@ const Hero = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
             <Card
               sx={{
                 p: 3,
+                borderStyle: 'solid',
+                borderColor: '#227C9D',
+                borderWidth: '1px',
               }}
             >
               <Grid container direction={'column'} spacing={3}>
