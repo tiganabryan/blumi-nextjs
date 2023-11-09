@@ -77,13 +77,13 @@ const Hero = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
             align="left"
             lineHeight={1.1}
           >
-            welcome to blumi.
+            welcome to blumi
           </Typography>
         </Grid>
 
         <Grid item xs={12} md={6}>
           <Typography variant="h4" component="p" color={'white'}>
-            we develop websites for small business owners, by hand.
+            we build websites and software for midsize companies by hand.
           </Typography>
         </Grid>
 

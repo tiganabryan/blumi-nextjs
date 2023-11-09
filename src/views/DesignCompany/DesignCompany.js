@@ -33,7 +33,7 @@ const DesignCompany = () => {
         <Hero />
         <OurWork />
         <MeetYourTeam />
-        <Container maxWidth={800} paddingBottom={'0 !important'}>
+        <Container maxWidth={800}>
           <Grid
             item
             container
@@ -50,11 +50,11 @@ const DesignCompany = () => {
                 align="center"
                 // id="services-section--js-scroll"
               >
-                Got a project for us?
+                Let's talk about your vision
               </Typography>
             </Grid>
 
-            <Typography
+            {/* <Typography
               variant={'body1'}
               fontSize={'1.2rem'}
               component={'h2'}
@@ -65,7 +65,7 @@ const DesignCompany = () => {
             >
               We help brands and platforms turn big ideas into beautiful digital
               products and experiences.
-            </Typography>
+            </Typography> */}
           </Grid>
           <Form />
         </Container>
