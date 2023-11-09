@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import { useState } from 'react';
 import { alpha, useTheme } from '@mui/material/styles';
@@ -12,8 +13,7 @@ import useScrollTrigger from '@mui/material/useScrollTrigger';
 import NoSsr from '@mui/material/NoSsr';
 import Divider from '@mui/material/Divider';
 import Card from '@mui/material/Card';
-// import kbkunleWebsite from '../Hero/kbkunleWebsite.png';
-import kbkunleWebsite from './kbkunleWebsite.png';
+import Image from 'next/image';
 
 const OurWork = ({
   children,
@@ -65,7 +65,13 @@ const OurWork = ({
         paddingX={{ xs: 6, md: 12 }}
         paddingY={{ xs: 2, md: 6 }}
       >
-        <Grid item container alignContent={'center'} direction={'column'}>
+        <Grid
+          item
+          container
+          alignContent={'center'}
+          direction={'column'}
+          justifyContent={'center'}
+        >
           <Grid item marginTop={8} marginBottom={2}>
             <Typography
               variant={'h4'}
@@ -74,18 +80,28 @@ const OurWork = ({
               fontWeight={'600'}
               align="center"
               id="services-section--js-scroll"
+              marginBottom={3}
             >
               Our Work
             </Typography>
           </Grid>
 
-          <Grid item container>
-            {/* <img
+          <Grid item marginBottom={3}>
+            <img
               height={'100%'}
               width={'100%'}
-              src={kbkunleWebsite}
+              src="/img/pinnacleLogisticsWebsite.png"
               alt="..."
-            /> */}
+            />
+          </Grid>
+
+          <Grid item>
+            <img
+              height={'100%'}
+              width={'100%'}
+              src="/img/kbkunleWebsite.png"
+              alt="..."
+            />
           </Grid>
 
           <Divider />

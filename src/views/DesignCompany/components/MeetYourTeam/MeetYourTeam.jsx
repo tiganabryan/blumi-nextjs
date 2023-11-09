@@ -103,12 +103,12 @@ const MeetYourTeam = ({
             {[
               {
                 name: 'Tigana Bryan',
-                title: 'Operations & Web Developer',
+                title: 'Operations & Web Development',
                 avatar: 'https://avatars.githubusercontent.com/u/68758768?v=4',
               },
               {
                 name: 'Alyssa Gomez',
-                title: 'UI/UX Designer',
+                title: 'UI/UX Design',
                 avatar: 'https://assets.maccarianagency.com/avatars/img5.jpg',
               },
             ].map((item, i) => (

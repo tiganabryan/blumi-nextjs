@@ -62,7 +62,7 @@ const Hero = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
       <Grid
         container
         direction={'column'}
-        spacing={6}
+        spacing={3}
         padding={{ xs: 4, md: 24 }}
         paddingTop={{ xs: 0, md: 12 }}
         marginBottom={{ xs: 0, md: 12 }}
@@ -77,18 +77,17 @@ const Hero = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
             align="left"
             lineHeight={1.1}
           >
-            THE ART OF WEB DESIGN
+            welcome to blumi.
           </Typography>
         </Grid>
 
         <Grid item xs={12} md={6}>
           <Typography variant="h4" component="p" color={'white'}>
-            We develop websites for small business owners and ourselves, by
-            hand.
+            we develop websites for small business owners, by hand.
           </Typography>
         </Grid>
 
-        <Grid item>
+        <Grid item marginTop={3}>
           <Button
             variant="contained"
             color="primary"

@@ -22,20 +22,25 @@ const About = () => {
       <Container>
         <Story />
       </Container>
+
       <Container paddingTop={'0 !important'}>
         <WhoWeAre />
       </Container>
+
       <Container maxWidth={800} paddingY={'0 !important'}>
         <Divider />
       </Container>
+
       <Container>
         <Team />
       </Container>
+
       <Box bgcolor={'alternate.main'}>
         <Container>
           <Partners />
         </Container>
       </Box>
+
       <Contact />
       <Container>
         <Gallery />
