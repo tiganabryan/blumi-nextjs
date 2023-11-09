@@ -162,9 +162,9 @@ const Hero = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
           spacing={{ xs: 3 }}
           direction={`xs ? 'column' : 'row'`}
           justifyContent={'center'}
-          marginBottom={{ xs: 6, md: 12 }}
+          marginBottom={{ xs: 3 }}
         >
-          <Grid item xs={12} md={3}>
+          <Grid item xs={12} sm={6} md={3}>
             <Card
               sx={{
                 p: 3,
@@ -216,7 +216,7 @@ const Hero = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
             </Card>
           </Grid>
 
-          <Grid item xs={12} md={3}>
+          <Grid item xs={12} sm={6} md={3}>
             <Card
               sx={{
                 p: 3,
@@ -268,7 +268,7 @@ const Hero = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
             </Card>
           </Grid>
 
-          <Grid item xs={12} md={3}>
+          <Grid item xs={12} sm={6} md={3}>
             <Card
               sx={{
                 p: 3,
@@ -320,7 +320,7 @@ const Hero = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
             </Card>
           </Grid>
 
-          <Grid item xs={12} md={3}>
+          <Grid item xs={12} sm={6} md={3}>
             <Card
               sx={{
                 p: 3,
@@ -373,7 +373,7 @@ const Hero = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
           </Grid>
         </Grid>
 
-        <Divider />
+        {/* <Divider /> */}
       </Grid>
     </>
   );

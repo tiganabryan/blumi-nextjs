@@ -31,7 +31,7 @@ const DesignCompany = () => {
       {/* <Topbar /> */}
       <Box className="hero-container">
         <Hero />
-        <OurWork />
+        {/* <OurWork /> */}
         <MeetYourTeam />
         <Container maxWidth={800}>
           <Grid
@@ -41,7 +41,7 @@ const DesignCompany = () => {
             direction={'column'}
             marginBottom={4}
           >
-            <Grid item marginTop={8} marginBottom={1}>
+            <Grid item marginBottom={1}>
               <Typography
                 variant={'h4'}
                 component={'h2'}

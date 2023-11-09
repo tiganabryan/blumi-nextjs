@@ -7,7 +7,8 @@
 }
 
 /* wider version of svg for desktop */
-@media (min-width: 600px) {
+/* @media (min-width: 600px) { */
+@media (min-width: 1000px) {
   .hero-container {
     background-image: url('./components/Hero/HeroSVG.svg');
     background-size: cover;

@@ -64,7 +64,7 @@ const MeetYourTeam = ({
         container
         direction={'column'}
         paddingX={{ xs: 6, md: 12 }}
-        paddingY={{ xs: 2, md: 6 }}
+        paddingY={{ xs: 2, md: 2 }}
       >
         <Grid
           item
@@ -73,7 +73,7 @@ const MeetYourTeam = ({
           direction={'column'}
           marginBottom={4}
         >
-          <Grid item marginTop={8} marginBottom={1}>
+          <Grid item marginTop={4} marginBottom={1}>
             <Typography
               variant={'h4'}
               component={'h2'}
@@ -82,7 +82,7 @@ const MeetYourTeam = ({
               align="center"
               id="services-section--js-scroll"
             >
-              Meet Your Team
+              Meet Your Collaborators
             </Typography>
           </Grid>
 
@@ -98,65 +98,65 @@ const MeetYourTeam = ({
           </Typography>
         </Grid>
 
-        <Box>
-          <Grid container spacing={2} justifyContent={'center'}>
-            {[
-              {
-                name: 'Tigana Bryan',
-                title: 'Operations & Web Development',
-                avatar: 'https://avatars.githubusercontent.com/u/68758768?v=4',
-              },
-              {
-                name: 'Alyssa Gomez',
-                title: 'UI/UX Design',
-                avatar: 'https://assets.maccarianagency.com/avatars/img5.jpg',
-              },
-            ].map((item, i) => (
-              <Grid
-                item
-                xs={12}
-                sm={6}
-                md={3}
-                key={i}
-                data-aos={'fade-up'}
-                data-aos-delay={i * 100}
-                data-aos-offset={100}
-                data-aos-duration={600}
+        {/* <Box> */}
+        <Grid container spacing={2} justifyContent={'center'}>
+          {[
+            {
+              name: 'Tigana Bryan',
+              title: 'Operations & Web Development',
+              avatar: 'https://avatars.githubusercontent.com/u/68758768?v=4',
+            },
+            {
+              name: 'Alyssa Gomez',
+              title: 'UI/UX Design',
+              avatar: 'https://assets.maccarianagency.com/avatars/img5.jpg',
+            },
+          ].map((item, i) => (
+            <Grid
+              item
+              xs={12}
+              sm={6}
+              md={3}
+              key={i}
+              data-aos={'fade-up'}
+              data-aos-delay={i * 100}
+              data-aos-offset={100}
+              data-aos-duration={600}
+            >
+              <Card
+                sx={{
+                  boxShadow: 0,
+                  background: 'transparent',
+                  backgroundImage: 'none',
+                }}
               >
-                <Card
-                  sx={{
-                    boxShadow: 0,
-                    background: 'transparent',
-                    backgroundImage: 'none',
-                  }}
+                <Box
+                  component={CardMedia}
+                  borderRadius={2}
+                  width={1}
+                  height={1}
+                  minHeight={320}
+                  image={item.avatar}
+                />
+                <Box
+                  component={CardContent}
+                  bgcolor={'transparent'}
+                  marginTop={-5}
                 >
-                  <Box
-                    component={CardMedia}
-                    borderRadius={2}
-                    width={1}
-                    height={1}
-                    minHeight={320}
-                    image={item.avatar}
-                  />
-                  <Box
-                    component={CardContent}
-                    bgcolor={'transparent'}
-                    marginTop={-5}
-                  >
-                    <Box component={Card}>
-                      <CardContent>
-                        <ListItemText
-                          primary={item.name}
-                          secondary={item.title}
-                        />
-                      </CardContent>
-                    </Box>
+                  <Box component={Card}>
+                    <CardContent>
+                      <ListItemText
+                        primary={item.name}
+                        secondary={item.title}
+                      />
+                    </CardContent>
                   </Box>
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
-        </Box>
+                </Box>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
+        {/* </Box> */}
       </Grid>
     </div>
   );
