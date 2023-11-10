@@ -35,6 +35,7 @@ const DesignCompany = () => {
             fontSize: '1rem',
             textTransform: 'lowercase',
             fontFamily: 'Lato',
+            width: '9rem',
           },
         },
       },

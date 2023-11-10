@@ -65,6 +65,7 @@ const MeetYourTeam = ({
         direction={'column'}
         paddingX={{ xs: 6, md: 12 }}
         paddingY={{ xs: 2, md: 2 }}
+        marginBottom={{ md: 2 }}
       >
         <Grid
           item
@@ -118,7 +119,7 @@ const MeetYourTeam = ({
               item
               xs={12}
               sm={6}
-              md={3}
+              md={6}
               key={i}
               data-aos={'fade-up'}
               data-aos-delay={i * 100}

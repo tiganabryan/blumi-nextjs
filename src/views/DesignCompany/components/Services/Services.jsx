@@ -8,9 +8,9 @@ const Services = () => {
     <Grid
       container
       direction={'column'}
-      paddingX={{ xs: 6, md: 12 }}
-      marginTop={{ xs: 30, md: 6 }}
-      marginBottom={{ xs: 3, md: 12 }}
+      paddingX={{ xs: 6, md: 3 }}
+      marginTop={{ xs: 11, sm: 22, md: 27, lg: 45 }}
+      marginBottom={{ xs: 3, md: 8 }}
     >
       <Grid item container alignContent={'center'} direction={'column'}>
         <Grid item marginTop={8} marginBottom={2}>
@@ -50,7 +50,7 @@ const Services = () => {
         justifyContent={'center'}
         marginBottom={{ xs: 3 }}
       >
-        <Grid item xs={12} sm={6} md={3}>
+        <Grid item xs={12} sm={6} md={6}>
           <Card
             sx={{
               p: 3,
@@ -106,7 +106,7 @@ const Services = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={12} sm={6} md={3}>
+        <Grid item xs={12} sm={6} md={6}>
           <Card
             sx={{
               p: 3,
@@ -162,7 +162,7 @@ const Services = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={12} sm={6} md={3}>
+        <Grid item xs={12} sm={6} md={6}>
           <Card
             sx={{
               p: 3,
@@ -218,7 +218,7 @@ const Services = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={12} sm={6} md={3}>
+        <Grid item xs={12} sm={6} md={6}>
           <Card
             sx={{
               p: 3,
@@ -260,7 +260,7 @@ const Services = () => {
                   fontSize={'1.25rem'}
                   fontFamily={'Lato'}
                 >
-                  Launch & Maintenance
+                  Maintenance
                 </Typography>
               </Grid>
               <Grid item>

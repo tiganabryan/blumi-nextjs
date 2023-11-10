@@ -20,84 +20,71 @@ const Hero = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
     defaultMatches: true,
   });
 
-  const trigger = useScrollTrigger({
-    disableHysteresis: true,
-    threshold: 38,
-  });
-
-  const [openSidebar, setOpenSidebar] = useState(false);
-
-  const handleSidebarOpen = () => {
-    setOpenSidebar(true);
-  };
-
-  const scrollTo = (id) => {
-    setTimeout(() => {
-      const element = document.querySelector(`#${id}`);
-      if (!element) {
-        return;
-      }
-
-      window.scrollTo({ left: 0, top: element.offsetTop, behavior: 'smooth' });
-    });
-  };
+  const deviceWidthSmallerThanMedium = useMediaQuery('(max-width: 899px)');
 
   return (
     <>
       <Grid
         container
         direction={'column'}
+        alignItems={deviceWidthSmallerThanMedium ? 'center' : 'left'}
         spacing={3}
-        padding={{ xs: 4, md: 24 }}
-        paddingTop={{ xs: 0, md: 12 }}
+        padding={{ xs: 4 }}
+        paddingTop={{ xs: 0, md: 7 }}
         marginBottom={{ xs: 0, md: 12 }}
+        marginLeft={{ xs: 0, md: 1 }}
       >
-        <Grid item marginTop={{ xs: 6, md: 5 }}>
+        <Grid item marginTop={{ xs: 5.5, md: 0 }}>
           <Typography
             // variant="h1"
             component={'h1'}
-            fontSize={{ xs: '2.6rem', md: '5rem' }}
+            fontSize={{ xs: '2.4rem', sm: '4rem', md: '5.8rem', lg: '20' }}
             fontFamily={"'Livvic', sans-serif"}
             color="#227C9D"
-            align="left"
+            textAlign={isMd ? 'left' : 'center'}
+            // textAlign={'left'}
             lineHeight={1.1}
           >
             welcome to blumi
           </Typography>
         </Grid>
 
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={6} marginBottom={{ xs: 1, md: 2 }}>
           <Typography
             variant="h4"
             component="p"
             color={'white'}
-            fontSize={{ xs: '1.5rem', md: '5rem' }}
+            fontSize={{ xs: '1.4rem', sm: '2rem', md: '2.3rem' }}
+            textAlign={deviceWidthSmallerThanMedium ? 'center' : 'left'}
           >
             we build websites and software for midsize companies by hand.
           </Typography>
         </Grid>
 
-        <Grid item marginTop={3}>
-          <Button
-            variant="contained"
-            color="primary"
-            size="small"
-            // fullWidth={isMd ? false : true}
-          >
-            connect
-          </Button>
-          {/* <DarkBlueBtn text={'.'} /> */}
-        </Grid>
+        <Grid
+          item
+          container
+          direction={deviceWidthSmallerThanMedium ? 'column' : 'row'}
+          spacing={1}
+        >
+          <Grid item>
+            <Button
+              variant="contained"
+              color="primary"
+              size="large"
+              fullWidth={true}
+              // fullWidth={isMd ? false : true}
+            >
+              connect
+            </Button>
+            {/* <DarkBlueBtn text={'.'} /> */}
+          </Grid>
 
-        <Grid item marginTop={0}>
-          <Button
-            variant="outlined"
-            color="primary"
-            size="small"
-            // fullWidth={isMd ? false : true}
-          >
-            view services
-          </Button>
+          <Grid item>
+            <Button variant="outlined" color="primary" size="large">
+              view services
+            </Button>
+          </Grid>
         </Grid>
       </Grid>
     </>
