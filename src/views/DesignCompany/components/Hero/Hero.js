@@ -53,11 +53,11 @@ const Hero = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
 
   return (
     <>
-      <Topbar
+      {/* <Topbar
         onSidebarOpen={handleSidebarOpen}
         pages={pages}
         colorInvert={trigger ? false : colorInvert}
-      />
+      /> */}
 
       <Grid
         container
@@ -67,7 +67,7 @@ const Hero = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
         paddingTop={{ xs: 0, md: 12 }}
         marginBottom={{ xs: 0, md: 12 }}
       >
-        <Grid item>
+        <Grid item marginTop={9}>
           <Typography
             // variant="h1"
             component={'h1'}

@@ -1,18 +1,55 @@
-/* svg background for mobile */
+/* SVG hero backgrounds for each breakpoint */
+
+/* xs 0px */
 .hero-container {
-  background-image: url('./components/Hero/HeroSVGmobile.svg');
+  /* background-image: url('./components/Hero/HeroSVGmobile.svg'); */
+  background-image: url('../../img/xsHeroImg.svg');
   background-size: cover;
   height: 100vh;
   width: 100vw;
+  transition: background-image 1s ease-in;
 }
 
-/* wider version of svg for desktop */
-/* @media (min-width: 600px) { */
-@media (min-width: 1000px) {
+/* sm 600px */
+@media (min-width: 600px) {
   .hero-container {
-    background-image: url('./components/Hero/HeroSVG.svg');
+    background-image: url('../../img/smHeroImg.svg');
     background-size: cover;
     height: 100vh;
     width: 100vw;
+    transition: background-image 1s ease-in;
+  }
+}
+
+/* md 900px */
+@media (min-width: 900px) {
+  .hero-container {
+    background-image: url('../../img/mdHeroImg.svg');
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    transition: background-image 1s ease-in;
+  }
+}
+
+/* lg 1200px */
+@media (min-width: 1200px) {
+  .hero-container {
+    background-image: url('../../img/lgHeroImg.svg');
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    transition: background-image 0.5s ease-in;
+  }
+}
+
+/* xl 1536 */
+@media (min-width: 1536px) {
+  .hero-container {
+    background-image: url('../../img/xlHeroImg.svg');
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    transition: background-image 0.5s ease-in;
   }
 }
