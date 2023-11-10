@@ -25,6 +25,20 @@ const DesignCompany = () => {
         contrastText: '#47008F',
       },
     },
+    components: {
+      // Name of the component
+      MuiButton: {
+        styleOverrides: {
+          // Name of the slot
+          root: {
+            // Some CSS
+            fontSize: '1rem',
+            textTransform: 'lowercase',
+            fontFamily: 'Lato',
+          },
+        },
+      },
+    },
   });
 
   return (

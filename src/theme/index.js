@@ -64,6 +64,7 @@ const getTheme = (mode, themeToggler) =>
               paddingTop: 10,
               paddingBottom: 10,
               backgroundColor: '227C9Df',
+              textTransform: 'lowercase',
             },
             containedSecondary: mode === 'light' ? { color: 'white' } : {},
           },

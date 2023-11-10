@@ -82,18 +82,19 @@ const Hero = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
             variant="contained"
             color="primary"
             size="small"
-            fullWidth={isMd ? false : true}
+            // fullWidth={isMd ? false : true}
           >
             connect
           </Button>
+          {/* <DarkBlueBtn text={'.'} /> */}
         </Grid>
 
-        <Grid item marginTop={3}>
+        <Grid item marginTop={0}>
           <Button
-            variant="contained"
+            variant="outlined"
             color="primary"
             size="small"
-            fullWidth={isMd ? false : true}
+            // fullWidth={isMd ? false : true}
           >
             view services
           </Button>
