@@ -9,7 +9,8 @@ const Services = () => {
       container
       direction={'column'}
       paddingX={{ xs: 6, md: 12 }}
-      paddingY={{ xs: 2, md: 6 }}
+      marginTop={{ xs: 30, md: 6 }}
+      marginBottom={{ xs: 3, md: 12 }}
     >
       <Grid item container alignContent={'center'} direction={'column'}>
         <Grid item marginTop={8} marginBottom={2}>
@@ -20,6 +21,7 @@ const Services = () => {
             fontWeight={'600'}
             align="center"
             id="services-section--js-scroll"
+            fontFamily={'Lato'}
           >
             Services
           </Typography>
@@ -32,6 +34,7 @@ const Services = () => {
             fontWeight={500}
             color={'#646E73'}
             align="center"
+            fontFamily={'Lato'}
           >
             Unlike larger agencies, we will treat your project as if it were our
             own.
@@ -57,7 +60,7 @@ const Services = () => {
             }}
           >
             <Grid container direction={'column'} spacing={3}>
-              <Grid item>
+              {/* <Grid item>
                 <svg
                   width="65"
                   height="65"
@@ -82,14 +85,18 @@ const Services = () => {
                     fill="#FFC857"
                   />
                 </svg>
-              </Grid>
+              </Grid> */}
               <Grid item>
-                <Typography fontWeight={700} fontSize={'1.25rem'}>
+                <Typography
+                  fontWeight={700}
+                  fontSize={'1.25rem'}
+                  fontFamily={'Lato'}
+                >
                   Idea
                 </Typography>
               </Grid>
               <Grid item>
-                <Typography>
+                <Typography fontFamily={'Lato'}>
                   We meet with your team to know more about your idea, project
                   and goal. After that, our team creates an action plan and
                   proposal for your project.
@@ -109,7 +116,7 @@ const Services = () => {
             }}
           >
             <Grid container direction={'column'} spacing={3}>
-              <Grid item>
+              {/* <Grid item>
                 <svg
                   width="64"
                   height="65"
@@ -134,14 +141,18 @@ const Services = () => {
                     stroke-linejoin="round"
                   />
                 </svg>
-              </Grid>
+              </Grid> */}
               <Grid item>
-                <Typography fontWeight={700} fontSize={'1.25rem'}>
+                <Typography
+                  fontWeight={700}
+                  fontSize={'1.25rem'}
+                  fontFamily={'Lato'}
+                >
                   Design
                 </Typography>
               </Grid>
               <Grid item>
-                <Typography>
+                <Typography fontFamily={'Lato'}>
                   We meet with your team to know more about your idea, project
                   and goal. After that, our team creates an action plan and
                   proposal for your project.
@@ -161,7 +172,7 @@ const Services = () => {
             }}
           >
             <Grid container direction={'column'} spacing={3}>
-              <Grid item>
+              {/* <Grid item>
                 <svg
                   width="65"
                   height="65"
@@ -186,14 +197,18 @@ const Services = () => {
                     stroke-linejoin="round"
                   />
                 </svg>
-              </Grid>
+              </Grid> */}
               <Grid item>
-                <Typography fontWeight={700} fontSize={'1.25rem'}>
+                <Typography
+                  fontWeight={700}
+                  fontSize={'1.25rem'}
+                  fontFamily={'Lato'}
+                >
                   Development
                 </Typography>
               </Grid>
               <Grid item>
-                <Typography>
+                <Typography fontFamily={'Lato'}>
                   We meet with your team to know more about your idea, project
                   and goal. After that, our team creates an action plan and
                   proposal for your project.
@@ -213,7 +228,7 @@ const Services = () => {
             }}
           >
             <Grid container direction={'column'} spacing={3}>
-              <Grid item>
+              {/* <Grid item>
                 <svg
                   width="65"
                   height="65"
@@ -238,14 +253,18 @@ const Services = () => {
                     fill="#227C9D"
                   />
                 </svg>
-              </Grid>
+              </Grid> */}
               <Grid item>
-                <Typography fontWeight={700} fontSize={'1.25rem'}>
+                <Typography
+                  fontWeight={700}
+                  fontSize={'1.25rem'}
+                  fontFamily={'Lato'}
+                >
                   Launch & Maintenance
                 </Typography>
               </Grid>
               <Grid item>
-                <Typography>
+                <Typography fontFamily={'Lato'}>
                   We meet with your team to know more about your idea, project
                   and goal. After that, our team creates an action plan and
                   proposal for your project.

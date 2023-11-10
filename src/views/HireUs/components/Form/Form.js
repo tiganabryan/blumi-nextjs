@@ -71,7 +71,11 @@ const Form = () => {
           spacing={4}
         >
           <Grid item xs={12} sm={6}>
-            <Typography variant={'subtitle2'} sx={{ marginBottom: 2 }}>
+            <Typography
+              variant={'subtitle2'}
+              sx={{ marginBottom: 2 }}
+              fontFamily={'Lato'}
+            >
               What's your name?
             </Typography>
             <TextField
@@ -103,7 +107,11 @@ const Form = () => {
             />
           </Grid> */}
           <Grid item xs={12} sm={6}>
-            <Typography variant={'subtitle2'} sx={{ marginBottom: 2 }}>
+            <Typography
+              variant={'subtitle2'}
+              sx={{ marginBottom: 2 }}
+              fontFamily={'Lato'}
+            >
               What's your email? *
             </Typography>
             <TextField
@@ -160,7 +168,11 @@ const Form = () => {
             </TextField>
           </Grid> */}
           <Grid item xs={12}>
-            <Typography variant={'subtitle2'} sx={{ marginBottom: 2 }}>
+            <Typography
+              variant={'subtitle2'}
+              sx={{ marginBottom: 2 }}
+              fontFamily={'Lato'}
+            >
               Your message *
             </Typography>
             <TextField
@@ -184,7 +196,12 @@ const Form = () => {
             alignItems={'center'}
             flexDirection={'column'}
           >
-            <Button size={'large'} variant={'contained'} type={'submit'}>
+            <Button
+              size={'large'}
+              variant={'contained'}
+              type={'submit'}
+              textTransform={'lowercase'}
+            >
               Connect
             </Button>
             {/* <Typography

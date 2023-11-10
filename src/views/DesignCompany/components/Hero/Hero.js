@@ -42,23 +42,8 @@ const Hero = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
     });
   };
 
-  const {
-    landings: landingPages,
-    secondary: secondaryPages,
-    company: companyPages,
-    account: accountPages,
-    portfolio: portfolioPages,
-    blog: blogPages,
-  } = pages;
-
   return (
     <>
-      {/* <Topbar
-        onSidebarOpen={handleSidebarOpen}
-        pages={pages}
-        colorInvert={trigger ? false : colorInvert}
-      /> */}
-
       <Grid
         container
         direction={'column'}
@@ -67,11 +52,11 @@ const Hero = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
         paddingTop={{ xs: 0, md: 12 }}
         marginBottom={{ xs: 0, md: 12 }}
       >
-        <Grid item marginTop={9}>
+        <Grid item marginTop={{ xs: 6, md: 5 }}>
           <Typography
             // variant="h1"
             component={'h1'}
-            fontSize={{ xs: '3rem', md: '5rem' }}
+            fontSize={{ xs: '2.6rem', md: '5rem' }}
             fontFamily={"'Livvic', sans-serif"}
             color="#227C9D"
             align="left"
@@ -82,7 +67,12 @@ const Hero = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
         </Grid>
 
         <Grid item xs={12} md={6}>
-          <Typography variant="h4" component="p" color={'white'}>
+          <Typography
+            variant="h4"
+            component="p"
+            color={'white'}
+            fontSize={{ xs: '1.5rem', md: '5rem' }}
+          >
             we build websites and software for midsize companies by hand.
           </Typography>
         </Grid>
@@ -94,7 +84,18 @@ const Hero = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
             size="small"
             fullWidth={isMd ? false : true}
           >
-            Contact Us
+            connect
+          </Button>
+        </Grid>
+
+        <Grid item marginTop={3}>
+          <Button
+            variant="contained"
+            color="primary"
+            size="small"
+            fullWidth={isMd ? false : true}
+          >
+            view services
           </Button>
         </Grid>
       </Grid>

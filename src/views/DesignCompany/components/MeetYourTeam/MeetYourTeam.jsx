@@ -81,6 +81,7 @@ const MeetYourTeam = ({
               fontWeight={'600'}
               align="center"
               id="services-section--js-scroll"
+              fontFamily={'Lato'}
             >
               Meet Your Collaborators
             </Typography>
@@ -93,6 +94,7 @@ const MeetYourTeam = ({
             fontWeight={'600'}
             align="center"
             id="services-section--js-scroll"
+            fontFamily={'Lato'}
           >
             We are a designer-developer duo.
           </Typography>

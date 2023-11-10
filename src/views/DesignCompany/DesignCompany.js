@@ -6,30 +6,29 @@ import Box from '@mui/material/Box';
 import Main from 'layouts/Main';
 import { Topbar } from 'layouts/Main/components';
 import Container from 'components/Container';
-import {
-  Partners,
-  CaseStudy1,
-  CaseStudy2,
-  CaseStudy3,
-  Hero,
-  Contact,
-  OurWork,
-  MeetYourTeam,
-  Services,
-} from './components';
+import { Hero, Contact, OurWork, MeetYourTeam, Services } from './components';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
 import Form from '/Users/user/Desktop/blumi/blumi-nextjs/src/views/HireUs/components/Form/Form.js';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const DesignCompany = () => {
-  const theme = useTheme();
+  const theme = createTheme({
+    palette: {
+      primary: {
+        main: '#227C9D',
+      },
+      secondary: {
+        main: '#E0C2FF',
+        light: '#F5EBFF',
+        contrastText: '#47008F',
+      },
+    },
+  });
 
   return (
-    <>
-      {/* <Main> */}
-      {/* <Container> */}
-      {/* <Topbar /> */}
+    <ThemeProvider theme={theme}>
       <Box className="hero-container">
         <Hero />
         <Services />
@@ -49,6 +48,7 @@ const DesignCompany = () => {
                 color={'#227C9D'}
                 fontWeight={'600'}
                 align="center"
+                fontFamily={'Lato'}
                 // id="services-section--js-scroll"
               >
                 Let's talk about your vision
@@ -71,7 +71,7 @@ const DesignCompany = () => {
           <Form />
         </Container>
       </Box>
-    </>
+    </ThemeProvider>
   );
 };
 
