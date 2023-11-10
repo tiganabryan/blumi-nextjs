@@ -15,6 +15,7 @@ import {
   Contact,
   OurWork,
   MeetYourTeam,
+  Services,
 } from './components';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
@@ -31,7 +32,7 @@ const DesignCompany = () => {
       {/* <Topbar /> */}
       <Box className="hero-container">
         <Hero />
-        {/* <OurWork /> */}
+        <Services />
         <MeetYourTeam />
         <Container maxWidth={800}>
           <Grid
