@@ -2,8 +2,25 @@ import React from 'react';
 import Card from '@mui/material/Card';
 import Grid from '@mui/material/Grid';
 import { Typography } from '@mui/material';
+import { useState, useEffect } from 'react';
 
 const Services = () => {
+  const [svgHeight, setSvgHeight] = useState(0);
+  const [marginTop, setMarginTop] = useState(0);
+
+  // const onSvgResize = () => {
+  //   const newSvgHeight = document
+  //     .querySelector('.hero-container')
+  //     .getBoundingClientRect().height;
+
+  //   setSvgHeight(newSvgHeight);
+  //   setMarginTop(newSvgHeight * 0.25);
+  // };
+
+  // useEffect(() => {
+  //   window.addEventListener('resize', onSvgResize);
+  //   return () => window.removeEventListener('resize', onSvgResize);
+  // }, []);
   return (
     <Grid
       container
@@ -13,7 +30,7 @@ const Services = () => {
       marginBottom={{ xs: 3, md: 8 }}
     >
       <Grid item container alignContent={'center'} direction={'column'}>
-        <Grid item marginTop={8} marginBottom={2}>
+        <Grid item marginBottom={2}>
           <Typography
             variant={'h4'}
             component={'h2'}

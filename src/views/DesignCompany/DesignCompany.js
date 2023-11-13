@@ -44,7 +44,7 @@ const DesignCompany = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Box className="hero-container">
+      <Box>
         <Hero />
         <Services />
         <MeetYourTeam />
