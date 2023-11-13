@@ -108,8 +108,9 @@ const Hero = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
           direction={deviceWidthSmallerThanMedium ? 'column' : 'row'}
           spacing={1}
           alignContent={deviceWidthSmallerThanMedium ? 'center' : 'left'}
+          // marginTop={3}
         >
-          <Grid item marginTop={3}>
+          <Grid item>
             <Button
               variant="contained"
               color="primary"
