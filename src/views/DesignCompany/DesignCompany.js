@@ -32,10 +32,11 @@ const DesignCompany = () => {
           // Name of the slot
           root: {
             // Some CSS
-            fontSize: '1rem',
+
             textTransform: 'lowercase',
             fontFamily: 'Lato',
-            width: '9rem',
+            width: '10rem',
+            // fontSize: { lg: '1.2rem' },
           },
         },
       },

@@ -79,7 +79,7 @@ const Hero = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
           <Typography
             // variant="h1"
             component={'h1'}
-            fontSize={{ xs: '2.4rem', sm: '4rem', md: '5.8rem' }}
+            fontSize={{ xs: '2.4rem', sm: '4rem', md: '5.8rem', lg: '6.2rem' }}
             fontFamily={"'Livvic', sans-serif"}
             color="#227C9D"
             textAlign={isMd ? 'left' : 'center'}
@@ -95,7 +95,7 @@ const Hero = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
             variant="h4"
             component="p"
             color={'white'}
-            fontSize={{ xs: '1.4rem', sm: '2rem', md: '2.3rem' }}
+            fontSize={{ xs: '1.4rem', sm: '2rem', md: '2.3rem', lg: '2.8rem' }}
             textAlign={deviceWidthSmallerThanMedium ? 'center' : 'left'}
           >
             we build websites and software for midsize companies by hand.
@@ -117,6 +117,9 @@ const Hero = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
               size="large"
               fullWidth={true}
               // fullWidth={isMd ? false : true}
+              sx={{
+                fontSize: { md: '1.1rem' },
+              }}
             >
               connect
             </Button>
@@ -124,7 +127,14 @@ const Hero = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
           </Grid>
 
           <Grid item>
-            <Button variant="outlined" color="primary" size="large">
+            <Button
+              variant="outlined"
+              color="primary"
+              size="large"
+              sx={{
+                fontSize: { md: '1.1rem' },
+              }}
+            >
               view services
             </Button>
           </Grid>
