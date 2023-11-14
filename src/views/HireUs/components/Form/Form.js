@@ -71,8 +71,12 @@ const Form = () => {
           spacing={4}
         >
           <Grid item xs={12} sm={6}>
-            <Typography variant={'subtitle2'} sx={{ marginBottom: 2 }}>
-              Please tell us your name *
+            <Typography
+              variant={'subtitle2'}
+              sx={{ marginBottom: 2 }}
+              fontFamily={'Lato'}
+            >
+              What's your name?
             </Typography>
             <TextField
               label="First name"
@@ -87,7 +91,7 @@ const Form = () => {
               helperText={formik.touched.firstName && formik.errors.firstName}
             />
           </Grid>
-          <Grid item xs={12} sm={6}>
+          {/* <Grid item xs={12} sm={6}>
             <Typography variant={'subtitle2'} sx={{ marginBottom: 2 }}>
               Please tell us your name *
             </Typography>
@@ -101,10 +105,14 @@ const Form = () => {
               error={formik.touched.lastName && Boolean(formik.errors.lastName)}
               helperText={formik.touched.lastName && formik.errors.lastName}
             />
-          </Grid>
+          </Grid> */}
           <Grid item xs={12} sm={6}>
-            <Typography variant={'subtitle2'} sx={{ marginBottom: 2 }}>
-              Please enter your email address *
+            <Typography
+              variant={'subtitle2'}
+              sx={{ marginBottom: 2 }}
+              fontFamily={'Lato'}
+            >
+              What's your email? *
             </Typography>
             <TextField
               label="Email"
@@ -117,7 +125,7 @@ const Form = () => {
               helperText={formik.touched.email && formik.errors.email}
             />
           </Grid>
-          <Grid item xs={12} sm={6}>
+          {/* <Grid item xs={12} sm={6}>
             <Typography variant={'subtitle2'} sx={{ marginBottom: 2 }}>
               Please enter your phone number (optional)
             </Typography>
@@ -131,10 +139,10 @@ const Form = () => {
               error={formik.touched.phone && Boolean(formik.errors.phone)}
               helperText={formik.touched.phone && formik.errors.phone}
             />
-          </Grid>
-          <Grid item xs={12}>
+          </Grid> */}
+          {/* <Grid item xs={12}>
             <Typography variant={'subtitle2'} sx={{ marginBottom: 2 }}>
-              Please tell us the budget
+              Please tell us your budget
             </Typography>
             <TextField
               select
@@ -148,20 +156,24 @@ const Form = () => {
               helperText={formik.touched.budget && formik.errors.budget}
             >
               {[
-                '< $20.000',
-                '$20.000 - $50.000',
-                '$50.000 - $100.000',
-                '> $100.000',
+                '< $20,000',
+                '$20,000 - $50,000',
+                '$50,000 - $100,000',
+                '> $100,000',
               ].map((option) => (
                 <MenuItem key={option} value={option}>
                   {option}
                 </MenuItem>
               ))}
             </TextField>
-          </Grid>
+          </Grid> */}
           <Grid item xs={12}>
-            <Typography variant={'subtitle2'} sx={{ marginBottom: 2 }}>
-              Please tell us about your project (optional)
+            <Typography
+              variant={'subtitle2'}
+              sx={{ marginBottom: 2 }}
+              fontFamily={'Lato'}
+            >
+              Your message *
             </Typography>
             <TextField
               label="Message"
@@ -184,17 +196,22 @@ const Form = () => {
             alignItems={'center'}
             flexDirection={'column'}
           >
-            <Button size={'large'} variant={'contained'} type={'submit'}>
-              Send request
+            <Button
+              size={'large'}
+              variant={'contained'}
+              type={'submit'}
+              textTransform={'lowercase'}
+            >
+              Connect
             </Button>
-            <Typography
+            {/* <Typography
               variant={'subtitle2'}
               color={'textSecondary'}
               sx={{ marginTop: 2 }}
               align={'center'}
             >
               We'll get back to you in 1-2 business days.
-            </Typography>
+            </Typography> */}
           </Grid>
         </Box>
       </form>

@@ -1,66 +1,93 @@
 import React from 'react';
 import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
+// import './hero.css';
 
 import Main from 'layouts/Main';
+import { Topbar } from 'layouts/Main/components';
 import Container from 'components/Container';
-import {
-  Partners,
-  CaseStudy1,
-  CaseStudy2,
-  CaseStudy3,
-  Hero,
-  Contact,
-} from './components';
+import { Hero, Contact, OurWork, MeetYourTeam, Services } from './components';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+
+import Form from '/Users/user/Desktop/blumi/blumi-nextjs/src/views/HireUs/components/Form/Form.js';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const DesignCompany = () => {
-  const theme = useTheme();
+  const theme = createTheme({
+    palette: {
+      primary: {
+        main: '#227C9D',
+      },
+      secondary: {
+        main: '#E0C2FF',
+        light: '#F5EBFF',
+        contrastText: '#47008F',
+      },
+    },
+    components: {
+      // Name of the component
+      MuiButton: {
+        styleOverrides: {
+          // Name of the slot
+          root: {
+            // Some CSS
+
+            textTransform: 'lowercase',
+            fontFamily: 'Lato',
+            width: '10rem',
+            // fontSize: { lg: '1.2rem' },
+          },
+        },
+      },
+    },
+  });
 
   return (
-    <Main>
-      <Container>
+    <ThemeProvider theme={theme}>
+      <Box>
         <Hero />
-      </Container>
-      <Container>
-        <Partners />
-      </Container>
-      <Container>
-        <CaseStudy1 />
-      </Container>
-      <Container paddingY={'0 !important'}>
-        <CaseStudy2 />
-      </Container>
-      <Container>
-        <CaseStudy3 />
-      </Container>
-      <Box
-        position={'relative'}
-        sx={{
-          backgroundColor: theme.palette.alternate.main,
-        }}
-      >
-        <Container>
-          <Contact />
+        <Services />
+        <MeetYourTeam />
+        <Container maxWidth={800}>
+          <Grid
+            item
+            container
+            alignContent={'center'}
+            direction={'column'}
+            marginBottom={4}
+          >
+            <Grid item marginBottom={1}>
+              <Typography
+                variant={'h4'}
+                component={'h2'}
+                color={'#227C9D'}
+                fontWeight={'600'}
+                align="center"
+                fontFamily={'Lato'}
+                // id="services-section--js-scroll"
+              >
+                Let's talk about your vision
+              </Typography>
+            </Grid>
+
+            {/* <Typography
+              variant={'body1'}
+              fontSize={'1.2rem'}
+              component={'h2'}
+              color={'#646E73'}
+              // fontWeight={'600'}
+              align="center"
+              // id="services-section--js-scroll"
+            >
+              We help brands and platforms turn big ideas into beautiful digital
+              products and experiences.
+            </Typography> */}
+          </Grid>
+          <Form />
         </Container>
-        <Box
-          component={'svg'}
-          preserveAspectRatio="none"
-          xmlns="http://www.w3.org/2000/svg"
-          x="0px"
-          y="0px"
-          viewBox="0 0 1920 100.1"
-          sx={{
-            width: '100%',
-            marginBottom: theme.spacing(-1),
-          }}
-        >
-          <path
-            fill={theme.palette.background.paper}
-            d="M0,0c0,0,934.4,93.4,1920,0v100.1H0L0,0z"
-          ></path>
-        </Box>
       </Box>
-    </Main>
+    </ThemeProvider>
   );
 };
 

@@ -103,9 +103,10 @@ const Hero = () => {
           '& .slick-slide img': {
             objectFit: 'cover',
           },
-          '& .slick-list, & .slick-slider, & .slick-track, & .slick-slide > div': {
-            height: { xs: 'auto', md: 1 },
-          },
+          '& .slick-list, & .slick-slider, & .slick-track, & .slick-slide > div':
+            {
+              height: { xs: 'auto', md: 1 },
+            },
           '& .slick-prev, & .slick-next': {
             zIndex: 2,
             bottom: 0,
@@ -154,6 +155,7 @@ const Hero = () => {
         width: 1,
         height: 1,
         overflow: 'hidden',
+        backgroundImage,
       }}
     >
       <Container paddingX={0} paddingY={0} maxWidth={{ sm: 1, md: 1236 }}>

@@ -1,122 +1,146 @@
 import React from 'react';
+import { useState } from 'react';
 import { alpha, useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
+import { Topbar } from 'layouts/Main/components';
+import pages from '/Users/user/Desktop/blumi/blumi-nextjs/src/layouts/navigation.js';
+import useScrollTrigger from '@mui/material/useScrollTrigger';
+import NoSsr from '@mui/material/NoSsr';
+import Divider from '@mui/material/Divider';
+import Card from '@mui/material/Card';
+import HeroImage from './HeroImage.jsx';
 
-const Hero = () => {
+// create longer hero img for less than 350 width
+const Hero = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
   const theme = useTheme();
 
+  // let heroImg = '';
+
+  // const isXs = useMediaQuery(theme.breakpoints.up('xs'), {
+  //   defaultMatches: true,
+  // });
+  // const isSm = useMediaQuery(theme.breakpoints.up('sm'), {
+  //   defaultMatches: true,
+  // });
   const isMd = useMediaQuery(theme.breakpoints.up('md'), {
     defaultMatches: true,
   });
+  // const isLg = useMediaQuery(theme.breakpoints.up('lg'), {
+  //   defaultMatches: true,
+  // });
+  // const isXl = useMediaQuery(theme.breakpoints.up('xl'), {
+  //   defaultMatches: true,
+  // });
+
+  const deviceWidthSmallerThanMedium = useMediaQuery('(max-width: 899px)');
+
+  // const heroImages = {
+  //   extraSmall: 'img/xsHeroImg.svg',
+  //   small: 'img/smHeroImgSHORTER.svg',
+  //   medium: 'img/mdHeroImg.svg',
+  //   large: 'img/lgHeroImg.svg',
+  //   extraLarge: 'img/xlHeroImg.svg',
+  // };
+
+  // if (isXs) {
+  //   heroImg = heroImages.extraSmall;
+  // } else if (isSm) {
+  //   heroImg = heroImages.small;
+  // } else if (isMd) {
+  //   heroImg = heroImages.medium;
+  // } else if (isLg) {
+  //   heroImg = heroImages.large;
+  // } else if (isXl) {
+  //   heroImg = heroImages.extraLarge;
+  // }
 
   return (
-    <Grid container spacing={4}>
-      <Grid item container xs={12} md={6} alignItems={'center'}>
-        <Box data-aos={isMd ? 'fade-right' : 'fade-up'}>
-          <Box marginBottom={2}>
-            <Typography
-              variant="h2"
-              component="h1"
-              color="text.primary"
-              sx={{ fontWeight: 700 }}
-            >
-              Design agency that
-              <br />
-              <Typography
-                color={'primary'}
-                component={'span'}
-                variant={'inherit'}
-                sx={{
-                  background: `linear-gradient(180deg, transparent 82%, ${alpha(
-                    theme.palette.secondary.main,
-                    0.3,
-                  )} 0%)`,
-                }}
-              >
-                inspires
-              </Typography>
-            </Typography>
-          </Box>
-          <Box marginBottom={3}>
-            <Typography variant="h6" component="h2" color="text.secondary">
-              World developers use our theFront theme to build their web
-              applications.
-              <br />
-              Save yourself time and money.
-            </Typography>
-          </Box>
-          <Box
-            display="flex"
-            flexDirection={{ xs: 'column', sm: 'row' }}
-            alignItems={{ xs: 'stretched', sm: 'flex-start' }}
+    <>
+      <HeroImage />
+      {/* <img src={heroImg} width="100%" className="hero" /> */}
+      <Grid
+        container
+        direction={'column'}
+        alignItems={deviceWidthSmallerThanMedium ? 'center' : 'left'}
+        spacing={3}
+        padding={{ xs: 4 }}
+        paddingTop={{ xs: 0, md: 7 }}
+        marginBottom={{ xs: 0, md: 12 }}
+        // marginLeft={{ xs: 0, md: 1 }}
+        position={'absolute'}
+        top={0}
+        left={0}
+      >
+        <Grid item marginTop={{ xs: 5.5, md: 0 }}>
+          <Typography
+            // variant="h1"
+            component={'h1'}
+            fontSize={{ xs: '2.4rem', sm: '4rem', md: '5.8rem', lg: '6.2rem' }}
+            fontFamily={"'Livvic', sans-serif"}
+            color="#227C9D"
+            textAlign={isMd ? 'left' : 'center'}
+            // textAlign={'left'}
+            lineHeight={1.1}
           >
+            welcome to blumi
+          </Typography>
+        </Grid>
+
+        <Grid item xs={12} md={6} marginBottom={{ xs: 1, md: 2 }}>
+          <Typography
+            variant="h4"
+            component="p"
+            color={'white'}
+            fontSize={{ xs: '1.4rem', sm: '2rem', md: '2.3rem', lg: '2.8rem' }}
+            textAlign={deviceWidthSmallerThanMedium ? 'center' : 'left'}
+          >
+            we build websites and software for midsize companies by hand.
+          </Typography>
+        </Grid>
+
+        <Grid
+          item
+          container
+          direction={deviceWidthSmallerThanMedium ? 'column' : 'row'}
+          spacing={1}
+          alignContent={deviceWidthSmallerThanMedium ? 'center' : 'left'}
+          // marginTop={3}
+        >
+          <Grid item>
             <Button
               variant="contained"
               color="primary"
               size="large"
-              fullWidth={isMd ? false : true}
+              fullWidth={true}
+              // fullWidth={isMd ? false : true}
+              sx={{
+                fontSize: { md: '1.1rem' },
+              }}
             >
-              Case studies
+              connect
             </Button>
-            <Box
-              component={Button}
+            {/* <DarkBlueBtn text={'.'} /> */}
+          </Grid>
+
+          <Grid item>
+            <Button
+              variant="outlined"
               color="primary"
               size="large"
-              marginTop={{ xs: 2, sm: 0 }}
-              marginLeft={{ sm: 2 }}
-              fullWidth={isMd ? false : true}
-              endIcon={
-                <Box
-                  component={'svg'}
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  width={24}
-                  height={24}
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                    clipRule="evenodd"
-                  />
-                </Box>
-              }
+              sx={{
+                fontSize: { md: '1.1rem' },
+              }}
             >
-              Learn more
-            </Box>
-          </Box>
-        </Box>
+              view services
+            </Button>
+          </Grid>
+        </Grid>
       </Grid>
-      <Grid
-        item
-        container
-        alignItems={'center'}
-        justifyContent={'center'}
-        xs={12}
-        md={6}
-      >
-        <Box
-          component={'img'}
-          loading="lazy"
-          height={1}
-          width={1}
-          src={'https://assets.maccarianagency.com/backgrounds/img8.jpg'}
-          alt="..."
-          borderRadius={2}
-          maxWidth={600}
-          maxHeight={500}
-          sx={{
-            objectFit: 'cover',
-            boxShadow: '19px 20px 0px 0 rgb(140 152 164 / 13%)',
-            filter: theme.palette.mode === 'dark' ? 'brightness(0.7)' : 'none',
-          }}
-        />
-      </Grid>
-    </Grid>
+    </>
   );
 };
 
