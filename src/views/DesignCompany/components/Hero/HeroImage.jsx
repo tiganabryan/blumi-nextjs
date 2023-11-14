@@ -29,6 +29,9 @@ const HeroImage = () => {
   const isXl = useMediaQuery(theme.breakpoints.down('xl'), {
     defaultMatches: true,
   });
+  const isLargerThanXl = useMediaQuery(theme.breakpoints.up('xl'), {
+    defaultMatches: true,
+  });
 
   if (isXs) {
     return <img src={heroImages.extraSmall} width="100%" className="hero" />;
@@ -38,7 +41,7 @@ const HeroImage = () => {
     return <img src={heroImages.medium} width="100%" className="hero" />;
   } else if (isLg) {
     return <img src={heroImages.large} width="100%" className="hero" />;
-  } else if (isXl) {
+  } else if (isXl || isLargerThanXl) {
     return <img src={heroImages.extraLarge} width="100%" className="hero" />;
   } else {
     return <img src={heroImages.small} width="100%" className="hero" />;

@@ -26,7 +26,7 @@ const Services = () => {
       container
       direction={'column'}
       paddingX={{ xs: 6, md: 3 }}
-      marginTop={{ xs: 11, sm: 22, md: 27, lg: 45 }}
+      // marginTop={{ xs: 11, sm: 22, md: 27, lg: 45 }}
       marginBottom={{ xs: 3, md: 8 }}
     >
       <Grid item container alignContent={'center'} direction={'column'}>
