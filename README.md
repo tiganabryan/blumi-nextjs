@@ -10,7 +10,6 @@
 
 - React
 - MUI
-- React Scripts
 - NextJS
 - GatsbyJS
 - Figma & Sketch
