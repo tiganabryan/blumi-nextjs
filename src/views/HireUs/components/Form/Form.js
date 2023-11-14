@@ -91,21 +91,7 @@ const Form = () => {
               helperText={formik.touched.firstName && formik.errors.firstName}
             />
           </Grid>
-          {/* <Grid item xs={12} sm={6}>
-            <Typography variant={'subtitle2'} sx={{ marginBottom: 2 }}>
-              Please tell us your name *
-            </Typography>
-            <TextField
-              label="Last name"
-              variant="outlined"
-              name={'lastName'}
-              fullWidth
-              value={formik.values.lastName}
-              onChange={formik.handleChange}
-              error={formik.touched.lastName && Boolean(formik.errors.lastName)}
-              helperText={formik.touched.lastName && formik.errors.lastName}
-            />
-          </Grid> */}
+
           <Grid item xs={12} sm={6}>
             <Typography
               variant={'subtitle2'}
@@ -125,48 +111,7 @@ const Form = () => {
               helperText={formik.touched.email && formik.errors.email}
             />
           </Grid>
-          {/* <Grid item xs={12} sm={6}>
-            <Typography variant={'subtitle2'} sx={{ marginBottom: 2 }}>
-              Please enter your phone number (optional)
-            </Typography>
-            <TextField
-              label="Phone number"
-              variant="outlined"
-              name={'phone'}
-              fullWidth
-              value={formik.values.phone}
-              onChange={formik.handleChange}
-              error={formik.touched.phone && Boolean(formik.errors.phone)}
-              helperText={formik.touched.phone && formik.errors.phone}
-            />
-          </Grid> */}
-          {/* <Grid item xs={12}>
-            <Typography variant={'subtitle2'} sx={{ marginBottom: 2 }}>
-              Please tell us your budget
-            </Typography>
-            <TextField
-              select
-              label="Project budget"
-              variant="outlined"
-              name={'budget'}
-              fullWidth
-              value={formik.values.budget}
-              onChange={formik.handleChange}
-              error={formik.touched.budget && Boolean(formik.errors.budget)}
-              helperText={formik.touched.budget && formik.errors.budget}
-            >
-              {[
-                '< $20,000',
-                '$20,000 - $50,000',
-                '$50,000 - $100,000',
-                '> $100,000',
-              ].map((option) => (
-                <MenuItem key={option} value={option}>
-                  {option}
-                </MenuItem>
-              ))}
-            </TextField>
-          </Grid> */}
+
           <Grid item xs={12}>
             <Typography
               variant={'subtitle2'}
@@ -204,14 +149,6 @@ const Form = () => {
             >
               Connect
             </Button>
-            {/* <Typography
-              variant={'subtitle2'}
-              color={'textSecondary'}
-              sx={{ marginTop: 2 }}
-              align={'center'}
-            >
-              We'll get back to you in 1-2 business days.
-            </Typography> */}
           </Grid>
         </Box>
       </form>

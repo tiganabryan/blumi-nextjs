@@ -1,10 +1,6 @@
 import React from 'react';
-import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-// import './hero.css';
 
-import Main from 'layouts/Main';
-import { Topbar } from 'layouts/Main/components';
 import Container from 'components/Container';
 import { Hero, Contact, OurWork, MeetYourTeam, Services } from './components';
 import Grid from '@mui/material/Grid';
@@ -26,13 +22,9 @@ const DesignCompany = () => {
       },
     },
     components: {
-      // Name of the component
       MuiButton: {
         styleOverrides: {
-          // Name of the slot
           root: {
-            // Some CSS
-
             textTransform: 'lowercase',
             fontFamily: 'Lato',
             width: '10rem',
@@ -70,19 +62,6 @@ const DesignCompany = () => {
                 Let's talk about your vision
               </Typography>
             </Grid>
-
-            {/* <Typography
-              variant={'body1'}
-              fontSize={'1.2rem'}
-              component={'h2'}
-              color={'#646E73'}
-              // fontWeight={'600'}
-              align="center"
-              // id="services-section--js-scroll"
-            >
-              We help brands and platforms turn big ideas into beautiful digital
-              products and experiences.
-            </Typography> */}
           </Grid>
           <Form />
         </Container>

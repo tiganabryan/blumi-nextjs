@@ -3,7 +3,6 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import { alpha, useTheme } from '@mui/material/styles';
 
 const HeroImage = () => {
-  //   let heroImage = '';
   const theme = useTheme();
 
   const heroImages = {

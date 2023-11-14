@@ -159,7 +159,6 @@ const MeetYourTeam = ({
             </Grid>
           ))}
         </Grid>
-        {/* </Box> */}
       </Grid>
     </div>
   );
