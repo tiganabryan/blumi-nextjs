@@ -6,7 +6,7 @@ import { Hero, Contact, OurWork, MeetYourTeam, Services } from './components';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
-import Form from '/Users/user/Desktop/blumi/blumi-nextjs/src/views/HireUs/components/Form/Form.js';
+import Form from '../HireUs/components/Form/Form.js';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const DesignCompany = () => {

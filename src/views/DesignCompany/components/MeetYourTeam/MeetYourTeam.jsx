@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import { Topbar } from 'layouts/Main/components';
-import pages from '/Users/user/Desktop/blumi/blumi-nextjs/src/layouts/navigation.js';
+import pages from '../../../../layouts/navigation.js';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import NoSsr from '@mui/material/NoSsr';
 import Divider from '@mui/material/Divider';
