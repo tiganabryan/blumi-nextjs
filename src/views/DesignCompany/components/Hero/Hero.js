@@ -29,13 +29,20 @@ const Hero = () => {
         paddingTop={{ xs: 0, md: 7 }}
         marginBottom={{ xs: 0, md: 12 }}
         position={'absolute'}
+        marginLeft={deviceWidthSmallerThanMedium ? '0rem' : '2rem'}
+        overflow={'hidden'}
         top={0}
         left={0}
       >
         <Grid item marginTop={{ xs: 5.5, md: 0 }}>
           <Typography
             component={'h1'}
-            fontSize={{ xs: '2.4rem', sm: '4rem', md: '5.8rem', lg: '6.2rem' }}
+            fontSize={{
+              xs: '2.4rem',
+              sm: '4rem',
+              md: '5.8rem',
+              lg: '6.2rem',
+            }}
             fontFamily={"'Livvic', sans-serif"}
             color="#227C9D"
             textAlign={isMd ? 'left' : 'center'}
@@ -50,7 +57,12 @@ const Hero = () => {
             variant="h4"
             component="p"
             color={'white'}
-            fontSize={{ xs: '1.4rem', sm: '2rem', md: '2.3rem', lg: '2.8rem' }}
+            fontSize={{
+              xs: '1.4rem',
+              sm: '2rem',
+              md: '2.3rem',
+              lg: '2.8rem',
+            }}
             textAlign={deviceWidthSmallerThanMedium ? 'center' : 'left'}
           >
             we build websites and software for midsize companies by hand.

@@ -49,7 +49,7 @@ const Services = () => {
         justifyContent={'center'}
         marginBottom={{ xs: 3 }}
       >
-        <Grid item xs={12} sm={6} md={6}>
+        <Grid item xs={12} sm={6} md={6} lg={3}>
           <Card
             sx={{
               p: 3,
@@ -79,7 +79,7 @@ const Services = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={12} sm={6} md={6}>
+        <Grid item xs={12} sm={6} md={6} lg={3}>
           <Card
             sx={{
               p: 3,
@@ -109,7 +109,7 @@ const Services = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={12} sm={6} md={6}>
+        <Grid item xs={12} sm={6} md={6} lg={3}>
           <Card
             sx={{
               p: 3,
@@ -139,7 +139,7 @@ const Services = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={12} sm={6} md={6}>
+        <Grid item xs={12} sm={6} md={6} lg={3}>
           <Card
             sx={{
               p: 3,
