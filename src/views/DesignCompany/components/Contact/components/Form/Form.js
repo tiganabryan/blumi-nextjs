@@ -13,7 +13,7 @@ import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import Grid from '@mui/material/Grid';
-import OnSubmitThankYouCard from '/Users/user/Desktop/blumi/blumi-nextjs/src/blocks/cards/OnSubmitThankYouCard.jsx';
+import OnSubmitThankYouCard from '../../../../../../blocks/cards/OnSubmitThankYouCard.jsx';
 
 const log = console.log;
 
