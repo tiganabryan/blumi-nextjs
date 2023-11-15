@@ -29,7 +29,7 @@ const Hero = () => {
         paddingTop={{ xs: 0, md: 7 }}
         marginBottom={{ xs: 0, md: 12 }}
         position={'absolute'}
-        marginLeft={deviceWidthSmallerThanMedium ? '0rem' : '2rem'}
+        marginLeft={{ md: '2rem' }}
         overflow={'hidden'}
         top={0}
         left={0}
