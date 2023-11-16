@@ -77,12 +77,12 @@ const Form = () => {
       data: JSONdata,
     })
       .then((response) => {
-        console.log(response);
+        // console.log(response);
         formik.resetForm();
         setIsSubmitted(true);
       })
       .catch((error) => {
-        console.log(error);
+        // console.log(error);
       });
   };
 
