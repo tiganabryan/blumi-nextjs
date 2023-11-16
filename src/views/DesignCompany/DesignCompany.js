@@ -57,7 +57,7 @@ const DesignCompany = () => {
                 fontWeight={'600'}
                 align="center"
                 fontFamily={'Lato'}
-                // id="services-section--js-scroll"
+                id="contact-us-section--js-scroll"
               >
                 Let's talk about your vision
               </Typography>
