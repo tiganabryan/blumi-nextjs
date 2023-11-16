@@ -22,11 +22,12 @@ const Form = () => {
     userEmail: userEmail,
     userMessage: userMessage,
     businessEmail: 'tigananow@gmail.com',
+    // normally, this would be an environment variable. but I want you to know my email – let's talk.
   };
 
   const theme = useTheme();
 
-  const log = console.log;
+  // const log = console.log;
 
   const handleSubmit = (e) => {
     // e.preventDefault();

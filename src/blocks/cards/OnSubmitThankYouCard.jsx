@@ -37,17 +37,18 @@ const OnSubmitThankYouCard = () => {
     // </Card>
     //   </Container>
     // </Box>
-    <Grid container>
-      <Grid item>
+    <Grid container justifyContent={'center'}>
+      <Grid item xs={7} sm={8} md={8} lg={8} xl={10}>
         <Card
           sx={{
             padding: { xs: 4, md: 6 },
-            marginBottom: 4,
+            // marginBottom: 4,
             width: { xs: '100%' },
             borderTopLeftRadius: 0,
             borderTopRightRadius: 0,
-            marginTop: { xs: 0, lg: 13 },
-            borderTop: `2px solid ${theme.palette.success.main}`,
+            marginTop: { xs: 0, lg: 3 },
+            // borderTop: `2px solid #8D3B72`,
+            backgroundColor: '#ffc8571f',
           }}
         >
           <Typography
@@ -55,9 +56,18 @@ const OnSubmitThankYouCard = () => {
             sx={{
               fontWeight: 500,
             }}
+            textAlign={'center'}
+            color={'#227C9D'}
+            fontSize={{
+              xs: '1.5rem',
+              sm: '1.3rem',
+              md: '1.5rem',
+              lg: '1.8rem',
+              xl: '2rem',
+            }}
           >
-            Thank you for your submission! We will contact you in 1-2 business
-            days.
+            Your message has been sent. <br></br>We're looking forward to
+            meeting you.
           </Typography>
         </Card>
       </Grid>

@@ -5,7 +5,7 @@ import { alpha, useTheme } from '@mui/material/styles';
 const HeroImage = ({ heightOfTextOverlay }) => {
   const theme = useTheme();
 
-  console.log(heightOfTextOverlay);
+  // console.log(heightOfTextOverlay);
   let height = '';
   let heroImage = '';
 
