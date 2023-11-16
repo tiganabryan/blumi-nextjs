@@ -1,15 +1,21 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
+import useResizeObserver from 'use-resize-observer';
 
 import HeroImage from './HeroImage.jsx';
 
-// create longer hero img for less than 350 width
 const Hero = () => {
   const theme = useTheme();
+
+  const heroTextContainerRef = useRef(null);
+
+  const { width, height } = useResizeObserver({
+    ref: heroTextContainerRef,
+  });
 
   const isMd = useMediaQuery(theme.breakpoints.up('md'), {
     defaultMatches: true,
@@ -19,9 +25,19 @@ const Hero = () => {
 
   return (
     <>
-      <HeroImage />
+      <HeroImage
+        heightOfTextOverlay={{
+          xs: height * 1.35,
+          sm: height * 1.5,
+          md: height * 1.6,
+          lg: height * 2.1,
+          xl: height * 2.2,
+        }}
+      />
       <Grid
         container
+        // className="hero"
+        id="hero"
         direction={'column'}
         alignItems={deviceWidthSmallerThanMedium ? 'center' : 'left'}
         spacing={3}
@@ -29,13 +45,21 @@ const Hero = () => {
         paddingTop={{ xs: 0, md: 7 }}
         marginBottom={{ xs: 0, md: 12 }}
         position={'absolute'}
+        paddingLeft={{ md: '5rem' }}
+        overflow={'hidden'}
         top={0}
         left={0}
+        ref={heroTextContainerRef}
       >
         <Grid item marginTop={{ xs: 5.5, md: 0 }}>
           <Typography
             component={'h1'}
-            fontSize={{ xs: '2.4rem', sm: '4rem', md: '5.8rem', lg: '6.2rem' }}
+            fontSize={{
+              xs: '2.4rem',
+              sm: '3.6rem',
+              md: '5.8rem',
+              lg: '6.2rem',
+            }}
             fontFamily={"'Livvic', sans-serif"}
             color="#227C9D"
             textAlign={isMd ? 'left' : 'center'}
@@ -50,7 +74,12 @@ const Hero = () => {
             variant="h4"
             component="p"
             color={'white'}
-            fontSize={{ xs: '1.4rem', sm: '2rem', md: '2.3rem', lg: '2.8rem' }}
+            fontSize={{
+              xs: '1.4rem',
+              sm: '1.7rem',
+              md: '2.3rem',
+              lg: '2.8rem',
+            }}
             textAlign={deviceWidthSmallerThanMedium ? 'center' : 'left'}
           >
             we build websites and software for midsize companies by hand.

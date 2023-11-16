@@ -120,6 +120,8 @@ const MeetYourTeam = ({
               xs={12}
               sm={6}
               md={6}
+              lg={3}
+              xl={3}
               key={i}
               data-aos={'fade-up'}
               data-aos-delay={i * 100}
@@ -137,8 +139,9 @@ const MeetYourTeam = ({
                   component={CardMedia}
                   borderRadius={2}
                   width={1}
-                  height={1}
-                  minHeight={320}
+                  height={'auto'}
+                  minHeight={{ xs: 320 }}
+                  // minWidth={{ xl: 300 }}
                   image={item.avatar}
                 />
                 <Box

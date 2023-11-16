@@ -37,7 +37,7 @@ const DesignCompany = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Box>
+      <Box position={'relative'} overflow={'hidden'}>
         <Hero />
         <Services />
         <MeetYourTeam />
