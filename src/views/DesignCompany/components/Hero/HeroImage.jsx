@@ -2,8 +2,12 @@ import React from 'react';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { alpha, useTheme } from '@mui/material/styles';
 
-const HeroImage = () => {
+const HeroImage = ({ heightOfTextOverlay }) => {
   const theme = useTheme();
+
+  console.log(heightOfTextOverlay);
+  let height = '';
+  let heroImage = '';
 
   const heroImages = {
     extraSmall: 'img/xsHeroImg.svg',
@@ -13,7 +17,7 @@ const HeroImage = () => {
     extraLarge: 'img/xlHeroImg.svg',
   };
 
-  const isXs = useMediaQuery(theme.breakpoints.down('xs'), {
+  const isXs = useMediaQuery(theme.breakpoints.down(300), {
     defaultMatches: true,
   });
   const isSm = useMediaQuery(theme.breakpoints.down('sm'), {
@@ -33,18 +37,30 @@ const HeroImage = () => {
   });
 
   if (isXs) {
-    return <img src={heroImages.extraSmall} width="100%" className="hero" />;
+    heroImage = heroImages.extraSmall;
+    height = heightOfTextOverlay.xs;
   } else if (isSm) {
-    return <img src={heroImages.small} width="100%" className="hero" />;
+    heroImage = heroImages.small;
+    height = heightOfTextOverlay.sm;
   } else if (isMd) {
-    return <img src={heroImages.medium} width="100%" className="hero" />;
+    heroImage = heroImages.medium;
+    height = heightOfTextOverlay.md;
   } else if (isLg) {
-    return <img src={heroImages.large} width="100%" className="hero" />;
+    heroImage = heroImages.large;
+    height = heightOfTextOverlay.lg;
   } else if (isXl || isLargerThanXl) {
-    return <img src={heroImages.extraLarge} width="100%" className="hero" />;
+    heroImage = heroImages.extraLarge;
+    height = heightOfTextOverlay.xl;
   } else {
-    return <img src={heroImages.small} width="100%" className="hero" />;
+    heroImage = heroImages.extraSmall;
+    height = heightOfTextOverlay.xs;
   }
+
+  return (
+    <>
+      <img src={heroImage} width="100%" height={height} className="hero" />
+    </>
+  );
 };
 
 export default HeroImage;
