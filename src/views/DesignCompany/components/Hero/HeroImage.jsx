@@ -1,6 +1,7 @@
 import React from 'react';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { alpha, useTheme } from '@mui/material/styles';
+import Image from 'next/image';
 
 const HeroImage = ({ heightOfTextOverlay }) => {
   const theme = useTheme();
@@ -56,9 +57,23 @@ const HeroImage = ({ heightOfTextOverlay }) => {
     height = heightOfTextOverlay.xs;
   }
 
+  const imageStyle = {
+    height: height,
+    width: '100%',
+  };
+
   return (
     <>
-      <img src={heroImage} width="100%" height={height} className="hero" />
+      <Image
+        priority={true}
+        src={heroImage}
+        width={390}
+        style={imageStyle}
+        height={600}
+        className="hero"
+        quality={100}
+      ></Image>
+      {/* <img src={heroImage} width="100%" height={height} className="hero" /> */}
     </>
   );
 };
