@@ -10,6 +10,7 @@ const Services = () => {
       direction={'column'}
       paddingX={{ xs: 6, md: 3 }}
       marginBottom={{ xs: 3, md: 8 }}
+      id="services-section--js-scroll"
     >
       <Grid item container alignContent={'center'} direction={'column'}>
         <Grid item marginBottom={2}>
@@ -19,7 +20,7 @@ const Services = () => {
             color={'#227C9D'}
             fontWeight={'600'}
             align="center"
-            id="services-section--js-scroll"
+            // id="services-section--js-scroll"
             fontFamily={'Lato'}
           >
             Services

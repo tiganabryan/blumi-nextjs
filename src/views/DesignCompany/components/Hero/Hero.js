@@ -23,6 +23,17 @@ const Hero = () => {
 
   const deviceWidthSmallerThanMedium = useMediaQuery('(max-width: 899px)');
 
+  const scrollTo = (id) => {
+    setTimeout(() => {
+      const element = document.querySelector(`#${id}`);
+      if (!element) {
+        return;
+      }
+
+      window.scrollTo({ left: 0, top: element.offsetTop, behavior: 'smooth' });
+    });
+  };
+
   return (
     <>
       <HeroImage
@@ -102,6 +113,7 @@ const Hero = () => {
               sx={{
                 fontSize: { md: '1.1rem' },
               }}
+              onClick={() => scrollTo('contact-us-section--js-scroll')}
             >
               connect
             </Button>
@@ -115,6 +127,7 @@ const Hero = () => {
               sx={{
                 fontSize: { md: '1.1rem' },
               }}
+              onClick={() => scrollTo('services-section--js-scroll')}
             >
               view services
             </Button>
