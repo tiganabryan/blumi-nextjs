@@ -17,7 +17,7 @@ export default class MyDocument extends Document {
           <meta name="theme-color" content="#ffffff" />
           <meta
             name="description"
-            content="A modern design system for your new landing and web pages."
+            content="Software for midsize companies, built by hand."
           />
           <meta
             name="robots"
@@ -31,16 +31,13 @@ export default class MyDocument extends Document {
           />
           <meta
             property="og:title"
-            content="theFront | UI Kit by Maccarian Agency."
+            content="blumi design | Tigana Bryan and Alyssa Gomez"
           />
           <meta
             property="og:description"
-            content="A modern design system for your new landing and web pages."
+            content="Software for midsize companies, built by hand."
           />
-          <meta
-            property="og:url"
-            content="https://thefront.maccarianagency.com/"
-          />
+          <meta property="og:url" content="https://www.blumidesign.ca/" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
