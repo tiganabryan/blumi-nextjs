@@ -1,5 +1,6 @@
 import React from 'react';
 import Box from '@mui/material/Box';
+import Main from 'layouts/Main';
 
 import Container from 'components/Container';
 import { Hero, Contact, OurWork, MeetYourTeam, Services } from './components';
@@ -37,7 +38,8 @@ const DesignCompany = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Box position={'relative'} overflow={'hidden'}>
+      {/* <Box position={'relative'} overflow={'hidden'}> */}
+      <Main>
         <Hero />
         <Services />
         <MeetYourTeam />
@@ -65,7 +67,8 @@ const DesignCompany = () => {
           </Grid>
           <Form />
         </Container>
-      </Box>
+      </Main>
+      {/* </Box> */}
     </ThemeProvider>
   );
 };

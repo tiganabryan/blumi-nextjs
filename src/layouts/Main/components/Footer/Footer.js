@@ -29,17 +29,18 @@ const Footer = () => {
           >
             <Box
               component={'img'}
-              src={
-                mode === 'light'
-                  ? 'https://assets.maccarianagency.com/the-front/logos/logo.svg'
-                  : 'https://assets.maccarianagency.com/the-front/logos/logo-negative.svg'
-              }
+              src={'img/blumiLogoWithText.svg'}
+              // {
+              //   mode === 'light'
+              //     ? 'https://assets.maccarianagency.com/the-front/logos/logo.svg'
+              //     : 'https://assets.maccarianagency.com/the-front/logos/logo-negative.svg'
+              // }
               height={1}
               width={1}
             />
           </Box>
           <Box display="flex" flexWrap={'wrap'} alignItems={'center'}>
-            <Box marginTop={1} marginRight={2}>
+            {/* <Box marginTop={1} marginRight={2}>
               <Link
                 underline="none"
                 component="a"
@@ -49,8 +50,8 @@ const Footer = () => {
               >
                 Home
               </Link>
-            </Box>
-            <Box marginTop={1} marginRight={2}>
+            </Box> */}
+            {/* <Box marginTop={1} marginRight={2}>
               <Link
                 underline="none"
                 component="a"
@@ -60,17 +61,17 @@ const Footer = () => {
               >
                 Documentation
               </Link>
-            </Box>
+            </Box> */}
             <Box marginTop={1}>
               <Button
                 variant="outlined"
                 color="primary"
                 component="a"
                 target="blank"
-                href="https://mui.com/store/items/the-front-landing-page/"
+                href="https://github.com/tiganabryan/blumi-nextjs"
                 size="small"
               >
-                Purchase now
+                view the code
               </Button>
             </Box>
           </Box>
@@ -83,7 +84,7 @@ const Footer = () => {
           color="text.secondary"
           gutterBottom
         >
-          &copy; theFront. 2021, Maccarian. All rights reserved
+          &copy; blumi design 2023. all rights reserved.
         </Typography>
         <Typography
           align={'center'}
@@ -91,7 +92,7 @@ const Footer = () => {
           color="text.secondary"
           component={'p'}
         >
-          When you visit or interact with our sites, services or tools, we or
+          when you visit or interact with our sites, services or tools, we or
           our authorised service providers may use cookies for storing
           information to help provide you with a better, faster and safer
           experience and for marketing purposes.

@@ -5,14 +5,14 @@ import Typography from '@mui/material/Typography';
 
 const mock = [
   {
-    title: 'Can I purchase a gift certificate?',
+    title: 'How do you ensure that you understand my business goals?',
     subtitle:
-      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+      'We will conduct  interviews with you and your team to gain a deep understanding of your business goals, target audience, and any specific pain points.',
   },
   {
-    title: 'What is your return policy?',
+    title: 'How do you ensure that you understand my business goals?',
     subtitle:
-      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+      'We will conduct  interviews with you and your team to gain a deep understanding of your business goals, target audience, and any specific pain points.',
   },
   {
     title: 'Do you sell gift cards?',

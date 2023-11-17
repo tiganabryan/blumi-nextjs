@@ -21,7 +21,7 @@ const SidebarNav = ({ pages }) => {
 
   return (
     <Box>
-      <Box width={1} paddingX={2} paddingY={1}>
+      <Box width={1} paddingX={0.6} paddingY={1}>
         <Box
           display={'flex'}
           component="a"
@@ -31,11 +31,12 @@ const SidebarNav = ({ pages }) => {
         >
           <Box
             component={'img'}
-            src={
-              mode === 'light'
-                ? 'https://assets.maccarianagency.com/the-front/logos/logo.svg'
-                : 'https://assets.maccarianagency.com/the-front/logos/logo-negative.svg'
-            }
+            src="/img/blumiLogoWithText.svg"
+            // {
+            //   mode === 'light'
+            //     ? 'https://assets.maccarianagency.com/the-front/logos/logo.svg'
+            //     : 'https://assets.maccarianagency.com/the-front/logos/logo-negative.svg'
+            // }
             height={1}
             width={1}
           />

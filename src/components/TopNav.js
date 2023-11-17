@@ -9,7 +9,7 @@ import ThemeModeToggler from 'components/ThemeModeToggler';
 const TopNav = ({ colorInvert = false }) => {
   return (
     <Box display={'flex'} justifyContent={'flex-end'} alignItems={'center'}>
-      <Box marginRight={{ xs: 1, sm: 2 }}>
+      {/* <Box marginRight={{ xs: 1, sm: 2 }}>
         <Link
           underline="none"
           component="a"
@@ -17,7 +17,7 @@ const TopNav = ({ colorInvert = false }) => {
           color={colorInvert ? 'common.white' : 'text.primary'}
           sx={{ display: 'flex', alignItems: 'center' }}
         >
-          Demos
+          view portfolio
           <Box
             padding={0.5}
             display={'inline-flex'}
@@ -33,8 +33,8 @@ const TopNav = ({ colorInvert = false }) => {
             </Typography>
           </Box>
         </Link>
-      </Box>
-      <Box marginRight={{ xs: 1, sm: 2 }}>
+      </Box> */}
+      {/* <Box marginRight={{ xs: 1, sm: 2 }}>
         <Link
           underline="none"
           component="a"
@@ -44,8 +44,8 @@ const TopNav = ({ colorInvert = false }) => {
         >
           Components
         </Link>
-      </Box>
-      <Box marginRight={{ xs: 1, sm: 2 }}>
+      </Box> */}
+      {/* <Box marginRight={{ xs: 1, sm: 2 }}>
         <Link
           underline="none"
           component="a"
@@ -54,7 +54,7 @@ const TopNav = ({ colorInvert = false }) => {
         >
           Docs
         </Link>
-      </Box>
+      </Box> */}
       <Box>
         <ThemeModeToggler />
       </Box>

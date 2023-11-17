@@ -55,7 +55,7 @@ const Hero = () => {
         padding={{ xs: 4 }}
         paddingTop={{ xs: 0, md: 7 }}
         marginBottom={{ xs: 0, md: 12 }}
-        position={'absolute'}
+        // position={'absolute'}
         paddingLeft={{ md: '5rem' }}
         overflow={'hidden'}
         top={0}

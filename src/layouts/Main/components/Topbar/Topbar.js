@@ -39,18 +39,19 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
         component="a"
         href="/"
         title="theFront"
-        width={{ xs: 100, md: 120 }}
+        width={{ xs: 100, md: 120, lg: 300 }}
       >
-        {/* <Box
+        <Box
           component={'img'}
-          src={
-            mode === 'light' && !colorInvert
-              ? 'https://assets.maccarianagency.com/the-front/logos/logo.svg'
-              : 'https://assets.maccarianagency.com/the-front/logos/logo-negative.svg'
-          }
+          src="img/blumiLogoWithText.svg"
+          // {
+          //   mode === 'light' && !colorInvert
+          //     ? 'https://assets.maccarianagency.com/the-front/logos/logo.svg'
+          //     : 'https://assets.maccarianagency.com/the-front/logos/logo-negative.svg'
+          // }
           height={1}
           width={1}
-        /> */}
+        />
         {/* DON'T DELETE ^^ THAT'S WHERE THE LOGO GOES */}
       </Box>
       <Box
