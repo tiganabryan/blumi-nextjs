@@ -101,9 +101,9 @@ const Services = () => {
               </Grid>
               <Grid item>
                 <Typography fontFamily={'Lato'}>
-                  We meet with your team to know more about your idea, project
-                  and goal. After that, our team creates an action plan and
-                  proposal for your project.
+                  Your website's custom design will be tailored to your brand
+                  and target audience, ensuring that your online presence truly
+                  resonates with visitors.
                 </Typography>
               </Grid>
             </Grid>
@@ -131,9 +131,9 @@ const Services = () => {
               </Grid>
               <Grid item>
                 <Typography fontFamily={'Lato'}>
-                  We meet with your team to know more about your idea, project
-                  and goal. After that, our team creates an action plan and
-                  proposal for your project.
+                  Translating your design into responsive web presence, we
+                  ensure your websites is secure, performant, and optimized for
+                  search engines.
                 </Typography>
               </Grid>
             </Grid>
@@ -161,9 +161,8 @@ const Services = () => {
               </Grid>
               <Grid item>
                 <Typography fontFamily={'Lato'}>
-                  We meet with your team to know more about your idea, project
-                  and goal. After that, our team creates an action plan and
-                  proposal for your project.
+                  Post build, we provide ongoing maintenance and support to keep
+                  your digital presence secure, and contend up to date.
                 </Typography>
               </Grid>
             </Grid>

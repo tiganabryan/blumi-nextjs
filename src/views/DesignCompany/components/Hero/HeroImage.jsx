@@ -60,6 +60,7 @@ const HeroImage = ({ heightOfTextOverlay }) => {
   const imageStyle = {
     height: height,
     width: '100%',
+    shapeRendering: 'crisp-edges',
   };
 
   return (

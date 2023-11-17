@@ -18,7 +18,7 @@ const NavItem = ({ title, id, items, colorInvert = false }) => {
   const handleClick = (event, popoverId) => {
     setAnchorEl(event.target);
     setOpenedPopoverId(popoverId);
-    console.log(event, event.target);
+    // console.log(event, event.target);
   };
 
   const handleClose = () => {
