@@ -47,7 +47,7 @@ const Hero = () => {
       />
       <Grid
         container
-        // className="hero"
+        className="text-fade-in-animation"
         id="hero"
         direction={'column'}
         alignItems={deviceWidthSmallerThanMedium ? 'center' : 'left'}

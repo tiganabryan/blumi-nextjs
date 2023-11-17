@@ -66,16 +66,14 @@ const HeroImage = ({ heightOfTextOverlay }) => {
   return (
     <>
       <Image
-        priority={true}
         src={heroImage}
         width={390}
         style={imageStyle}
         height={600}
-        className="hero"
+        className="hero-image fade-in-animation"
         quality={100}
         unoptimized={true}
         alt="yellow, blue, and pink hero image"
-        // layout="fill"
       ></Image>
       {/* <img src={heroImage} width="100%" height={height} className="hero" /> */}
     </>
