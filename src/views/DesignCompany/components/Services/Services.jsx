@@ -57,6 +57,7 @@ const Services = () => {
               borderStyle: 'solid',
               borderColor: '#FFC857',
               borderWidth: '1px',
+              height: '100%',
             }}
           >
             <Grid container direction={'column'} spacing={3}>
@@ -87,6 +88,7 @@ const Services = () => {
               borderStyle: 'solid',
               borderColor: '#8D3B72',
               borderWidth: '1px',
+              height: '100%',
             }}
           >
             <Grid container direction={'column'} spacing={3}>
@@ -117,6 +119,7 @@ const Services = () => {
               borderStyle: 'solid',
               borderColor: '#EC91D8',
               borderWidth: '1px',
+              height: '100%',
             }}
           >
             <Grid container direction={'column'} spacing={3}>
@@ -147,6 +150,7 @@ const Services = () => {
               borderStyle: 'solid',
               borderColor: '#227C9D',
               borderWidth: '1px',
+              height: '100%',
             }}
           >
             <Grid container direction={'column'} spacing={3}>
