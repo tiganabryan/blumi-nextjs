@@ -165,8 +165,9 @@ const Services = () => {
               </Grid>
               <Grid item>
                 <Typography fontFamily={'Lato'}>
-                  Post build, we provide ongoing maintenance and support to keep
-                  your digital presence secure, and content up to date.
+                  Our maintenance plans provide ongoing support to address
+                  technical concerns and content updates – giving your team the
+                  peace of mind to focus on more pressing matters.
                 </Typography>
               </Grid>
             </Grid>
