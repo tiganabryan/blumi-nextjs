@@ -75,6 +75,7 @@ const HeroImage = ({ heightOfTextOverlay }) => {
         quality={100}
         unoptimized={true}
         alt="yellow, blue, and pink hero image"
+        // layout="fill"
       ></Image>
       {/* <img src={heroImage} width="100%" height={height} className="hero" /> */}
     </>

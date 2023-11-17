@@ -3,6 +3,7 @@ import React from 'react';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import createCache from '@emotion/cache';
 import createEmotionServer from '@emotion/server/create-instance';
+import { Analytics } from '@vercel/analytics/react';
 
 export default class MyDocument extends Document {
   render() {
@@ -44,6 +45,7 @@ export default class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
+          <Analytics />
         </body>
       </Html>
     );
