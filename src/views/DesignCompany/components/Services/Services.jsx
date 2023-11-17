@@ -134,7 +134,7 @@ const Services = () => {
               </Grid>
               <Grid item>
                 <Typography fontFamily={'Lato'}>
-                  Translating your design into responsive web presence, we
+                  Translating your design into a responsive web presence, we
                   ensure your websites is secure, performant, and optimized for
                   search engines.
                 </Typography>
@@ -166,7 +166,7 @@ const Services = () => {
               <Grid item>
                 <Typography fontFamily={'Lato'}>
                   Post build, we provide ongoing maintenance and support to keep
-                  your digital presence secure, and contend up to date.
+                  your digital presence secure, and content up to date.
                 </Typography>
               </Grid>
             </Grid>
