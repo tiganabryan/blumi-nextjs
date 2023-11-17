@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Head from 'next/head';
 // import { theme } from '../utils/theme';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { Analytics } from '@vercel/analytics/react';
 
 import Page from '../components/Page';
 
@@ -59,6 +60,7 @@ export default function App({ Component, pageProps }) {
       </Head>
       <Page>
         <Component {...pageProps} />
+        <Analytics />
       </Page>
     </ThemeProvider>
   );
