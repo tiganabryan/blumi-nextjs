@@ -53,12 +53,12 @@ const Hero = () => {
         alignItems={deviceWidthSmallerThanMedium ? 'center' : 'left'}
         spacing={3}
         padding={{ xs: 4 }}
-        paddingTop={{ xs: 0, md: 7 }}
+        paddingTop={{ xs: 5, sm: 4, md: 10, lg: 21 }}
         marginBottom={{ xs: 0, md: 12 }}
-        // position={'absolute'}
+        position={'absolute'}
         paddingLeft={{ md: '5rem' }}
         overflow={'hidden'}
-        top={0}
+        top={60}
         left={0}
         ref={heroTextContainerRef}
       >

@@ -17,6 +17,8 @@ const SidebarNav = ({ pages }) => {
     account: accountPages,
     portfolio: portfolioPages,
     blog: blogPages,
+    services: servicesPages,
+    about: about,
   } = pages;
 
   return (
@@ -44,23 +46,23 @@ const SidebarNav = ({ pages }) => {
       </Box>
       <Box paddingX={2} paddingY={2}>
         <Box>
-          <NavItem title={'Landings'} items={landingPages} />
+          <NavItem title={'home'} items={landingPages} />
         </Box>
         <Box>
-          <NavItem title={'Company'} items={companyPages} />
+          <NavItem title={'services'} items={companyPages} />
         </Box>
         <Box>
-          <NavItem title={'Pages'} items={secondaryPages} />
+          <NavItem title={'about blumi'} items={about} />
         </Box>
         <Box>
-          <NavItem title={'Account'} items={accountPages} />
+          <NavItem title={'faq'} items={accountPages} />
         </Box>
-        <Box>
+        {/* <Box>
           <NavItem title={'Blog'} items={blogPages} />
         </Box>
         <Box>
           <NavItem title={'Portfolio'} items={portfolioPages} />
-        </Box>
+        </Box> */}
         <Box marginTop={2}>
           <Button
             size={'large'}
@@ -69,7 +71,7 @@ const SidebarNav = ({ pages }) => {
             component="a"
             href="/docs/introduction"
           >
-            Documentation
+            how this site was built
           </Button>
         </Box>
         <Box marginTop={1}>
@@ -82,7 +84,7 @@ const SidebarNav = ({ pages }) => {
             target="blank"
             href="https://mui.com/store/items/the-front-landing-page/"
           >
-            Purchase now
+            connect
           </Button>
         </Box>
       </Box>

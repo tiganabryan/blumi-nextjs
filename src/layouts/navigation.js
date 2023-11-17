@@ -95,12 +95,13 @@ const pages = {
       href: '/about-side-cover',
     },
     {
-      title: 'About',
+      title: 'about',
       href: '/about',
     },
     {
-      title: 'Pricing',
-      href: '/pricing',
+      title: 'Services',
+      // used to be "Pricing"
+      href: '/services',
     },
     {
       title: 'Terms',
@@ -222,6 +223,24 @@ const pages = {
       title: 'Parallax',
       href: '/agency',
     },
+  ],
+  about: [
+    {
+      title: 'our story',
+      href: '/about-tigana',
+    },
+    {
+      title: 'Tigana',
+      href: '/about-tigana',
+    },
+    {
+      title: 'Alyssa',
+      href: '/about-alyssa',
+    },
+    // {
+    //   title: 'advisory board',
+    //   href: '/about#advisory-board',
+    // },
   ],
 };
 

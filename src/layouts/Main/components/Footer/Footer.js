@@ -25,7 +25,7 @@ const Footer = () => {
             component="a"
             href="/"
             title="theFront"
-            width={80}
+            width={115}
           >
             <Box
               component={'img'}

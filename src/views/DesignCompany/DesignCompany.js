@@ -28,7 +28,7 @@ const DesignCompany = () => {
           root: {
             textTransform: 'lowercase',
             fontFamily: 'Lato',
-            width: '10rem',
+            // width: '10rem',
             // fontSize: { lg: '1.2rem' },
           },
         },

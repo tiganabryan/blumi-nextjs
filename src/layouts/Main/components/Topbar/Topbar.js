@@ -6,12 +6,16 @@ import { alpha, useTheme } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
 import Link from '@mui/material/Link';
 import pages from 'layouts/navigation';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 import { NavItem } from './components';
 
 const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
   const theme = useTheme();
+  const deviceWidthSmallerThanMedium = useMediaQuery('(max-width: 899px)');
+
   const { mode } = theme.palette;
+
   const {
     landings: landingPages,
     secondary: secondaryPages,
@@ -26,29 +30,24 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
       display={'flex'}
       justifyContent={'space-between'}
       width={1}
-      padding={{ xs: 2, md: 3 }}
+      // padding={{ xs: 2, md: 3 }}
       position="sticky"
       top="0px"
       bottom="0px"
       left="0px"
       right="0px"
-      alignItems="flex-start"
+      alignItems={deviceWidthSmallerThanMedium ? 'center' : 'flex-start'}
     >
       <Box
         display={'flex'}
         component="a"
         href="/"
-        title="theFront"
-        width={{ xs: 100, md: 120, lg: 300 }}
+        title="blumi | home"
+        width={{ xs: 150, md: 120, lg: 300 }}
       >
         <Box
           component={'img'}
           src="img/blumiLogoWithText.svg"
-          // {
-          //   mode === 'light' && !colorInvert
-          //     ? 'https://assets.maccarianagency.com/the-front/logos/logo.svg'
-          //     : 'https://assets.maccarianagency.com/the-front/logos/logo-negative.svg'
-          // }
           height={1}
           width={1}
         />

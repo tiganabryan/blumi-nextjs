@@ -3,13 +3,24 @@ import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
 
 import ThemeModeToggler from 'components/ThemeModeToggler';
 
 const TopNav = ({ colorInvert = false }) => {
+  const theme = useTheme();
+
+  const isSmallerThanMd = useMediaQuery(theme.breakpoints.down('md'), {
+    defaultMatches: true,
+  });
   return (
-    <Box display={'flex'} justifyContent={'flex-end'} alignItems={'center'}>
-      {/* <Box marginRight={{ xs: 1, sm: 2 }}>
+    <Box
+      display={isSmallerThanMd ? 'none' : 'flex'}
+      justifyContent={'flex-end'}
+      alignItems={'center'}
+    >
+      <Box marginRight={{ xs: 1, sm: 2 }}>
         <Link
           underline="none"
           component="a"
@@ -33,8 +44,8 @@ const TopNav = ({ colorInvert = false }) => {
             </Typography>
           </Box>
         </Link>
-      </Box> */}
-      {/* <Box marginRight={{ xs: 1, sm: 2 }}>
+      </Box>
+      <Box marginRight={{ xs: 1, sm: 2 }}>
         <Link
           underline="none"
           component="a"
@@ -42,22 +53,22 @@ const TopNav = ({ colorInvert = false }) => {
           color={colorInvert ? 'common.white' : 'text.primary'}
           sx={{ display: 'flex', alignItems: 'center' }}
         >
-          Components
+          faq
         </Link>
-      </Box> */}
-      {/* <Box marginRight={{ xs: 1, sm: 2 }}>
+      </Box>
+      <Box marginRight={{ xs: 1, sm: 2 }}>
         <Link
           underline="none"
           component="a"
           href="/docs/introduction"
           color={colorInvert ? 'common.white' : 'text.primary'}
         >
-          Docs
+          contact
         </Link>
-      </Box> */}
-      <Box>
-        <ThemeModeToggler />
       </Box>
+      {/* <Box>
+        <ThemeModeToggler />
+      </Box> */}
     </Box>
   );
 };
