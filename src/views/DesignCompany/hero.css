@@ -6,7 +6,7 @@
   -ms-animation: fadeIn ease 2s;
 }
 
-.text-fade-in-animation {
+#text-fade-in-animation {
   animation: fadeIn ease 0.2s;
   -webkit-animation: fadeIn ease 0.2s;
   -moz-animation: fadeIn ease 0.2s;
@@ -57,4 +57,13 @@
   100% {
     opacity: 1;
   }
+}
+
+/* HERO BACKGROUND IMAGE */
+
+.hero-background-image {
+  background-image: url(../../../public/img/mdHeroImg.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  /* width: 100%; */
 }
