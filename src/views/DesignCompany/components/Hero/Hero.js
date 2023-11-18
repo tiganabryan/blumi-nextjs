@@ -8,23 +8,45 @@ import useResizeObserver from 'use-resize-observer';
 
 import HeroImage from './HeroImage.jsx';
 
-// export async function getStaticProps() {
-//   const textContent = await fetch('/api/text-content').then((response) =>
-//     response.json(),
-//   );
-//   const textHeight = calculateTextHeight(textContent); // Use the provided function to calculate textHeight
-
-//   return {
-//     props: {
-//       initialBackgroundHeight: textHeight,
-//     },
-//   };
-// }
-
-const Hero = ({ initialBackgroundHeight }) => {
+const Hero = () => {
   const theme = useTheme();
 
-  const [textHeight, setTextHeight] = useState(initialBackgroundHeight);
+  const heroTextContainerRef = useRef(null);
+
+  const { width, height } = useResizeObserver({
+    ref: heroTextContainerRef,
+  });
+
+  const [heightIncrease, setHeightIncrease] = useState(0);
+
+  const isXs = useMediaQuery(theme.breakpoints.down(300), {
+    defaultMatches: true,
+  });
+  const isSm = useMediaQuery(theme.breakpoints.down('sm'), {
+    defaultMatches: true,
+  });
+  const isMd = useMediaQuery(theme.breakpoints.down('md'), {
+    defaultMatches: true,
+  });
+  const isLg = useMediaQuery(theme.breakpoints.down('lg'), {
+    defaultMatches: true,
+  });
+  const isXl = useMediaQuery(theme.breakpoints.down('xl'), {
+    defaultMatches: true,
+  });
+  const isLargerThanXl = useMediaQuery(theme.breakpoints.up('xl'), {
+    defaultMatches: true,
+  });
+
+  const deviceWidthSmallerThanMedium = useMediaQuery('(max-width: 899px)');
+
+  const heroImageHeightIncrease = {
+    xs: 1.4,
+    sm: 1.4,
+    md: 1.55,
+    lg: 1.6,
+    xl: 1.9,
+  };
 
   useEffect(() => {
     if (typeof window === 'null') return;
@@ -33,11 +55,31 @@ const Hero = ({ initialBackgroundHeight }) => {
     const heroImage = document.querySelector('.hero-background-image');
 
     const adjustBackgroundHeight = () => {
-      const newTextHeight = heroText.offsetHeight * 1.5;
-      console.log(newTextHeight);
-      setTextHeight(newTextHeight);
-      heroImage.style.height = `${newTextHeight}px`;
+      if (isXs) {
+        setHeightIncrease(heroImageHeightIncrease.xs);
+      } else if (isSm) {
+        setHeightIncrease(heroImageHeightIncrease.sm);
+      } else if (isMd) {
+        setHeightIncrease(heroImageHeightIncrease.md);
+      } else if (isLg) {
+        setHeightIncrease(heroImageHeightIncrease.lg);
+      } else if (isXl || isLargerThanXl) {
+        setHeightIncrease(heroImageHeightIncrease.xl);
+      } else {
+        setHeightIncrease(heroImageHeightIncrease.xs);
+      }
+
+      console.log(heroText.offsetHeight);
+      console.log(heightIncrease);
+
+      const heroImageHeight = heroText.offsetHeight * heightIncrease;
+
+      console.log(heroImageHeight);
+
+      heroImage.style.height = `${heroImageHeight}px`;
     };
+
+    adjustBackgroundHeight();
 
     window.addEventListener('resize', adjustBackgroundHeight);
     heroText.addEventListener('input', adjustBackgroundHeight);
@@ -46,19 +88,7 @@ const Hero = ({ initialBackgroundHeight }) => {
       window.removeEventListener('resize', adjustBackgroundHeight);
       heroText.removeEventListener('input', adjustBackgroundHeight);
     };
-  }, []);
-
-  // const heroTextContainerRef = useRef(null);
-
-  // const { width, height } = useResizeObserver({
-  //   ref: heroTextContainerRef,
-  // });
-
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
-    defaultMatches: true,
-  });
-
-  const deviceWidthSmallerThanMedium = useMediaQuery('(max-width: 899px)');
+  }, [width]);
 
   const scrollTo = (id) => {
     setTimeout(() => {
@@ -76,30 +106,11 @@ const Hero = ({ initialBackgroundHeight }) => {
     });
   };
 
-  // const heightOfTextOverlay = {
-  //   xs: height * 1.35,
-  //   sm: height * 1.5,
-  //   md: height * 1.6,
-  //   lg: height * 2.1,
-  //   xl: height * 2.2,
-  // };
-
   return (
     <>
-      {/* <HeroImage
-        heightOfTextOverlay={{
-          xs: height * 1.35,
-          sm: height * 1.5,
-          md: height * 1.6,
-          lg: height * 2.1,
-          xl: height * 2.2,
-        }}
-      /> */}
       <div
         className="hero-background-image fade-in-animation"
         id="hero-background-image"
-        // ref={heroTextContainerRef}
-        // style={{ height: textHeight }} // 1.35 is the ratio of the height of the text overlay to the height of the image
       >
         <Grid
           container
@@ -109,14 +120,14 @@ const Hero = ({ initialBackgroundHeight }) => {
           alignItems={deviceWidthSmallerThanMedium ? 'center' : 'left'}
           spacing={3}
           padding={{ xs: 4 }}
-          paddingTop={{ xs: 5, sm: 4, md: 10, lg: 8 }}
+          paddingTop={{ xs: 2, sm: 4, md: 10, lg: 8 }}
           marginBottom={{ xs: 0, md: 12 }}
           // position={'absolute'}
           paddingLeft={{ md: '5rem' }}
           overflow={'hidden'}
           top={60}
           left={0}
-          // ref={heroTextContainerRef}
+          ref={heroTextContainerRef}
         >
           <Grid item marginTop={{ xs: 5.5, md: 0 }}>
             <Typography
@@ -129,7 +140,7 @@ const Hero = ({ initialBackgroundHeight }) => {
               }}
               fontFamily={"'Livvic', sans-serif"}
               color="#227C9D"
-              textAlign={isMd ? 'left' : 'center'}
+              textAlign={deviceWidthSmallerThanMedium ? 'center' : 'left'}
               lineHeight={1.1}
             >
               welcome to blumi

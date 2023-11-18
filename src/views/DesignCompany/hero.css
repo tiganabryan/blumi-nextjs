@@ -1,17 +1,30 @@
 .fade-in-animation {
-  animation: fadeIn ease 2s;
-  -webkit-animation: fadeIn ease 2s;
-  -moz-animation: fadeIn ease 2s;
-  -o-animation: fadeIn ease 2s;
-  -ms-animation: fadeIn ease 2s;
+  transition: 1.3s;
+
+  animation: fadeIn ease 0.6s;
+  -webkit-animation: fadeIn ease 0.6s;
+  -moz-animation: fadeIn ease 0.6s;
+  -o-animation: fadeIn ease 0.6s;
+  -ms-animation: fadeIn ease 0.6s;
 }
 
-#text-fade-in-animation {
-  animation: fadeIn ease 0.2s;
-  -webkit-animation: fadeIn ease 0.2s;
-  -moz-animation: fadeIn ease 0.2s;
-  -o-animation: fadeIn ease 0.2s;
-  -ms-animation: fadeIn ease 0.2s;
+#services-section--js-scroll {
+  transition: 1.3s;
+  animation: fadeIn ease 3s;
+  -webkit-animation: fadeIn ease 3s;
+  -moz-animation: fadeIn ease 3s;
+  -o-animation: fadeIn ease 3s;
+  -ms-animation: fadeIn ease 3s;
+}
+
+.text-fade-in-animation {
+  transition: 0.5s !important;
+
+  animation: fadeIn ease 3.5s !important;
+  -webkit-animation: fadeIn ease 3.5s !important;
+  -moz-animation: fadeIn ease 3.5s !important;
+  -o-animation: fadeIn ease 3.5s !important;
+  -ms-animation: fadeIn ease 3.5s !important;
 }
 
 @keyframes fadeIn {
@@ -59,11 +72,42 @@
   }
 }
 
-/* HERO BACKGROUND IMAGE */
+/* HERO BACKGROUND IMAGES */
 
 .hero-background-image {
-  background-image: url(../../../public/img/mdHeroImg.svg);
+  background-image: url(../../../public/img/xsHeroImg.svg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  /* width: 100%; */
+}
+
+@media (min-width: 600px) {
+  .hero-background-image {
+    background-image: url(../../../public/img/smHeroImg.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+}
+
+@media (min-width: 900px) {
+  .hero-background-image {
+    background-image: url(../../../public/img/mdHeroImg.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero-background-image {
+    background-image: url(../../../public/img/lgHeroImg.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+}
+
+@media (min-width: 1536px) {
+  .hero-background-image {
+    background-image: url(../../../public/img/xlHeroImg.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
 }
