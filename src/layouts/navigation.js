@@ -231,16 +231,39 @@ const pages = {
     },
     {
       title: 'Tigana',
-      href: '/about-tigana',
+      href: '/tigana',
+      // could go to portfolio website, video, or another page
     },
     {
       title: 'Alyssa',
-      href: '/about-alyssa',
+      href: '/alyssa',
+      // could go to portfolio website, video, or another page
     },
     // {
     //   title: 'advisory board',
     //   href: '/about#advisory-board',
     // },
+  ],
+  services: [
+    {
+      title: 'website updates & repair',
+      href: '/services#site-updates',
+    },
+    {
+      title: 'website design',
+      href: '/services#web-design',
+      // could go to portfolio website, video, or another page
+    },
+    {
+      title: 'maintenance subscription',
+      href: '/services#maintenance',
+      // could go to portfolio website, video, or another page
+    },
+    {
+      title: 'graphic design & branding',
+      href: '/services#graphic-design',
+      // could go to portfolio website, video, or another page
+    },
   ],
 };
 

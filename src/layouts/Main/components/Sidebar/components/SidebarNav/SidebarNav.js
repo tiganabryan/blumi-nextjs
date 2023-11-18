@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import { useTheme } from '@mui/material/styles';
+import Link from '@mui/material/Link';
+import Typography from '@mui/material/Typography';
 
 import NavItem from './components/NavItem';
 
@@ -17,19 +19,19 @@ const SidebarNav = ({ pages }) => {
     account: accountPages,
     portfolio: portfolioPages,
     blog: blogPages,
-    services: servicesPages,
+    services: services,
     about: about,
   } = pages;
 
   return (
     <Box>
-      <Box width={1} paddingX={0.6} paddingY={1}>
+      <Box width={1} paddingY={1}>
         <Box
           display={'flex'}
           component="a"
           href="/"
           title="theFront"
-          width={{ xs: 100, md: 120 }}
+          width={{ xs: 140, md: 120 }}
         >
           <Box
             component={'img'}
@@ -45,33 +47,33 @@ const SidebarNav = ({ pages }) => {
         </Box>
       </Box>
       <Box paddingX={2} paddingY={2}>
-        <Box>
-          <NavItem title={'home'} items={landingPages} />
+        <Box marginBottom={1.6}>
+          <Link underline="none" color={'black'} href="/">
+            home
+          </Link>
         </Box>
         <Box>
-          <NavItem title={'services'} items={companyPages} />
+          <NavItem title={'services'} items={services} />
         </Box>
         <Box>
           <NavItem title={'about blumi'} items={about} />
         </Box>
-        <Box>
-          <NavItem title={'faq'} items={accountPages} />
+        <Box marginTop={1.7}>
+          <Link underline="none" color={'black'} href="/faq">
+            faq
+          </Link>
         </Box>
-        {/* <Box>
-          <NavItem title={'Blog'} items={blogPages} />
-        </Box>
-        <Box>
-          <NavItem title={'Portfolio'} items={portfolioPages} />
-        </Box> */}
+
         <Box marginTop={2}>
           <Button
             size={'large'}
             variant="outlined"
             fullWidth
             component="a"
-            href="/docs/introduction"
+            target="blank"
+            href="https://github.com/tiganabryan/blumi-nextjs"
           >
-            how this site was built
+            view the github
           </Button>
         </Box>
         <Box marginTop={1}>

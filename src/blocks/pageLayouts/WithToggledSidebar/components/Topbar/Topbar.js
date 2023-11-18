@@ -166,7 +166,7 @@ const Topbar = ({ onSidebarOpen }) => {
               </svg>
             }
           >
-            Conatct us
+            Contact us
           </Button>
         </Box>
         <Button
