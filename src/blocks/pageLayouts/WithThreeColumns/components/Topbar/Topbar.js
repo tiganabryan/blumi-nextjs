@@ -112,7 +112,7 @@ const Topbar = ({ onSidebarOpen }) => {
                     right: 14,
                     width: 10,
                     height: 10,
-                    bgcolor: 'background.paper',
+                    // bgcolor: 'background.paper',
                     transform: 'translateY(-50%) rotate(45deg)',
                     zIndex: 0,
                   },
@@ -157,7 +157,7 @@ const Topbar = ({ onSidebarOpen }) => {
               </svg>
             }
           >
-            Conatct us
+            Contact us
           </Button>
         </Box>
         <Box sx={{ display: { xs: 'block', md: 'none' } }} marginLeft={2}>

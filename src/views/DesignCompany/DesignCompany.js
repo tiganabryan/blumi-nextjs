@@ -1,5 +1,6 @@
 import React from 'react';
 import Box from '@mui/material/Box';
+import Main from 'layouts/Main';
 
 import Container from 'components/Container';
 import { Hero, Contact, OurWork, MeetYourTeam, Services } from './components';
@@ -27,7 +28,7 @@ const DesignCompany = () => {
           root: {
             textTransform: 'lowercase',
             fontFamily: 'Lato',
-            width: '10rem',
+            // width: '10rem',
             // fontSize: { lg: '1.2rem' },
           },
         },
@@ -37,7 +38,8 @@ const DesignCompany = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Box position={'relative'} overflow={'hidden'}>
+      {/* <Box position={'relative'} overflow={'hidden'}> */}
+      <Main>
         <Hero />
         <Services />
         <MeetYourTeam />
@@ -57,7 +59,7 @@ const DesignCompany = () => {
                 fontWeight={'600'}
                 align="center"
                 fontFamily={'Lato'}
-                id="contact-us-section--js-scroll"
+                id="contact-us-section--js-scroll contact-us-ref"
               >
                 Let's talk about your vision
               </Typography>
@@ -65,7 +67,8 @@ const DesignCompany = () => {
           </Grid>
           <Form />
         </Container>
-      </Box>
+      </Main>
+      {/* </Box> */}
     </ThemeProvider>
   );
 };

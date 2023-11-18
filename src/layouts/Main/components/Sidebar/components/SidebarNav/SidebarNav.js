@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import { useTheme } from '@mui/material/styles';
+import Link from '@mui/material/Link';
+import Typography from '@mui/material/Typography';
 
 import NavItem from './components/NavItem';
 
@@ -17,73 +19,76 @@ const SidebarNav = ({ pages }) => {
     account: accountPages,
     portfolio: portfolioPages,
     blog: blogPages,
+    services: services,
+    about: about,
   } = pages;
 
   return (
     <Box>
-      <Box width={1} paddingX={2} paddingY={1}>
+      <Box width={1} paddingY={1}>
         <Box
           display={'flex'}
           component="a"
           href="/"
           title="theFront"
-          width={{ xs: 100, md: 120 }}
+          width={{ xs: 140, md: 120 }}
         >
           <Box
             component={'img'}
-            src={
-              mode === 'light'
-                ? 'https://assets.maccarianagency.com/the-front/logos/logo.svg'
-                : 'https://assets.maccarianagency.com/the-front/logos/logo-negative.svg'
-            }
+            src="/img/blumiLogoWithText.svg"
+            // {
+            //   mode === 'light'
+            //     ? 'https://assets.maccarianagency.com/the-front/logos/logo.svg'
+            //     : 'https://assets.maccarianagency.com/the-front/logos/logo-negative.svg'
+            // }
             height={1}
             width={1}
           />
         </Box>
       </Box>
       <Box paddingX={2} paddingY={2}>
-        <Box>
-          <NavItem title={'Landings'} items={landingPages} />
+        <Box marginBottom={1.6}>
+          <Link underline="none" color={'black'} href="/">
+            home
+          </Link>
         </Box>
         <Box>
-          <NavItem title={'Company'} items={companyPages} />
+          <NavItem title={'services'} items={services} />
         </Box>
         <Box>
-          <NavItem title={'Pages'} items={secondaryPages} />
+          <NavItem title={'about blumi'} items={about} />
         </Box>
-        <Box>
-          <NavItem title={'Account'} items={accountPages} />
+        <Box marginTop={1.7}>
+          <Link underline="none" color={'black'} href="/services#faq">
+            faq
+          </Link>
         </Box>
-        <Box>
-          <NavItem title={'Blog'} items={blogPages} />
-        </Box>
-        <Box>
-          <NavItem title={'Portfolio'} items={portfolioPages} />
-        </Box>
-        <Box marginTop={2}>
+
+        <Box marginTop={4}>
           <Button
             size={'large'}
-            variant="outlined"
+            // variant="outlined"
+            variant="contained"
             fullWidth
             component="a"
-            href="/docs/introduction"
+            target="blank"
+            href="https://github.com/tiganabryan/blumi-nextjs"
           >
-            Documentation
+            view the github
           </Button>
         </Box>
-        <Box marginTop={1}>
+        {/* <Box marginTop={1}>
           <Button
             size={'large'}
             variant="contained"
             color="primary"
             fullWidth
             component="a"
-            target="blank"
-            href="https://mui.com/store/items/the-front-landing-page/"
+            href="/#contact-us-ref"
           >
-            Purchase now
+            connect
           </Button>
-        </Box>
+        </Box> */}
       </Box>
     </Box>
   );

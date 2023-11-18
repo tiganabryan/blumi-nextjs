@@ -3,22 +3,33 @@ import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
 
 import ThemeModeToggler from 'components/ThemeModeToggler';
 
 const TopNav = ({ colorInvert = false }) => {
+  const theme = useTheme();
+
+  const isSmallerThanMd = useMediaQuery(theme.breakpoints.down('md'), {
+    defaultMatches: true,
+  });
   return (
-    <Box display={'flex'} justifyContent={'flex-end'} alignItems={'center'}>
+    <Box
+      display={isSmallerThanMd ? 'none' : 'flex'}
+      justifyContent={'flex-end'}
+      alignItems={'center'}
+    >
       <Box marginRight={{ xs: 1, sm: 2 }}>
         <Link
           underline="none"
           component="a"
-          href="/demos"
+          href="/"
           color={colorInvert ? 'common.white' : 'text.primary'}
           sx={{ display: 'flex', alignItems: 'center' }}
         >
-          Demos
-          <Box
+          home
+          {/* <Box
             padding={0.5}
             display={'inline-flex'}
             borderRadius={1}
@@ -31,18 +42,28 @@ const TopNav = ({ colorInvert = false }) => {
             >
               new
             </Typography>
-          </Box>
+          </Box> */}
         </Link>
       </Box>
       <Box marginRight={{ xs: 1, sm: 2 }}>
         <Link
           underline="none"
           component="a"
-          href="/blocks"
+          href="/services"
           color={colorInvert ? 'common.white' : 'text.primary'}
           sx={{ display: 'flex', alignItems: 'center' }}
         >
-          Components
+          services
+        </Link>
+      </Box>
+      <Box marginRight={{ xs: 1, sm: 2 }}>
+        <Link
+          underline="none"
+          component="a"
+          href="/services#faq"
+          color={colorInvert ? 'common.white' : 'text.primary'}
+        >
+          faq
         </Link>
       </Box>
       <Box marginRight={{ xs: 1, sm: 2 }}>
@@ -52,12 +73,13 @@ const TopNav = ({ colorInvert = false }) => {
           href="/docs/introduction"
           color={colorInvert ? 'common.white' : 'text.primary'}
         >
-          Docs
+          connect
         </Link>
       </Box>
-      <Box>
+
+      {/* <Box>
         <ThemeModeToggler />
-      </Box>
+      </Box> */}
     </Box>
   );
 };

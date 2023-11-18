@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Pricing from 'views/Pricing';
 
-const PricingPage = () => {
+const Services = () => {
   const seo = {
     title: 'pricing | blumi',
     description: 'transparent web design pricing.',
@@ -14,6 +14,8 @@ const PricingPage = () => {
       'affordable web design for toronto businesses',
       'mobile-friendly web design toronto',
       'local SEO services for businesses',
+      'blumi design',
+      'blumi',
     ],
   };
 
@@ -32,4 +34,4 @@ const PricingPage = () => {
   );
 };
 
-export default PricingPage;
+export default Services;

@@ -95,12 +95,13 @@ const pages = {
       href: '/about-side-cover',
     },
     {
-      title: 'About',
+      title: 'about',
       href: '/about',
     },
     {
-      title: 'Pricing',
-      href: '/pricing',
+      title: 'Services',
+      // used to be "Pricing"
+      href: '/services',
     },
     {
       title: 'Terms',
@@ -221,6 +222,47 @@ const pages = {
     {
       title: 'Parallax',
       href: '/agency',
+    },
+  ],
+  about: [
+    // {
+    //   title: 'our story',
+    //   href: '/our-story',
+    // },
+    {
+      title: 'Tigana',
+      href: '/#meet-the-team-ref',
+      // will become one page with team descriptions or videos
+      // could go to portfolio website, video, or another page
+    },
+    {
+      title: 'Alyssa',
+      href: '/#meet-the-team',
+      // will become one page with team descriptions or videos
+
+      // could go to portfolio website, video, or another page
+    },
+    // {
+    //   title: 'advisory board',
+    //   href: '/about#advisory-board',
+    // },
+  ],
+  services: [
+    {
+      title: 'website updates & repair',
+      href: '/services#site-updates-ref',
+    },
+    {
+      title: 'website design',
+      href: '/services#web-design-ref',
+    },
+    {
+      title: 'maintenance subscription',
+      href: '/services#maintenance-subscription-ref',
+    },
+    {
+      title: 'graphic design & branding',
+      href: '/services#graphic-design-ref',
     },
   ],
 };
