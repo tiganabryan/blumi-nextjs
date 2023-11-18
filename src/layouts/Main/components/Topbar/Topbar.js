@@ -36,14 +36,14 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
       bottom="0px"
       left="0px"
       right="0px"
-      alignItems={deviceWidthSmallerThanMedium ? 'center' : 'flex-start'}
+      alignItems={'center'}
     >
       <Box
         display={'flex'}
         component="a"
         href="/"
         title="blumi | home"
-        width={{ xs: 150, md: 120, lg: 300 }}
+        width={{ xs: 150, md: 120, lg: 120 }}
       >
         <Box
           component={'img'}
@@ -62,11 +62,11 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
           <Link
             underline="none"
             component="a"
-            href="/agency"
-            color={'common.white'}
+            href="/"
+            color={'primary.main'}
             sx={{ display: 'flex', alignItems: 'center' }}
           >
-            Portfolio
+            home
           </Link>
         </Box>
 
@@ -74,11 +74,11 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
           <Link
             underline="none"
             component="a"
-            href="/pricing"
-            color={'common.white'}
+            href="/services"
+            color={'primary.main'}
             sx={{ display: 'flex', alignItems: 'center' }}
           >
-            Services
+            services
           </Link>
         </Box>
 
@@ -86,11 +86,11 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
           <Link
             underline="none"
             component="a"
-            href="/about-side-cover"
-            color={'common.white'}
+            href="/services#faq"
+            color={'primary.main'}
             sx={{ display: 'flex', alignItems: 'center' }}
           >
-            About
+            faq
           </Link>
         </Box>
 
@@ -98,11 +98,11 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
           <Link
             underline="none"
             component="a"
-            href="/contact-page-cover"
-            color={'common.white'}
+            href="#contact-us-section--js-scroll"
+            color={'#227C9D'}
             sx={{ display: 'flex', alignItems: 'center' }}
           >
-            Contact
+            contact
           </Link>
         </Box>
       </Box>

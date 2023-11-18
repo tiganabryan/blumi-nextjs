@@ -53,7 +53,7 @@ const Hero = () => {
         alignItems={deviceWidthSmallerThanMedium ? 'center' : 'left'}
         spacing={3}
         padding={{ xs: 4 }}
-        paddingTop={{ xs: 5, sm: 4, md: 10, lg: 21 }}
+        paddingTop={{ xs: 5, sm: 4, md: 10, lg: 8 }}
         marginBottom={{ xs: 0, md: 12 }}
         position={'absolute'}
         paddingLeft={{ md: '5rem' }}
