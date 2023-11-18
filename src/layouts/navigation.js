@@ -225,18 +225,21 @@ const pages = {
     },
   ],
   about: [
-    {
-      title: 'our story',
-      href: '/about-tigana',
-    },
+    // {
+    //   title: 'our story',
+    //   href: '/our-story',
+    // },
     {
       title: 'Tigana',
-      href: '/tigana',
+      href: '/#meet-the-team-ref',
+      // will become one page with team descriptions or videos
       // could go to portfolio website, video, or another page
     },
     {
       title: 'Alyssa',
-      href: '/alyssa',
+      href: '/#meet-the-team',
+      // will become one page with team descriptions or videos
+
       // could go to portfolio website, video, or another page
     },
     // {
@@ -247,22 +250,19 @@ const pages = {
   services: [
     {
       title: 'website updates & repair',
-      href: '/services#site-updates',
+      href: '/services#site-updates-ref',
     },
     {
       title: 'website design',
-      href: '/services#web-design',
-      // could go to portfolio website, video, or another page
+      href: '/services#web-design-ref',
     },
     {
       title: 'maintenance subscription',
-      href: '/services#maintenance',
-      // could go to portfolio website, video, or another page
+      href: '/services#maintenance-subscription-ref',
     },
     {
       title: 'graphic design & branding',
-      href: '/services#graphic-design',
-      // could go to portfolio website, video, or another page
+      href: '/services#graphic-design-ref',
     },
   ],
 };

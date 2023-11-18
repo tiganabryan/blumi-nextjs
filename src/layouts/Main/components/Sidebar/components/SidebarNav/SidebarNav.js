@@ -59,7 +59,7 @@ const SidebarNav = ({ pages }) => {
           <NavItem title={'about blumi'} items={about} />
         </Box>
         <Box marginTop={1.7}>
-          <Link underline="none" color={'black'} href="/faq">
+          <Link underline="none" color={'black'} href="/services#faq">
             faq
           </Link>
         </Box>

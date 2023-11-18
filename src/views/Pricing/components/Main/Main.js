@@ -19,37 +19,36 @@ import Container from 'components/Container';
 
 const mock = [
   {
-    title: 'Starter',
-    subtitle: 'Is perfect for individual developers',
-    price: { monthly: '$22', annual: '$190' },
-    features: ['1 User', '1 App', 'Integrations'],
+    title: 'website updates & repair',
+    subtitle: 'debugging, content updates',
+    // price: { monthly: '$22', annual: '$190' },
+    features: ['1 User'],
     isHighlighted: false,
+    id: 'site-updates-ref',
   },
   {
-    title: 'Pro',
-    subtitle: 'For teams and advanced developers',
-    price: { monthly: '$44', annual: '$390' },
-    features: [
-      'All in Starter plan',
-      'Google Ads',
-      'SSO via Google',
-      'API access',
-    ],
+    title: 'website design',
+    subtitle: 'custom software built for your business',
+    // price: { monthly: '$44', annual: '$390' },
+    features: ['All in Starter plan'],
     isHighlighted: true,
+    id: 'web-design-ref',
   },
   {
-    title: 'Enterprise',
-    subtitle: 'Ideal for corporate companyes',
-    price: { monthly: '$77', annual: '$690' },
-    features: [
-      'All features',
-      'Email support',
-      'Google Ads',
-      'SSO via Google',
-      'API access',
-      'Facebook Ads',
-    ],
+    title: 'maintenance subscription',
+    subtitle: 'ongoing technical support, when you need it most',
+    // price: { monthly: '$77', annual: '$690' },
+    features: ['All features'],
     isHighlighted: false,
+    id: 'maintenance-subscription-ref',
+  },
+  {
+    title: 'graphic design',
+    subtitle: 'Ideal for corporate companyes',
+    // price: { monthly: '$77', annual: '$690' },
+    features: ['All features'],
+    isHighlighted: false,
+    id: 'graphic-design-ref',
   },
 ];
 
@@ -65,56 +64,56 @@ const Main = () => {
     setPricingOption(newPricingOption);
   };
 
-  const renderToggler = () => (
-    <Box display={'flex'} justifyContent={'center'} marginBottom={4}>
-      <ToggleButtonGroup value={pricingOption} exclusive onChange={handleClick}>
-        <ToggleButton
-          value="annual"
-          size={isMd ? 'large' : 'small'}
-          sx={{
-            backgroundColor:
-              pricingOption === 'annual'
-                ? `${theme.palette.primary.light} !important`
-                : 'transparent',
-            border: `1px solid ${theme.palette.primary.main}`,
-          }}
-        >
-          <Typography
-            variant="subtitle2"
-            sx={{
-              fontWeight: 700,
-              color:
-                pricingOption === 'annual' ? 'common.white' : 'text.primary',
-            }}
-          >
-            Annual
-          </Typography>
-        </ToggleButton>
-        <ToggleButton
-          value="monthly"
-          size={isMd ? 'large' : 'small'}
-          sx={{
-            backgroundColor:
-              pricingOption === 'monthly'
-                ? `${theme.palette.primary.light} !important`
-                : 'transparent',
-            border: `1px solid ${theme.palette.primary.main}`,
-          }}
-        >
-          <Typography
-            variant="subtitle2"
-            sx={{
-              fontWeight: 700,
-              color:
-                pricingOption !== 'annual' ? 'common.white' : 'text.primary',
-            }}
-          >
-            Monthly
-          </Typography>
-        </ToggleButton>
-      </ToggleButtonGroup>
-    </Box>
-  );
+  // const renderToggler = () => (
+  //   <Box display={'flex'} justifyContent={'center'} marginBottom={4}>
+  //     <ToggleButtonGroup value={pricingOption} exclusive onChange={handleClick}>
+  //       <ToggleButton
+  //         value="annual"
+  //         size={isMd ? 'large' : 'small'}
+  //         sx={{
+  //           backgroundColor:
+  //             pricingOption === 'annual'
+  //               ? `${theme.palette.primary.light} !important`
+  //               : 'transparent',
+  //           border: `1px solid ${theme.palette.primary.main}`,
+  //         }}
+  //       >
+  //         <Typography
+  //           variant="subtitle2"
+  //           sx={{
+  //             fontWeight: 700,
+  //             color:
+  //               pricingOption === 'annual' ? 'common.white' : 'text.primary',
+  //           }}
+  //         >
+  //           Annual
+  //         </Typography>
+  //       </ToggleButton>
+  //       <ToggleButton
+  //         value="monthly"
+  //         size={isMd ? 'large' : 'small'}
+  //         sx={{
+  //           backgroundColor:
+  //             pricingOption === 'monthly'
+  //               ? `${theme.palette.primary.light} !important`
+  //               : 'transparent',
+  //           border: `1px solid ${theme.palette.primary.main}`,
+  //         }}
+  //       >
+  //         <Typography
+  //           variant="subtitle2"
+  //           sx={{
+  //             fontWeight: 700,
+  //             color:
+  //               pricingOption !== 'annual' ? 'common.white' : 'text.primary',
+  //           }}
+  //         >
+  //           Monthly
+  //         </Typography>
+  //       </ToggleButton>
+  //     </ToggleButtonGroup>
+  //   </Box>
+  // );
 
   return (
     <Box>
@@ -138,22 +137,55 @@ const Main = () => {
                   fontWeight: 900,
                 }}
               >
-                Flexible pricing options
+                start a digital experience that resonates with your customers.
+              </Typography>
+
+              <Typography
+                variant="h6"
+                component="p"
+                color="text.primary"
+                align={'center'}
+                marginBottom={4}
+              >
+                at blumi, we understand that your website is more than just a
+                collection of pages – it's the digital face of your brand, the
+                gateway to your success.
               </Typography>
               <Typography
                 variant="h6"
                 component="p"
                 color="text.primary"
                 align={'center'}
+                marginBottom={4}
               >
-                We are founded by a leading academic and researcher in the field
-                of Industrial Systems Engineering.
+                our mission is to create visually stunning and user-friendly
+                websites that not only leave a lasting impression but also drive
+                real, tangible results.
                 <br />
-                For entrepreneurs, startups and freelancers. If you didn’t find
-                what you needed, these could help!
+              </Typography>
+              <Typography
+                variant="h6"
+                component="p"
+                color="text.primary"
+                align={'center'}
+                marginBottom={4}
+              >
+                whether you need a captivating portfolio site, responsive
+                corporate website, or e-commerce platform, we have the skills,
+                knowledge, and passion to make it happen.
+              </Typography>
+              <Typography
+                variant="h6"
+                component="p"
+                color="text.primary"
+                align={'center'}
+                marginBottom={4}
+              >
+                run by the new generation of technical professionals and backed
+                by a mature advisory board, blumi is ready to meet you.
               </Typography>
             </Box>
-            {renderToggler()}
+            {/* {renderToggler()} */}
           </Box>
         </Container>
       </Box>
@@ -167,6 +199,7 @@ const Main = () => {
                 display={'flex'}
                 flexDirection={'column'}
                 variant={'outlined'}
+                id={item.id}
               >
                 <CardContent
                   sx={{
@@ -181,7 +214,7 @@ const Main = () => {
                       {item.subtitle}
                     </Typography>
                   </Box>
-                  <Box
+                  {/* <Box
                     display={'flex'}
                     alignItems={'baseline'}
                     marginBottom={2}
@@ -198,7 +231,7 @@ const Main = () => {
                     >
                       {pricingOption === 'annual' ? '/y' : '/mo'}
                     </Typography>
-                  </Box>
+                  </Box> */}
                   <Grid container spacing={1}>
                     {item.features.map((feature, j) => (
                       <Grid item xs={12} key={j}>
@@ -208,7 +241,7 @@ const Main = () => {
                           width={'auto'}
                           padding={0}
                         >
-                          <Box
+                          {/* <Box
                             component={ListItemAvatar}
                             minWidth={'auto !important'}
                             marginRight={2}
@@ -233,7 +266,7 @@ const Main = () => {
                                 />
                               </svg>
                             </Box>
-                          </Box>
+                          </Box> */}
                           <ListItemText primary={feature} />
                         </Box>
                       </Grid>
@@ -241,11 +274,11 @@ const Main = () => {
                   </Grid>
                 </CardContent>
                 <Box flexGrow={1} />
-                <CardActions sx={{ justifyContent: 'flex-end', padding: 4 }}>
+                {/* <CardActions sx={{ justifyContent: 'flex-end', padding: 4 }}>
                   <Button size={'large'} variant={'contained'}>
                     Learn more
                   </Button>
-                </CardActions>
+                </CardActions> */}
               </Box>
             </Grid>
           ))}
