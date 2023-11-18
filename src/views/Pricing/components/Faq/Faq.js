@@ -5,21 +5,21 @@ import Typography from '@mui/material/Typography';
 
 const mock = [
   {
-    title: 'How do you ensure that you understand my business goals?',
+    title: 'how do you ensure that you understand my business goals?',
     subtitle:
-      'We will conduct  interviews with you and your team to gain a deep understanding of your business goals, target audience, and any specific pain points.',
+      'we will conduct  interviews with you and your team to gain a deep understanding of your business goals, target audience, and any specific pain points.',
   },
   {
     title:
-      'How do you develop the plan that outlines the timeline for my project?',
+      'how do you develop the plan that outlines the timeline for my project?',
     subtitle:
-      'Once we have a clear understanding of your project, we will develop a detailed action plan that outlines the specific tasks that will be involved in completing your project. We will also provide a realistic timeline for each task, so you can be confident that your project will be completed on time and within budget.',
+      'once we have a clear understanding of your project, we will develop a detailed action plan that outlines the specific tasks that will be involved in completing your project. we will also provide a realistic timeline for each task, so you can be confident that your project will be completed on time and within budget.',
   },
   {
     title:
-      'How do you make sure that my website is performant and fast-loading?',
+      'how do you make sure that my website is performant and fast-loading?',
     subtitle:
-      "We will use a number of techniques to optimize your website for performance, including using efficient coding practices, optimizing images, and using a content delivery network (CDN). We will also monitor your website's performance and make adjustments as needed.",
+      "we will use a number of techniques to optimize your website for performance, including using efficient coding practices, optimizing images, and using a content delivery network (CDN). we will also monitor your website's performance and make adjustments as needed.",
   },
   // {
   //   title: 'Can I change plans later on?',
@@ -43,7 +43,7 @@ const Faq = () => {
     <Box id="faq">
       <Box marginBottom={4}>
         <Typography fontWeight={700} variant={'h4'} align={'center'}>
-          Frequently asked questions
+          frequently asked questions
         </Typography>
       </Box>
       <Grid container spacing={4}>

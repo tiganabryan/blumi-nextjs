@@ -22,15 +22,27 @@ const mock = [
     title: 'website updates & repair',
     subtitle: 'debugging, content updates',
     // price: { monthly: '$22', annual: '$190' },
-    features: ['1 User'],
+    features: [
+      "quickly repair your website's nagging errors and give your customers confidence when they visit your website.",
+    ],
     isHighlighted: false,
     id: 'site-updates-ref',
   },
   {
-    title: 'website design',
+    title: 'web design and technical solutions',
     subtitle: 'custom software built for your business',
     // price: { monthly: '$44', annual: '$390' },
-    features: ['All in Starter plan'],
+    features:
+      'whether you need a captivating portfolio site, responsive corporate website, or e-commerce platform, we have the skills, knowledge, and passion to make it happen.',
+    isHighlighted: true,
+    id: 'web-design-ref',
+  },
+  {
+    title: 'technical additions',
+    subtitle: 'one-time additions to your online presence',
+    // price: { monthly: '$44', annual: '$390' },
+    features:
+      "e-commerce integration, customer loyalty programs. let's talk about your customers' specific pain points and how they can be addressed.",
     isHighlighted: true,
     id: 'web-design-ref',
   },
@@ -38,15 +50,19 @@ const mock = [
     title: 'maintenance subscription',
     subtitle: 'ongoing technical support, when you need it most',
     // price: { monthly: '$77', annual: '$690' },
-    features: ['All features'],
+    features: [
+      'for years, website builders like wix and wordpress have assumed that small business owners want to engineer their own sites rather than focusing on more pressing matters. what if they have it backwards? let us take care of the tedious technical details so you can focus on what matters most: your business.',
+    ],
     isHighlighted: false,
     id: 'maintenance-subscription-ref',
   },
   {
     title: 'graphic design',
-    subtitle: 'Ideal for corporate companyes',
+    subtitle: 'logos, QR codes, and more',
     // price: { monthly: '$77', annual: '$690' },
-    features: ['All features'],
+    features: [
+      'craft a consistent brand identity with our graphic design services.',
+    ],
     isHighlighted: false,
     id: 'graphic-design-ref',
   },
@@ -131,13 +147,39 @@ const Main = () => {
             <Box marginBottom={4}>
               <Typography
                 variant="h3"
+                marginBottom={3}
                 gutterBottom
                 align={'center'}
                 sx={{
                   fontWeight: 900,
                 }}
               >
-                start a digital experience that resonates with your customers.
+                a digital experience that your customers will remember.
+              </Typography>
+
+              <Typography
+                variant="h6"
+                component="p"
+                color="text.primary"
+                align={'center'}
+                marginBottom={2}
+              >
+                at blumi, we understand that your website is more than just a
+                collection of pages – it's the digital face of your brand, the
+                gateway to your success.
+              </Typography>
+
+              <Typography
+                variant="h6"
+                component="p"
+                color="text.primary"
+                align={'center'}
+                // marginBottom={4}
+              >
+                our mission is to create visually stunning and user-friendly
+                websites that not only leave a lasting impression but also drive
+                real, tangible results.
+                <br />
               </Typography>
 
               <Typography
@@ -146,35 +188,9 @@ const Main = () => {
                 color="text.primary"
                 align={'center'}
                 marginBottom={4}
-              >
-                at blumi, we understand that your website is more than just a
-                collection of pages – it's the digital face of your brand, the
-                gateway to your success.
-              </Typography>
-              <Typography
-                variant="h6"
-                component="p"
-                color="text.primary"
-                align={'center'}
-                marginBottom={4}
-              >
-                our mission is to create visually stunning and user-friendly
-                websites that not only leave a lasting impression but also drive
-                real, tangible results.
-                <br />
-              </Typography>
-              <Typography
-                variant="h6"
-                component="p"
-                color="text.primary"
-                align={'center'}
-                marginBottom={4}
-              >
-                whether you need a captivating portfolio site, responsive
-                corporate website, or e-commerce platform, we have the skills,
-                knowledge, and passion to make it happen.
-              </Typography>
-              <Typography
+              ></Typography>
+
+              {/* <Typography
                 variant="h6"
                 component="p"
                 color="text.primary"
@@ -183,7 +199,7 @@ const Main = () => {
               >
                 run by the new generation of technical professionals and backed
                 by a mature advisory board, blumi is ready to meet you.
-              </Typography>
+              </Typography> */}
             </Box>
             {/* {renderToggler()} */}
           </Box>
@@ -233,15 +249,19 @@ const Main = () => {
                     </Typography>
                   </Box> */}
                   <Grid container spacing={1}>
-                    {item.features.map((feature, j) => (
-                      <Grid item xs={12} key={j}>
-                        <Box
-                          component={ListItem}
-                          disableGutters
-                          width={'auto'}
-                          padding={0}
-                        >
-                          {/* <Box
+                    {/* {item.features.map((feature, j) => ( */}
+                    <Grid
+                      item
+                      xs={12}
+                      // key={j}
+                    >
+                      <Box
+                        component={ListItem}
+                        disableGutters
+                        width={'auto'}
+                        padding={0}
+                      >
+                        {/* <Box
                             component={ListItemAvatar}
                             minWidth={'auto !important'}
                             marginRight={2}
@@ -267,10 +287,10 @@ const Main = () => {
                               </svg>
                             </Box>
                           </Box> */}
-                          <ListItemText primary={feature} />
-                        </Box>
-                      </Grid>
-                    ))}
+                        <ListItemText primary={item.features} />
+                      </Box>
+                    </Grid>
+                    {/* ))} */}
                   </Grid>
                 </CardContent>
                 <Box flexGrow={1} />

@@ -64,10 +64,11 @@ const SidebarNav = ({ pages }) => {
           </Link>
         </Box>
 
-        <Box marginTop={2}>
+        <Box marginTop={4}>
           <Button
             size={'large'}
-            variant="outlined"
+            // variant="outlined"
+            variant="contained"
             fullWidth
             component="a"
             target="blank"
@@ -76,19 +77,18 @@ const SidebarNav = ({ pages }) => {
             view the github
           </Button>
         </Box>
-        <Box marginTop={1}>
+        {/* <Box marginTop={1}>
           <Button
             size={'large'}
             variant="contained"
             color="primary"
             fullWidth
             component="a"
-            target="blank"
-            href="https://mui.com/store/items/the-front-landing-page/"
+            href="/#contact-us-ref"
           >
             connect
           </Button>
-        </Box>
+        </Box> */}
       </Box>
     </Box>
   );
