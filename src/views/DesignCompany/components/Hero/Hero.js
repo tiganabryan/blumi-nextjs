@@ -106,7 +106,10 @@ const Hero = () => {
               </Button>
             </Grid>
 
-            <Grid item marginBottom={{ sm: 25, md: 30, lg: 45, xl: 37 }}>
+            <Grid
+              item
+              marginBottom={{ xs: 15, sm: 25, md: 30, lg: 45, xl: 37 }}
+            >
               <Button
                 variant="outlined"
                 color="primary"
