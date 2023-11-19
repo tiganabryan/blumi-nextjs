@@ -81,6 +81,15 @@
   background-position: bottom-center;
 }
 
+@media (min-width: 300px) {
+  .hero-background-image {
+    background-image: url(../../../public/img/smHeroImg.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: bottom-center;
+  }
+}
+
 @media (min-width: 600px) {
   .hero-background-image {
     background-image: url(../../../public/img/smHeroImg.svg);
@@ -142,7 +151,7 @@ Extend length of background image at xs widths */
 
 @media (max-width: 429px) {
   .view-services-button {
-    margin-bottom: 10rem;
+    margin-bottom: 15rem;
   }
 }
 
