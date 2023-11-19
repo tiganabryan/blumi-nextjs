@@ -179,16 +179,16 @@ Extend length of background image */
 
 @media (max-width: 899px) {
   .cta-button-container {
-    align-content: center;
-    flex-direction: column;
+    /* align-content: center; */
+    /* flex-direction: column; */
     justify-content: center;
   }
 }
 
 @media (min-width: 900px) {
   .cta-button-container {
-    align-content: left;
-    flex-direction: row;
+    /* align-content: left; */
+    /* flex-direction: row; */
     margin-bottom: 4rem;
   }
 }

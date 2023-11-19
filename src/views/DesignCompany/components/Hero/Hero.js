@@ -57,7 +57,7 @@ const Hero = () => {
               className="tagline-text"
               fontFamily={"'Livvic', sans-serif"}
               color="#227C9D"
-              textAlign={deviceWidthSmallerThanMedium ? 'center' : 'left'}
+              textAlign={{ xs: 'center', md: 'left' }}
               lineHeight={1}
             >
               refine your website. <br /> drive growth.
@@ -87,9 +87,9 @@ const Hero = () => {
             item
             container
             className="cta-button-container"
-            // direction={deviceWidthSmallerThanMedium ? 'column' : 'row'}
+            direction={{ xs: 'column', md: 'row' }}
             spacing={1}
-            // alignContent={deviceWidthSmallerThanMedium ? 'center' : 'left'}
+            alignContent={{ xs: 'center', md: 'left' }}
           >
             <Grid item>
               <Button
