@@ -107,7 +107,7 @@ const Hero = () => {
                 variant="outlined"
                 color="primary"
                 size="large"
-                className="view-services-button"
+                id="view-services-button"
                 href="/services"
                 sx={{
                   fontSize: { md: '1.1rem' },
