@@ -3,7 +3,7 @@ import Card from '@mui/material/Card';
 import Grid from '@mui/material/Grid';
 import { Typography, CardActionArea } from '@mui/material';
 
-const Services = () => {
+const OurProcess = () => {
   return (
     <Grid
       container
@@ -23,7 +23,7 @@ const Services = () => {
             // id="services-section--js-scroll"
             fontFamily={'Lato'}
           >
-            Services
+            Our process
           </Typography>
         </Grid>
 
@@ -187,4 +187,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default OurProcess;
