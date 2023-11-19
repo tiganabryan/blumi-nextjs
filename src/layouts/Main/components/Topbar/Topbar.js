@@ -30,7 +30,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
       display={'flex'}
       justifyContent={'space-between'}
       width={1}
-      // padding={{ xs: 2, md: 3 }}
+      // marginLeft={'1rem'}
       position="sticky"
       top="0px"
       bottom="0px"
@@ -44,6 +44,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
         href="/"
         title="blumi | home"
         width={{ xs: 150, md: 120, lg: 120 }}
+        // marginLeft={{ xs: 0, md: '.7rem', lg: '1.3rem' }}
       >
         <Box
           component={'img'}
@@ -56,7 +57,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
       <Box
         sx={{ display: { xs: 'none', md: 'flex' } }}
         alignItems={'center'}
-        paddingRight={24}
+        paddingRight={{ xs: 0, md: 3 }}
       >
         <Box marginLeft={4}>
           <Link
@@ -106,7 +107,11 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
           </Link>
         </Box>
       </Box>
-      <Box sx={{ display: { md: 'none' } }} alignItems={'center'}>
+      <Box
+        sx={{ display: { md: 'none' } }}
+        alignItems={'center'}
+        // marginRight={2}
+      >
         <Button
           onClick={() => onSidebarOpen()}
           aria-label="Menu"

@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Main from 'layouts/Main';
 
 import Container from 'components/Container';
-import { Hero, Contact, OurWork, MeetYourTeam, Services } from './components';
+import { Hero, Contact, OurWork, MeetYourTeam, OurProcess } from './components';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
@@ -41,7 +41,7 @@ const DesignCompany = () => {
       {/* <Box position={'relative'} overflow={'hidden'}> */}
       <Main>
         <Hero />
-        <Services />
+        <OurProcess />
         <MeetYourTeam />
         <Container maxWidth={800}>
           <Grid

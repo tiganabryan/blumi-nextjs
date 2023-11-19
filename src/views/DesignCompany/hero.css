@@ -1,17 +1,30 @@
 .fade-in-animation {
-  animation: fadeIn ease 2s;
-  -webkit-animation: fadeIn ease 2s;
-  -moz-animation: fadeIn ease 2s;
-  -o-animation: fadeIn ease 2s;
-  -ms-animation: fadeIn ease 2s;
+  transition: 0.4s;
+
+  animation: fadeIn ease 1s;
+  -webkit-animation: fadeIn ease 1s;
+  -moz-animation: fadeIn ease 1s;
+  -o-animation: fadeIn ease 1s;
+  -ms-animation: fadeIn ease 1s;
+}
+
+#services-section--js-scroll {
+  transition: 1.3s;
+  animation: fadeIn ease 3s;
+  -webkit-animation: fadeIn ease 3s;
+  -moz-animation: fadeIn ease 3s;
+  -o-animation: fadeIn ease 3s;
+  -ms-animation: fadeIn ease 3s;
 }
 
 .text-fade-in-animation {
-  animation: fadeIn ease 0.2s;
-  -webkit-animation: fadeIn ease 0.2s;
-  -moz-animation: fadeIn ease 0.2s;
-  -o-animation: fadeIn ease 0.2s;
-  -ms-animation: fadeIn ease 0.2s;
+  transition: 0.5s !important;
+
+  animation: fadeIn ease 1s !important;
+  -webkit-animation: fadeIn ease 1s !important;
+  -moz-animation: fadeIn ease 1s !important;
+  -o-animation: fadeIn ease 1s !important;
+  -ms-animation: fadeIn ease 1s !important;
 }
 
 @keyframes fadeIn {
@@ -56,5 +69,132 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+/* HERO BACKGROUND IMAGES */
+
+.hero-background-image {
+  background-image: url(../../../public/img/xsHeroImg.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: bottom;
+}
+
+/* @media (min-width: 300px) {
+  .hero-background-image {
+    background-image: url(../../../public/img/smHeroImg.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: bottom-center;
+  }
+} */
+
+@media (min-width: 600px) {
+  .hero-background-image {
+    background-image: url(../../../public/img/smHeroImg.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: bottom;
+  }
+}
+
+@media (min-width: 900px) {
+  .hero-background-image {
+    background-image: url(../../../public/img/mdHeroImg.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: bottom;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero-background-image {
+    background-image: url(../../../public/img/lgHeroImg.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: bottom;
+  }
+}
+
+@media (min-width: 1536px) {
+  .hero-background-image {
+    background-image: url(../../../public/img/xlHeroImg.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: bottom;
+  }
+}
+
+/* HERO TEXT ALIGNMENT */
+
+@media (max-width: 899px) {
+  /* .tagline-text, */
+  /* .tagline-subheading-text, */
+  .tagline-text-container,
+  .tagline-subheading-container {
+    text-align: center;
+    justify-content: center;
+    /* max-width: 65%; */
+  }
+}
+
+@media (min-width: 900px) {
+  /* .tagline-text, */
+  /* .tagline-subheading-text, */
+  .tagline-text-container,
+  .tagline-subheading-container {
+    text-align: left;
+    justify-content: left;
+    /* max-width: 75%; */
+  }
+}
+
+@media (min-width: 1200px) {
+  .tagline-subheading-text {
+    max-width: 75%;
+  }
+}
+
+/* SERVICES BUTTONS CONTAINER (MARGIN AND ALIGNMENT)
+Extend length of background image */
+
+@media (min-width: 600px) {
+  .cta-button-container {
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media (max-width: 599px) {
+  .cta-button-container {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 429px) {
+  .cta-button-container {
+    margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 256px) {
+  .cta-button-container {
+    margin-bottom: 7rem;
+  }
+}
+
+@media (max-width: 899px) {
+  .cta-button-container {
+    /* align-content: center; */
+    /* flex-direction: column; */
+    justify-content: center;
+  }
+}
+
+@media (min-width: 900px) {
+  .cta-button-container {
+    /* align-content: left; */
+    /* flex-direction: row; */
+    margin-bottom: 4rem;
   }
 }
