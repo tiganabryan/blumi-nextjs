@@ -181,6 +181,7 @@ Extend length of background image */
   .cta-button-container {
     align-content: center;
     flex-direction: column;
+    justify-content: center;
   }
 }
 
