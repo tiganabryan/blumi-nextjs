@@ -1,11 +1,11 @@
 .fade-in-animation {
-  /* transition: 0.4s; */
+  transition: 0.4s;
 
-  animation: fadeIn ease 0.4s;
-  -webkit-animation: fadeIn ease 0.4s;
-  -moz-animation: fadeIn ease 0.4s;
-  -o-animation: fadeIn ease 0.4s;
-  -ms-animation: fadeIn ease 0.4s;
+  animation: fadeIn ease 1s;
+  -webkit-animation: fadeIn ease 1s;
+  -moz-animation: fadeIn ease 1s;
+  -o-animation: fadeIn ease 1s;
+  -ms-animation: fadeIn ease 1s;
 }
 
 #services-section--js-scroll {
@@ -129,34 +129,65 @@
 /* HERO TEXT ALIGNMENT */
 
 @media (max-width: 899px) {
-  .hero-text {
+  /* .tagline-text, */
+  /* .tagline-subheading-text, */
+  .tagline-text-container,
+  .tagline-subheading-container {
     text-align: center;
+    justify-content: center;
+    /* max-width: 65%; */
   }
 }
 
 @media (min-width: 900px) {
-  .hero-text {
+  /* .tagline-text, */
+  /* .tagline-subheading-text, */
+  .tagline-text-container,
+  .tagline-subheading-container {
     text-align: left;
+    justify-content: left;
+    /* max-width: 75%; */
   }
 }
 
-/* SERVICES BUTTON MARGIN
-Extend length of background image at xs widths */
+@media (min-width: 1200px) {
+  .tagline-subheading-text {
+    max-width: 75%;
+  }
+}
+
+/* SERVICES BUTTONS CONTAINER (MARGIN AND ALIGNMENT)
+Extend length of background image */
 
 @media (max-width: 599px) {
-  #view-services-button {
-    margin-bottom: 8rem;
+  .cta-button-container {
+    margin-bottom: 9rem;
   }
 }
 
 @media (max-width: 429px) {
-  #view-services-button {
-    margin-bottom: 7.5rem;
+  .cta-button-container {
+    margin-bottom: 10.5rem;
   }
 }
 
-@media (max-width: 264px) {
-  #view-services-button {
+@media (max-width: 256px) {
+  .cta-button-container {
     margin-bottom: 12rem;
+  }
+}
+
+@media (max-width: 899px) {
+  .cta-button-container {
+    align-content: center;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 900px) {
+  .cta-button-container {
+    align-content: left;
+    flex-direction: row;
+    margin-bottom: 4rem;
   }
 }

@@ -36,56 +36,60 @@ const Hero = () => {
           className="text-fade-in-animation"
           id="hero"
           direction={'column'}
-          spacing={3}
-          padding={{ xs: 4 }}
-          paddingTop={{ xs: 0, sm: 2, md: 7, lg: 8 }}
-          marginBottom={{ xs: 0, md: 12 }}
-          paddingLeft={{ md: '5rem' }}
+          spacing={{ xs: 3, md: 5 }}
+          padding={{ xs: 4, sm: 0 }}
+          paddingTop={{ xs: 4, sm: 3.5, md: 7, lg: 7 }}
+          paddingLeft={{ md: '2.5rem', lg: '4rem' }}
           overflow={'hidden'}
-          top={60}
-          left={0}
+          // top={60}
+          // left={0}
         >
-          <Grid item marginTop={{ xs: 5.5, md: 0 }} marginBottom={{ xs: 0 }}>
+          <Grid item container className="tagline-text-container">
             <Typography
               component={'h1'}
               fontSize={{
-                xs: '2.8rem',
+                xs: '2.4rem',
                 sm: '3.6rem',
-                md: '5.8rem',
-                lg: '6.2rem',
+                md: '5.6rem',
+                lg: '5.9rem',
+                xl: '5.8rem',
               }}
+              className="tagline-text"
               fontFamily={"'Livvic', sans-serif"}
               color="#227C9D"
               textAlign={deviceWidthSmallerThanMedium ? 'center' : 'left'}
-              lineHeight={1.1}
+              lineHeight={1}
             >
-              welcome to blumi
+              refine your website. <br /> drive growth.
             </Typography>
           </Grid>
 
-          <Grid item xs={12} md={6} marginBottom={{ xs: 2, md: 3 }}>
+          <Grid item xs={12} md={6} className="tagline-subheading-container">
             <Typography
               variant="h4"
               component="p"
               color={'white'}
+              className="tagline-subheading-text"
               fontSize={{
-                xs: '1.5rem',
+                xs: '1.3rem',
                 sm: '1.7rem',
                 md: '2.3rem',
                 lg: '2.8rem',
               }}
-              textAlign={deviceWidthSmallerThanMedium ? 'center' : 'left'}
+              // textAlign={deviceWidthSmallerThanMedium ? 'center' : 'left'}
             >
-              we build websites and software for midsize companies by hand.
+              we'll handle the technical complexities so you can focus on what
+              matters most: your clients.
             </Typography>
           </Grid>
 
           <Grid
             item
             container
-            direction={deviceWidthSmallerThanMedium ? 'column' : 'row'}
+            className="cta-button-container"
+            // direction={deviceWidthSmallerThanMedium ? 'column' : 'row'}
             spacing={1}
-            alignContent={deviceWidthSmallerThanMedium ? 'center' : 'left'}
+            // alignContent={deviceWidthSmallerThanMedium ? 'center' : 'left'}
           >
             <Grid item>
               <Button

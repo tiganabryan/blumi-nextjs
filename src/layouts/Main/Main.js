@@ -47,7 +47,7 @@ const Main = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
         }}
         elevation={trigger ? 1 : 0}
       >
-        <Container paddingY={1}>
+        <Container paddingY={1} maxWidth={'99%'}>
           <Topbar
             onSidebarOpen={handleSidebarOpen}
             pages={pages}
