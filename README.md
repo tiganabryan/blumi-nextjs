@@ -27,13 +27,13 @@ image designed by [Alyssa Gomez](https://www.linkedin.com/in/alyssagomez29/)
 
 # achieving visual harmony with whitespace
 
-A crucial aspect of this project involved determining the hero text's height to ensure the SVG seamlessly grew and shrunk accordingly, maintaining design best practices for whitespace.
+A crucial aspect of this project involved determining the hero text's height to ensure that the SVG seamlessly grew and shrunk even if text wrapped onto new lines, maintaining design best practices for whitespace.
 
 This delicate balance between functionality and visual harmony presented a juicy problem to solve.
 
 # the value of iterative problem-solving
 
-To achieve the balance required to scale an organic shape and maintain Alyssa's design, I implemented dynamic height calculations based on [Material Design's whitespace ratios](https://m2.material.io/design/layout/spacing-methods.html) that accounted for both the container's dimensions and the desired whitespace.
+To achieve the balance required to scale an organic shape and maintain Alyssa's design, I wrote height calculations based on [Material Design's whitespace ratios](https://m2.material.io/design/layout/spacing-methods.html) that accounted for both the container's dimensions and the desired whitespace.
 
 Initially, I attempted to solve this problem using JavaScript, but I always aim to keep my code as simple and maintainable as possible, which led me to explore solutions written in pure CSS.
 
