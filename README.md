@@ -14,6 +14,7 @@ built with React, Next.js, Material-UI, and Figma. click [here](blumidesign.ca) 
 
 the responsive background image on the homepage was carefully crafted to ensure the best user experience across a wide range of devices. building a responsive organic shape involved a combination of CSS techniques, JavaScript, and mindful design decisions.
 
+gif demonstration:
 ![test](/public/img/blumiGif.gif)
 image designed by [Alyssa Gomez](https://www.linkedin.com/in/alyssagomez29/)
 
