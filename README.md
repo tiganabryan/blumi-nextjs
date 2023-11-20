@@ -35,7 +35,7 @@ This delicate balance between functionality and visual harmony presented a juicy
 
 To achieve the balance required to scale an organic shape and maintain Alyssa's design, I implemented dynamic height calculations based on [Material Design's whitespace ratios](https://m2.material.io/design/layout/spacing-methods.html) that accounted for both the container's dimensions and the desired whitespace.
 
-Initially, I attempted to solve this problem using JavaScript, but I always aim to keep my code as simple and maintanable as possible, which led me to exploring solutions written in pure CSS.
+Initially, I attempted to solve this problem using JavaScript, but I always aim to keep my code as simple and maintainable as possible, which led me to explore solutions written in pure CSS.
 
 This experience highlighted the importance of continuous evaluation and the willingness to adapt to alternative solutions when faced with roadblocks.
 
@@ -49,9 +49,9 @@ This experience highlighted the importance of continuous evaluation and the will
 
 - Since SSR loads the page beforehand, you can no longer access the window object – this required me to swiftly adjust my approach to fit the effects of Server Side Rendering.
 
-- I discovered that since the useEffect hook only runs after the page has been painted, I could still access the window object (phew). However, I needed to measure the device’s width before the website was painted, to prevent the layout from flickering when it adjusts. I needed a layout altering side effect, which led me to [this article](https://kentcdodds.com/blog/useeffect-vs-uselayouteffect) on React's useLayoutEffect hook by Kent C. Dodds.
+- I discovered that since the useEffect hook only runs after the page has been painted, I could still access the window object (phew). However, I needed to measure the device’s width before the website was painted, to prevent the layout from flickering when it adjusts. I needed a layout-altering side effect, which led me to [this article](https://kentcdodds.com/blog/useeffect-vs-uselayouteffect) on React's useLayoutEffect hook by Kent C. Dodds.
 
-- I learned that the split second flicker is caused by the side effects only taking place after the browser has rendered the page – this is where useLayoutEffect comes in handy, as it runs after the DOM has been created, but before the page is rendered.
+- I learned that the split-second flicker is caused by the side effects only taking place after the browser has rendered the page – this is where useLayoutEffect comes in handy, as it runs after the DOM has been created, but before the page is rendered.
 
 # final solution
 
