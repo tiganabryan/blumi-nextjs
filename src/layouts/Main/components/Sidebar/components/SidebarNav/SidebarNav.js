@@ -30,8 +30,8 @@ const SidebarNav = ({ pages }) => {
           display={'flex'}
           component="a"
           href="/"
-          title="theFront"
-          width={{ xs: 140, md: 120 }}
+          title="blumi | home"
+          width={{ xs: 120 }}
         >
           <Box
             component={'img'}

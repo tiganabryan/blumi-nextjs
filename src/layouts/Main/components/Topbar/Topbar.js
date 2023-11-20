@@ -43,7 +43,8 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
         component="a"
         href="/"
         title="blumi | home"
-        width={{ xs: 150, md: 120, lg: 120 }}
+        width={{ xs: 130 }}
+        paddingLeft={{ xs: 0, md: 1 }}
         // marginLeft={{ xs: 0, md: '.7rem', lg: '1.3rem' }}
       >
         <Box
