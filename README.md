@@ -27,7 +27,7 @@ image designed by [Alyssa Gomez](https://www.linkedin.com/in/alyssagomez29/)
 
 # achieving visual harmony with whitespace
 
-A crucial aspect of this project involved determining the SVG's height to ensure it seamlessly adapted to the container's height while maintaining visual appeal. Merely copying the height of the text wasn’t enough; extra whitespace was required to maintain design best practices and be pleasing to the eye.
+A crucial aspect of this project involved determining the hero text's height to ensure the SVG seamlessly grew and shrunk accordingly, maintaining design best practices for whitespace.
 
 This delicate balance between functionality and visual harmony presented a juicy problem to solve.
 
