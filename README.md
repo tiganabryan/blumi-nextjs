@@ -41,9 +41,9 @@ This experience highlighted the importance of continuous evaluation and the will
 
 # what I learned
 
-## deepened understanding of SSR and its benefits over CSR (speed, SEO)
+## deepened understanding of Server Side Rendering and its benefits over Client Side Rendering (speed, SEO)
 
-- So the whole point of SSR is to load the whole page on the server beforehand... While this prevents the preloaded version of the page from being adjusted to the user's device size, it does allow the site to load faster and be updated in a split second. All SEO keywords are preloaded and able to be picked up by search engine scraping, boosting Google page rankings.
+- So the point of SSR is to load the page on the server beforehand, allowing sites to load faster and be updated in a split second. All SEO keywords are preloaded and able to be picked up by search engine scraping, boosting Google page rankings. Without SSR, some SEO keywords aren't loaded in time and get missed by scraping.
 
 ## limitations of SSR
 
