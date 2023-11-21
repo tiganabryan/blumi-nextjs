@@ -13,8 +13,12 @@ export default class MyDocument extends Document {
           <link rel="shortcut icon" href="/img/blumiIcon.png" />
           <meta name="theme-color" content="#ffffff" />
           <meta
+            name="keywords"
+            content="blumi, blumi design, wellness web design toronto, web design small business, SEO toronto, websites bugs, how to add ecommerce to website, how to add shopify to website, how to debug my website"
+          />
+          <meta
             name="description"
-            content="Software for midsize companies, built by hand."
+            content="Website design and repair for midsize companies."
           />
           <meta
             name="robots"
@@ -22,14 +26,14 @@ export default class MyDocument extends Document {
           />
           <meta property="og:locale" content="en_US" />
           <meta property="og:type" content="website" />
-          <meta property="og:image" content="<generated>" />
+          <meta property="og:image" content="/img/opengraph-image.png" />
           <meta
             property="og:title"
-            content="blumi design | Tigana Bryan and Alyssa Gomez"
+            content="blumi design | toronto web design and repair"
           />
           <meta
             property="og:description"
-            content="Software for midsize companies, built by hand."
+            content="Web design and repair for midsize companies."
           />
           <meta property="og:url" content="https://www.blumidesign.ca/" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
