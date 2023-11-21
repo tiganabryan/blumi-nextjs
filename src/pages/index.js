@@ -6,7 +6,7 @@ import DesignCompanyPage from './design-company';
 const IndexPage = () => {
   const seo = {
     title: 'blumi design | home',
-    description: 'website maintenance and repair for midsize companies.',
+    description: 'website design & repair for midsize companies.',
     keywords: [
       'web design in Midtown Toronto',
       'web design for small businesses',
