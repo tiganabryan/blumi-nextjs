@@ -31,7 +31,11 @@ While the background SVG image and text looked the same as Alyssa's Figma design
 <strong>Describe desired behaviour:</strong> What exactly am I trying to change? The background image height must dynamically adjust according to the height of the text's container so that even if text wraps onto new lines, there's still whitespace underneath it.
 
 
-<strong>Research and apply best practices:</strong> Initially, I attempted to solve this problem using JavaScript and the UI library I was using, Material-UI. To achieve the balance required to scale an organic shape and maintain Alyssa's design, I looked up [Material Design's whitespace ratios](https://m2.material.io/design/layout/spacing-methods.html) and used them as a reference for an object containing height multiplicands for each breakpoint width. However, Next.js threw a new error when it tried to run my event listener: <strong>```ReferenceError: window is not defined```</strong>.
+<strong>Research and apply best practices:</strong> Initially, I attempted to solve this problem using JavaScript and the UI library I was using, Material-UI. To achieve the balance required to scale an organic shape and maintain Alyssa's design, I looked up [Material Design's whitespace ratios](https://m2.material.io/design/layout/spacing-methods.html) and used them as a reference for an object containing height multiplicands for each breakpoint width. However, Next.js threw a new error when it tried to run my event listener:
+
+```javascript
+ReferenceError: window is not defined
+```
 
 Wait a minute. 
 
@@ -61,7 +65,7 @@ After ensuring it wasn't a speed concern, I went down a rabbit hole of React's r
 
 ## 💡 Final solution
 
-While I ultimately decided to use `background-position: bottom;` to dynamically adjust the height of the background image and adjusted margins with media queries to increase whitespace, this rabbithole greatly deepened my understanding of Server Side Rendering and the React rendering cycle. It was incredibly stimulating and fun.
+I ultimately decided to use ```background-position: bottom;``` to dynamically adjust the height of the background image and text container margins with media queries.
 
 ```css
 @media (min-width: 600px) {
@@ -78,18 +82,13 @@ While I ultimately decided to use `background-position: bottom;` to dynamically 
 }
 ```
 
-Above all, this experience highlighted the importance of continuous evaluation and the willingness to adapt to alternative solutions when faced with roadblocks.
+While I ended up using CSS, this rabbit hole greatly deepened my understanding of server-side rendering and the React rendering cycle. It highlighted the importance of continuous evaluation and the willingness to adapt when faced with roadblocks. It was also just fun.
 
-
+<br></br>
 <div align="center">Thanks for reading, have a lovely day.</div>
 <br></br>
 <br></br>
 <br></br>
-<br></br>
-
-
-
-
 
 
 
