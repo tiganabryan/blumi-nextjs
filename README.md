@@ -37,11 +37,11 @@ While the background SVG image and text looked the same as the Figma design at s
 ReferenceError: window is not defined
 ```
 
-Wait a minute. 
+Wait. Of course... A page rendered server-side can't adjust to a device it doesn't know exists yet. So how do I continue using SSR (preferable as it has SEO benefits. more on that later), and adjust the height of the hero image depending on the width of the user's device?
 
 ## What I learned
 
-Of course – a page rendered server-side can't adjust to a device it doesn't know exists yet. So how do I continue using server-side rendering (preferable as it has SEO benefits. more on that later), and adjust the height of the hero image depending on the width of the user's device? A quick Google search led me to discover that useEffect only runs once the page has been painted, so I could still write some code to access the window object and get the component to adjust.
+ A quick Google search led me to discover that useEffect only runs once the page has been painted, so I could still write some code to access the window object and get the component to adjust.
 
 Just what I was looking for!
 
