@@ -3,7 +3,7 @@
 Built with React, Next.js, Material-UI, and Figma. click [here](blumidesign.ca) to visit
 
 ![test](/public/img/blumiGif.gif)
-image designed by [Alyssa Gomez](https://www.linkedin.com/in/alyssagomez29/)
+Image designed by [Alyssa Gomez](https://www.linkedin.com/in/alyssagomez29/)
 
 ## Features
 
@@ -21,7 +21,7 @@ image designed by [Alyssa Gomez](https://www.linkedin.com/in/alyssagomez29/)
 
 <!-- ![Author](https://img.shields.io/badge/LinkedIn-blue?logo=linkedin&abelColorblue) -->
 
-# Ensuring seamless adjustment of the background image's height to accommodate text wrapping was a critical aspect of this project. <br></br>If this problem hadn't been solved, the SVG wouldn't have scaled correctly across all devices, leading to a cluttered and unprofessional appearance.
+## Ensuring seamless adjustment of the background image's height to accommodate text wrapping was a critical aspect of this project. <br></br>If this problem hadn't been solved, the SVG wouldn't have scaled correctly across all devices, leading to a cluttered and unprofessional appearance.
 
 
 ## How I approached this problem
@@ -33,7 +33,7 @@ image designed by [Alyssa Gomez](https://www.linkedin.com/in/alyssagomez29/)
 
 Wait a minute. 
 
-# What I learned
+## What I learned
 
 Of course – a page rendered server-side can't adjust to a device it doesn't know exists yet. So how do I continue using server-side rendering (preferable as it has SEO benefits. more on that later), and adjust the height of the hero image depending on the width of the user's device? A quick Google search led me to discover that useEffect only runs once the page has been painted, so I could still write some code to access the window object and get the component to adjust.
 
@@ -44,20 +44,20 @@ Just what I was looking for!
 After ensuring it wasn't a speed concern, I went down a rabbit hole of React's render cycle, server-side rendering, and a lesser-known React hook.
 
 
-## Understanding the benefits of Server Side Rendering (SSR) over Client Side Rendering
+### Understanding the benefits of Server Side Rendering (SSR) over Client Side Rendering
 
 - The point of SSR is to load the page and metadata on the server beforehand, allowing sites to load faster. All SEO keywords are preloaded and able to be picked up by search engine scraping, boosting Google page rankings. Without SSR, some SEO keywords aren't loaded in time and the page ranks lower on Google. If customers can't find the website, the business loses revenue.
 
-## The limitations of SSR, React's render cycle, and useLayoutEffect
+### The limitations of SSR, React's render cycle, and useLayoutEffect
 
 - I discovered that since the useEffect hook only runs after the page has been painted, I could still access the window object. However, I needed to measure the device’s width before the website was painted, to prevent the layout from flickering when it adjusts. I needed a layout-altering side effect, which led me to [this article](https://kentcdodds.com/blog/useeffect-vs-uselayouteffect) on React's useLayoutEffect hook by Kent C. Dodds.
 
 - I learned that the split-second flicker is caused by the side effects only taking place after the browser has rendered the page – this is where useLayoutEffect comes in handy, as it runs after the DOM has been created, but before the page is rendered.
 
 
-## While useLayoutEffect could've been an adequate solution, I noticed the code becoming verbose and knew there had to be a simpler solution. The project couldn't just <em>work</em>, it needed to be maintainable as well. This led me to pure CSS.
+### While useLayoutEffect could've been an adequate solution, I noticed the code becoming verbose and knew there had to be a simpler solution. The project couldn't just <em>work</em>, it needed to be maintainable as well. This led me to pure CSS.
 
-# Solution
+## 💡 Final solution
 
 While I ultimately decided to use `background-position: bottom;` to dynamically adjust the height of the background image and adjusted margins with media queries to increase whitespace, this rabbithole greatly deepened my understanding of Server Side Rendering and the React rendering cycle. It was incredibly stimulating and fun.
 
@@ -80,6 +80,9 @@ Above all, this experience highlighted the importance of continuous evaluation a
 
 
 <div align="center">Thanks for reading, have a lovely day.</div>
+<br></br>
+<br></br>
+<br></br>
 <br></br>
 
 
