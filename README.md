@@ -23,7 +23,7 @@ Image designed by [Alyssa Gomez](https://www.linkedin.com/in/alyssagomez29/)
 
 ## The problem
 
-While the background SVG image and text looked the same as Alyssa's Figma designs at set breakpoints, other widths prompted the text to wrap onto new lines. This disrupted the whitespace ratios on the page and led to a cluttered appearance. The image wasn't truly responsive if the UI only looked harmonious at certain breakpoints. 
+While the background SVG image and text looked the same as the Figma design at set widths, other widths caused the text to wrap onto new lines. This disrupted the whitespace ratios on the page and led to a cluttered appearance. An image isn't truly responsive if the UI only looks harmonious at certain breakpoints. 
 
 
 ## How I approached this problem
