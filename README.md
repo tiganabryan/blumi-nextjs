@@ -21,15 +21,17 @@ Image designed by [Alyssa Gomez](https://www.linkedin.com/in/alyssagomez29/)
 
 <!-- ![Author](https://img.shields.io/badge/LinkedIn-blue?logo=linkedin&abelColorblue) -->
 
-## Ensuring seamless adjustment of the background image's height to accommodate text wrapping was a critical aspect of this project. <br></br>If this problem hadn't been solved, the SVG wouldn't have scaled correctly across all devices, leading to a cluttered and unprofessional appearance.
+## The problem
+
+While the background SVG image and text looked the same as Alyssa's Figma designs at set breakpoints, other widths prompted the text to wrap onto new lines. This disrupted the whitespace ratios on the page and led to a cluttered appearance. The image wasn't truly responsive if the UI only looked harmonious at certain breakpoints. 
 
 
 ## How I approached this problem
 
-<strong>Describe desired behaviour:</strong> What exactly am I trying to change? The background image height must dynamically adjust, according to the height of the text container.
+<strong>Describe desired behaviour:</strong> What exactly am I trying to change? The background image height must dynamically adjust according to the height of the text's container so that even if text wraps onto new lines, there's still whitespace underneath it.
 
 
-<strong>Research and apply best practices:</strong> Initially, I attempted to solve this problem using JavaScript and the UI library I was using, Material-UI. To achieve the balance required to scale an organic shape and maintain Alyssa's design, I looked up [Material Design's whitespace ratios](https://m2.material.io/design/layout/spacing-methods.html) and used them as a reference for an object containing height multiplicands for each breakpoint. However, Next.js threw a new error: <strong>```ReferenceError: window is not defined```</strong>.
+<strong>Research and apply best practices:</strong> Initially, I attempted to solve this problem using JavaScript and the UI library I was using, Material-UI. To achieve the balance required to scale an organic shape and maintain Alyssa's design, I looked up [Material Design's whitespace ratios](https://m2.material.io/design/layout/spacing-methods.html) and used them as a reference for an object containing height multiplicands for each breakpoint width. However, Next.js threw a new error when it tried to run my event listener: <strong>```ReferenceError: window is not defined```</strong>.
 
 Wait a minute. 
 
