@@ -1,6 +1,17 @@
-# blumi design website
+# <em>blumi</em> website
 
-built with React, Next.js, Material-UI, and Figma. click [here](blumidesign.ca) to visit
+Built with React, Next.js, Material-UI, and Figma. click [here](blumidesign.ca) to visit
+
+![test](/public/img/blumiGif.gif)
+image designed by [Alyssa Gomez](https://www.linkedin.com/in/alyssagomez29/)
+
+## Features
+
+- Multiple SVG background images at each breakpoint to maintain smooth lines
+- Set SVGs’ aspect ratio to “none” to take advantage of their ability to stretch without getting blurry
+- Adjusted button container margins and position with media queries
+- Accounted for text wrapping to ensure a consistent presentation
+- Pure CSS was chosen over MUI+JavaScript for the hero section's styling to improve page load times and simplify the code
 
 <!-- ![](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg)
 
@@ -10,50 +21,43 @@ built with React, Next.js, Material-UI, and Figma. click [here](blumidesign.ca) 
 
 <!-- ![Author](https://img.shields.io/badge/LinkedIn-blue?logo=linkedin&abelColorblue) -->
 
-## rendering a responsive organic image
+# Ensuring seamless adjustment of the background image's height to accommodate text wrapping was a critical aspect of this project. <br></br>If this problem hadn't been solved, the SVG wouldn't have scaled correctly across all devices, leading to a cluttered and unprofessional appearance.
 
-the responsive background image on the homepage was carefully crafted to ensure the best user experience across a wide range of devices. building a responsive organic shape involved a combination of CSS techniques, JavaScript, and mindful design decisions.
 
-![test](/public/img/blumiGif.gif)
-image designed by [Alyssa Gomez](https://www.linkedin.com/in/alyssagomez29/)
+## How I approached this problem
 
-# features
+<strong>Describe desired behaviour:</strong> What exactly am I trying to change? The background image height must dynamically adjust, according to the height of the text container.
 
-- multiple background images at each breakpoint to maintain smooth lines
-- set SVGs’ aspect ratio to “none” to take advantage of their ability to stretch without getting blurry
-- adjusted button container margins and position with media queries
-- accounted for text wrapping to ensure a consistent presentation
-- pure CSS was chosen over MUI+JavaScript for the hero section's styling to improve page load times and simplify the code
 
-# achieving visual harmony with whitespace
+<strong>Research and apply best practices:</strong> Initially, I attempted to solve this problem using JavaScript and the UI library I was using, Material-UI. To achieve the balance required to scale an organic shape and maintain Alyssa's design, I looked up [Material Design's whitespace ratios](https://m2.material.io/design/layout/spacing-methods.html) and used them as a reference for an object containing height multiplicands for each breakpoint. However, Next.js threw a new error: <strong>```ReferenceError: window is not defined```</strong>.
 
-A crucial aspect of this project involved determining the hero text's height to ensure that the SVG seamlessly grew and shrunk even if text wrapped onto new lines, maintaining design best practices for whitespace.
+Wait a minute. 
 
-This delicate balance between functionality and visual harmony presented a juicy problem to solve.
+# What I learned
 
-# the value of iterative problem-solving
+Of course – a page rendered server-side can't adjust to a device it doesn't know exists yet. So how do I continue using server-side rendering (preferable as it has SEO benefits. more on that later), and adjust the height of the hero image depending on the width of the user's device? A quick Google search led me to discover that useEffect only runs once the page has been painted, so I could still write some code to access the window object and get the component to adjust.
 
-To achieve the balance required to scale an organic shape and maintain Alyssa's design, I wrote height calculations based on [Material Design's whitespace ratios](https://m2.material.io/design/layout/spacing-methods.html) that accounted for both the container's dimensions and the desired whitespace.
+Just what I was looking for!
 
-Initially, I attempted to solve this problem using JavaScript, but I always aim to keep my code as simple and maintainable as possible, which led me to explore solutions written in pure CSS.
+<strong>Then I paused.</strong> A new problem had surfaced: while the layout was now adjusting on-render, it was happening a split-second after the component had loaded. This made the site look unfinished.
 
-This experience highlighted the importance of continuous evaluation and the willingness to adapt to alternative solutions when faced with roadblocks.
+After ensuring it wasn't a speed concern, I went down a rabbit hole of React's render cycle, server-side rendering, and a lesser-known React hook.
 
-# what I learned
 
-## deepened understanding of Server Side Rendering and its benefits over Client Side Rendering (speed, SEO)
+## Understanding the benefits of Server Side Rendering (SSR) over Client Side Rendering
 
-- So the point of SSR is to load the page on the server beforehand, allowing sites to load faster and be updated in a split second. All SEO keywords are preloaded and able to be picked up by search engine scraping, boosting Google page rankings. Without SSR, some SEO keywords aren't loaded in time and get missed by scraping.
+- The point of SSR is to load the page and metadata on the server beforehand, allowing sites to load faster. All SEO keywords are preloaded and able to be picked up by search engine scraping, boosting Google page rankings. Without SSR, some SEO keywords aren't loaded in time and the page ranks lower on Google. If customers can't find the website, the business loses revenue.
 
-## limitations of SSR
+## The limitations of SSR, React's render cycle, and useLayoutEffect
 
-- Since SSR loads the page beforehand, you can no longer access the window object – this required me to swiftly adjust my approach to fit the effects of Server Side Rendering.
-
-- I discovered that since the useEffect hook only runs after the page has been painted, I could still access the window object (phew). However, I needed to measure the device’s width before the website was painted, to prevent the layout from flickering when it adjusts. I needed a layout-altering side effect, which led me to [this article](https://kentcdodds.com/blog/useeffect-vs-uselayouteffect) on React's useLayoutEffect hook by Kent C. Dodds.
+- I discovered that since the useEffect hook only runs after the page has been painted, I could still access the window object. However, I needed to measure the device’s width before the website was painted, to prevent the layout from flickering when it adjusts. I needed a layout-altering side effect, which led me to [this article](https://kentcdodds.com/blog/useeffect-vs-uselayouteffect) on React's useLayoutEffect hook by Kent C. Dodds.
 
 - I learned that the split-second flicker is caused by the side effects only taking place after the browser has rendered the page – this is where useLayoutEffect comes in handy, as it runs after the DOM has been created, but before the page is rendered.
 
-# final solution
+
+## While useLayoutEffect could've been an adequate solution, I noticed the code becoming verbose and knew there had to be a simpler solution. The project couldn't just <em>work</em>, it needed to be maintainable as well. This led me to pure CSS.
+
+# Solution
 
 While I ultimately decided to use `background-position: bottom;` to dynamically adjust the height of the background image and adjusted margins with media queries to increase whitespace, this rabbithole greatly deepened my understanding of Server Side Rendering and the React rendering cycle. It was incredibly stimulating and fun.
 
@@ -72,14 +76,24 @@ While I ultimately decided to use `background-position: bottom;` to dynamically 
 }
 ```
 
-<div align="center">thanks for reading, have a lovely day.</div>
+Above all, this experience highlighted the importance of continuous evaluation and the willingness to adapt to alternative solutions when faced with roadblocks.
+
+
+<div align="center">Thanks for reading, have a lovely day.</div>
 <br></br>
 
-# a peak into my development process
 
-get an idea of how I use version control by [viewing a pull request](https://github.com/tiganabryan/blumi-nextjs/pull/14) :)
 
-see how I interact with APIs to display information on websites by [clicking here](https://github.com/tiganabryan/goalTrackerBE/blob/master/routes/controllers/goalTrackerController.js)
+
+
+
+
+
+# A peak into my development process
+
+Get an idea of how I use version control by [viewing a pull request](https://github.com/tiganabryan/blumi-nextjs/pull/14) :)
+
+See how I interact with APIs to display information on websites by [clicking here](https://github.com/tiganabryan/goalTrackerBE/blob/master/routes/controllers/goalTrackerController.js)
 
 <!-- ---
 
