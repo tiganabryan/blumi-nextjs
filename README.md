@@ -41,7 +41,7 @@ Of course – a page rendered server-side can't adjust to a device it doesn't kn
 
 Just what I was looking for!
 
-<strong>Then I paused.</strong> A new problem had surfaced: while the layout was now adjusting on-render, it was happening a split-second after the component had loaded. This made the site look unfinished.
+<strong>Then I paused.</strong> A new problem had surfaced: while the layout was now adjusting according to the device width, it was happening a split-second after the component had loaded. This made the site look unfinished.
 
 After ensuring it wasn't a speed concern, I went down a rabbit hole of React's render cycle, server-side rendering, and a lesser-known React hook.
 
