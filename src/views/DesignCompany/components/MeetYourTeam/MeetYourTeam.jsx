@@ -112,7 +112,7 @@ const MeetYourTeam = ({
             {
               name: 'Alyssa Gomez',
               title: 'UI/UX Design',
-              avatar: 'https://assets.maccarianagency.com/avatars/img5.jpg',
+              avatar: '/img/alyssaHeadshot.jpeg',
             },
           ].map((item, i) => (
             <Grid

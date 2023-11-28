@@ -4,8 +4,8 @@ import Pricing from 'views/Pricing';
 
 const Services = () => {
   const seo = {
-    title: 'pricing | blumi',
-    description: 'transparent web design pricing.',
+    title: 'services | blumi',
+    description: 'let us fix those nagging bugs on your website.',
     keywords: [
       'affordable web design toronto',
       'web design for small businesses',

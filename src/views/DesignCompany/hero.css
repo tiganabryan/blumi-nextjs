@@ -1,3 +1,5 @@
+/* LANDING PAGE FADE-IN ANIMATIONS */
+
 .fade-in-animation {
   transition: 0.4s;
 
@@ -72,7 +74,8 @@
   }
 }
 
-/* HERO BACKGROUND IMAGES */
+/* HERO SECTION BREAKPOINTS */
+/* Button margin extends length of background image */
 
 .hero-background-image {
   background-image: url(../../../public/img/xsHeroImg.svg);
@@ -81,21 +84,16 @@
   background-position: bottom;
 }
 
-/* @media (min-width: 300px) {
-  .hero-background-image {
-    background-image: url(../../../public/img/smHeroImg.svg);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: bottom-center;
-  }
-} */
-
 @media (min-width: 600px) {
   .hero-background-image {
     background-image: url(../../../public/img/smHeroImg.svg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: bottom;
+  }
+
+  .cta-button-container {
+    margin-bottom: 2.5rem;
   }
 }
 
@@ -106,6 +104,16 @@
     background-size: 100% 100%;
     background-position: bottom;
   }
+
+  .cta-button-container {
+    margin-bottom: 4rem;
+  }
+
+  .tagline-text-container,
+  .tagline-subheading-container {
+    text-align: left;
+    justify-content: left;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -114,6 +122,10 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: bottom;
+  }
+
+  .tagline-subheading-text {
+    max-width: 75%;
   }
 }
 
@@ -126,42 +138,15 @@
   }
 }
 
-/* HERO TEXT ALIGNMENT */
-
 @media (max-width: 899px) {
-  /* .tagline-text, */
-  /* .tagline-subheading-text, */
   .tagline-text-container,
   .tagline-subheading-container {
     text-align: center;
     justify-content: center;
-    /* max-width: 65%; */
   }
-}
 
-@media (min-width: 900px) {
-  /* .tagline-text, */
-  /* .tagline-subheading-text, */
-  .tagline-text-container,
-  .tagline-subheading-container {
-    text-align: left;
-    justify-content: left;
-    /* max-width: 75%; */
-  }
-}
-
-@media (min-width: 1200px) {
-  .tagline-subheading-text {
-    max-width: 75%;
-  }
-}
-
-/* SERVICES BUTTONS CONTAINER (MARGIN AND ALIGNMENT)
-Extend length of background image */
-
-@media (min-width: 600px) {
   .cta-button-container {
-    margin-bottom: 2.5rem;
+    justify-content: center;
   }
 }
 
@@ -180,21 +165,5 @@ Extend length of background image */
 @media (max-width: 256px) {
   .cta-button-container {
     margin-bottom: 7rem;
-  }
-}
-
-@media (max-width: 899px) {
-  .cta-button-container {
-    /* align-content: center; */
-    /* flex-direction: column; */
-    justify-content: center;
-  }
-}
-
-@media (min-width: 900px) {
-  .cta-button-container {
-    /* align-content: left; */
-    /* flex-direction: row; */
-    margin-bottom: 4rem;
   }
 }
