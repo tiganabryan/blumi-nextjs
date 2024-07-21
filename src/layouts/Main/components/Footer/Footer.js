@@ -84,7 +84,7 @@ const Footer = () => {
           color="text.secondary"
           gutterBottom
         >
-          &copy; blumi design 2023. all rights reserved.
+          &copy; blumi design 2023-2025. all rights reserved.
         </Typography>
         <Typography
           align={'center'}

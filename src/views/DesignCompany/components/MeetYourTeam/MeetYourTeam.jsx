@@ -107,7 +107,8 @@ const MeetYourTeam = ({
             {
               name: 'Tigana Bryan',
               title: 'Operations & Web Development',
-              avatar: 'https://avatars.githubusercontent.com/u/68758768?v=4',
+              avatar:
+                'https://media.licdn.com/dms/image/D5603AQEhVH15pJRb3Q/profile-displayphoto-shrink_800_800/0/1721521964835?e=1727308800&v=beta&t=qldvvAvDefDhFqD7sDvL202Om5-OiCg-EkcsY3Utky4',
             },
             {
               name: 'Alyssa Gomez',
